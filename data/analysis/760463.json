@@ -1,0 +1,159 @@
+{
+ "headline": "קרב על ראשות הבית: שוויץ מול קנדה במאבק ישיר על המקום הראשון בבית ב'",
+ "context": "המשחק בין שוויץ לקנדה הוא המפגש המכריע על ראשות בית ב' במונדיאל 2026. שתי הנבחרות הבטיחו כמעט בוודאות את מקומן בשלב 32 האחרונות, אך ניצחון יבטיח את המקום הראשון בבית ויכול להשפיע על ההצלבה בשלבי הנוקאאוט. קנדה מגיעה למשחק עם יתרון בהפרש השערים (+6 לעומת +3 לשוויץ), מה שאומר שתיקו יספיק לה כדי לסיים ראשונה. שוויץ תצטרך ניצחון כדי לעקוף את קנדה. המפגש יתקיים בוונקובר, קנדה, מה שמעניק יתרון ביתיות לקנדה.",
+ "lineups": {
+  "SUI": {
+   "formation": "4-3-3 (הערכה)",
+   "xi": [
+    "Kobel",
+    "Zakaria",
+    "Elvedi",
+    "Akanji",
+    "Rodriguez",
+    "Aebischer",
+    "Xhaka",
+    "Freuler",
+    "Ndoye",
+    "Embolo",
+    "Vargas"
+   ],
+   "news": "שוויץ מגיעה ללא פציעות או השעיות משמעותיות."
+  },
+  "CAN": {
+   "formation": "4-4-2 (הערכה)",
+   "xi": [
+    "Crepeau",
+    "Johnson",
+    "De Fougerolles",
+    "Cornelius",
+    "Laryea",
+    "Buchanan",
+    "Kone",
+    "Eustaquio",
+    "Millar",
+    "David",
+    "Oluwaseyi"
+   ],
+   "news": "אלפונסו דייויס, קפטן קנדה, מתאושש מפציעה בשריר הירך האחורי ולא יפתח במשחק, אך צפוי לשחק במהלכו."
+  }
+ },
+ "tactics": "שוויץ צפויה להציג משחק מאורגן הגנתית, תוך הסתמכות על ניסיון הקישור ושחקני מפתח כמו גראניט ג'אקה ומנואל אקנג'י. המאמן מוראט יאקין שם דגש על ריכוז הגנתי בשלבים המכריעים. קנדה, בהובלת ג'סי מארש, צפויה לשחק בסגנון אגרסיבי ופיזי, עם דגש על התקפה מהירה ושחקנים אתלטיים. יתרון הביתיות צפוי לדחוף אותם למשחק התקפי כדי לנסות להבטיח את המקום הראשון.",
+ "form": {
+  "SUI": "שוויץ הגיעה למשחק לאחר ניצחון 1:4 על בוסניה והרצגובינה ותיקו 1:1 מול קטאר בשלב הבתים. במוקדמות המונדיאל, שוויץ סיימה ראשונה בבית שלה ללא הפסד (4 ניצחונות, 2 תיקו), עם 14 שערים שהובקעו ו-2 שערים בלבד שנספגו.",
+  "CAN": "קנדה מגיעה למשחק בכושר מצוין, לאחר ניצחון מוחץ 0:6 על קטאר ותיקו 1:1 מול בוסניה בשלב הבתים. הנבחרת בלתי מנוצחת בעשרת משחקיה האחרונים (4 ניצחונות, 6 תיקו). זהו הניצחון הגדול ביותר של קנדה במונדיאל אי פעם, והפעם הראשונה שהיא שומרת על שער נקי בטורניר."
+ },
+ "h2h": "קנדה ניצחה את שוויץ 1:3 במשחק הידידות היחיד בין שתי הנבחרות, שנערך במאי 2002.",
+ "matchup": "המאצ'אפ צפוי להיות צמוד, כאשר המודל שלי חוזה 1.42 שערים לשוויץ ו-1.24 שערים לקנדה. לשוויץ יש את הניסיון והארגון ההגנתי, בעוד קנדה מגיעה עם מומנטום חזק ויתרון ביתיות. שתי הנבחרות הוכיחו יכולת הבקעה במחזור הקודם, כאשר שוויץ כבשה רביעייה וקנדה שישייה.",
+ "opta": {
+  "home": "31%",
+  "draw": "29%",
+  "away": "40%",
+  "sims": "הערכה - לא נמצאו נתונים עדכניים של Opta ספציפית למשחק זה. הנתונים המוצגים מבוססים על מודל פנימי ועל תחזיות כלליות למונדיאל."
+ },
+ "betting": {
+  "odds": {
+   "home": {
+    "dec": "2.45",
+    "imp": "40.8%"
+   },
+   "draw": {
+    "dec": "3.10",
+    "imp": "32.3%"
+   },
+   "away": {
+    "dec": "3.00",
+    "imp": "33.3%"
+   }
+  },
+  "ou": "מעל/מתחת 2.5 שערים (קו 2.5 שערים)",
+  "handicap": "שוויץ +0 / קנדה -0 (הערכה, בהתבסס על יחסי ה-1X2 הצמודים)",
+  "predicted_scores": [
+   {
+    "src": "המודל שלי",
+    "score": "1-1"
+   }
+  ],
+  "value": "תיקו (בהתבסס על יחסי הזכייה והמודל שלי).",
+  "tip": "הימור על תיקו או ששוויץ תנצח וששתי הקבוצות יבקיעו.",
+  "sources": []
+ },
+ "key_players": [
+  {
+   "team": "SUI",
+   "name": "Granit Xhaka",
+   "why": "קפטן הנבחרת והלב הפועם של הקישור, מספק מנהיגות, מסירות ארוכות ומשמעת טקטית."
+  },
+  {
+   "team": "SUI",
+   "name": "Manuel Akanji",
+   "why": "בלם מרכזי מנוסה ואתלטי, עוגן ההגנה של שוויץ עם מיקום, מהירות התאוששות ובניית משחק רגועה."
+  },
+  {
+   "team": "CAN",
+   "name": "Jonathan David",
+   "why": "החלוץ המוביל של קנדה, מגיע בכושר הבקעה מצוין לאחר שלושער במחזור הקודם."
+  },
+  {
+   "team": "CAN",
+   "name": "Alphonso Davies",
+   "why": "אף שלא יפתח, קפטן הנבחרת הוא השחקן המוכר והמוכשר ביותר של קנדה. כניסתו למשחק יכולה לשנות את המומנטום."
+  }
+ ],
+ "prediction": "צפוי משחק צמוד ופיזי בין שתי נבחרות עם מטרות ברורות. יתרון הביתיות והמומנטום של קנדה עשויים להעניק לה יתרון קל, אך הניסיון והארגון של שוויץ יקשו עליה. תיקו נראה כתוצאה סבירה, שתבטיח לקנדה את ראשות הבית.",
+ "score_hint": "1-1",
+ "sources": [
+  "https://www.goal.com/en/news/switzerland-vs-canada-fifa-world-cup-2026-preview-everything-you-need-to-know/blt2b06900a066922d4",
+  "https://www.youtube.com/watch?v=kY0R6_x02eU",
+  "https://www.youtube.com/watch?v=Xh0Y-P7J-iI",
+  "https://olympic.ca/2026/05/29/team-canada-unveils-26-man-roster-for-fifa-world-cup-2026/",
+  "https://www.dazn.com/en-CA/news/soccer/canada-squad-for-2026-world-cup-all-players-captain-shirt-numbers-and-jesse-marschs-coaching-staff/121r7m3j6y1h310r2q508w8l2j",
+  "https://www.xscores.com/soccer/match_preview/switzerland-vs-canada-24-06-2026",
+  "https://www.goal.com/en-ng/news/switzerland-vs-canada-fifa-world-cup-2026-preview-everything-you-need-to-know/blt2b06900a066922d4",
+  "https://heavy.com/sports/canada-national-team-2026-world-cup-roster/",
+  "https://www.thecelticstar.com/2026/06/21/switzerland-vs-canada-prediction-world-cup-2026-preview-best-bets/",
+  "https://www.fifa.com/fifaplus/en/match/switzerland-vs-canada-fifa-world-cup-2026-400032483",
+  "https://www.mlssoccer.com/news/canada-roster-for-2026-world-cup-9-mls-players-called",
+  "https://canadasoccer.com/news/canada-soccer-announces-canmnt-squad-for-fifa-world-cup-2026/",
+  "https://www.youtube.com/watch?v=0hN9c0r3T7Q",
+  "https://www.flashscore.com/match/hM522K7D/#/match-summary",
+  "https://www.goal.com/en/lists/switzerland-squad-world-cup-2026-which-players-will-make-it-to-the-showpiece-in-usa-mexico-and-canada/blt72750e2613149842",
+  "https://www.tsn.ca/soccer/game/canada-vs-switzerland-20260624-2.1974773",
+  "https://www.ticombo.com/en/switzerland-national-team-2026-world-cup",
+  "https://www.fourfourtwo.com/news/switzerland-squad-world-cup-2026-murat-yakins-squad-to-face-bosnia-herzegovina",
+  "https://www.dimers.com/soccer/world-cup/canada-vs-switzerland-prediction-picks-june-24-2026",
+  "https://www.thecelticstar.com/2026/06/21/switzerland-vs-canada-prediction-world-cup-2026-preview-best-bets-2/",
+  "https://heavy.com/sports/switzerland-national-team-2026-world-cup-roster/",
+  "https://www.beinsports.com/en/match/switzerland-vs-canada-2026-06-24-fifa-world-cup",
+  "https://vietnam.vn/hebrew/news/2026-world-cup/2026/06/619227/",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=440536",
+  "https://www.one.co.il/Article/26-27/1,1,4,138241/476903.html",
+  "https://vietnam.vn/hebrew/news/2026-world-cup/2026/06/619230/",
+  "https://www.youtube.com/watch?v=F07-2vY6H2o",
+  "https://www.torontosun.com/sports/soccer/canada-ready-to-unleash-captain-alphonso-davies-in-critical-world-cup-clash-with-switzerland",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=439363",
+  "https://www.365scores.com/football/world-cup/match/switzerland-canada-1210870",
+  "https://playoff.co.il/match/2957",
+  "https://www.youtube.com/watch?v=WlC3R7R_990",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=440537",
+  "https://www.365scores.com/football/world-cup/odds",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=438902",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=440538",
+  "https://www.walla.co.il/item/3702137",
+  "https://www.israelhayom.co.il/sport/world-cup/article/16016147",
+  "https://www.ynet.co.il/sport/worldcup/article/h17i00kgr",
+  "https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%A0%D7%93%D7%99%D7%90%D7%9C_2026",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=440540",
+  "https://vietnam.vn/hebrew/news/2026-world-cup/2026/06/619228/",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=440106",
+  "https://www.365scores.com/football/world-cup/standings",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=440107",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=439017",
+  "https://www.nhl.com/news/milano-cortina-2026-olympics-canada-tops-switzerland-to-win-group-a",
+  "https://www.sport5.co.il/articles.aspx?FolderID=6595&docID=438848"
+ ],
+ "match_id": "760463",
+ "home": "SUI",
+ "away": "CAN",
+ "group": "B",
+ "generated_by": "gemini (gemini-2.5-flash)"
+}

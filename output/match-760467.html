@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>צ'כיה נגד מקסיקו — חיזוי מונדיאל 2026</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(160deg,#0f2027,#1c3a4a 60%,#16222a);
+ color:#1b2733;direction:rtl;padding:14px;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto}
+header{text-align:center;color:#eafff4;padding:12px 8px 6px}
+header h1{font-size:1.8rem}
+header .sub{opacity:.85;margin-top:4px}
+.upd{opacity:.65;font-size:.8rem;margin-top:6px;color:#eafff4}
+.navbtns{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.nav{display:inline-block;background:#11a36b;color:#fff;border:none;border-radius:9px;
+ padding:8px 14px;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit}
+.nav:hover{background:#0d8a5a}
+.card{background:#fff;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.22)}
+.card h2{font-size:1.15rem;margin-bottom:12px;color:#0f3d2e;border-bottom:2px solid #e7f1ec;padding-bottom:8px}
+.note{font-size:.78rem;color:#7a8794;margin-top:10px;line-height:1.5}
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
+img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto}
+.chip.big{font-size:1.25rem;gap:9px}.chip.big img.fl{width:34px;height:34px}
+.fl{font-size:1.15rem}
+/* matches */
+.matches{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.match{border:1px solid #e9eeec;border-radius:13px;padding:12px;background:#fafdfb;display:flex;flex-direction:column}
+.mtop{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#80909a;margin-bottom:9px}
+.mgrp{font-weight:700;color:#0f3d2e}
+.mstat{display:flex;align-items:center;gap:6px}
+.mscore{background:#0f3d2e;color:#fff;border-radius:6px;padding:1px 8px;font-weight:700}
+.mscore.pred{background:#cdd8d2;color:#33433b}
+.badge{font-size:.66rem;padding:2px 7px;border-radius:20px;font-weight:700}
+.badge.soon{background:#eef3f1;color:#7a8794}.badge.done{background:#dfeee6;color:#0f7a4f}
+.badge.live{background:#e0654b;color:#fff}
+.mteams{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:10px}
+.mt{display:flex;align-items:center;gap:6px}
+.xg{font-weight:800;color:#11a36b;font-size:1.05rem}.vs{font-size:.7rem;color:#9aa7b0}
+.probbar{display:flex;height:24px;border-radius:7px;overflow:hidden;font-size:.72rem;font-weight:700;color:#fff}
+.probbar.big{height:30px;font-size:.82rem;margin-top:6px}
+.probbar div{display:flex;align-items:center;justify-content:center;min-width:20px}
+.ph{background:#11a36b}.pd{background:#9aa7b0}.pa{background:#e0654b}
+.problbl{display:flex;justify-content:space-between;font-size:.66rem;color:#8694a0;margin-top:4px}
+.abtn{margin-top:11px;text-align:center;background:#0f3d2e;color:#fff;border-radius:9px;
+ padding:9px;font-weight:700;text-decoration:none;font-size:.9rem}
+.abtn:hover{background:#16513c}
+/* analysis page */
+.analysis .ahead{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+ padding-bottom:8px;border-bottom:2px solid #e7f1ec}
+.avs{color:#9aa7b0;font-weight:600}
+.asub{text-align:center;color:#7a8794;font-size:.85rem;margin:8px 0 14px}
+.headline{font-size:1.15rem;font-weight:800;color:#0f3d2e;text-align:center;margin-bottom:14px;line-height:1.5}
+.modelstrip{background:#f3f9f6;border:1px solid #dcefe6;border-radius:12px;padding:12px;margin-bottom:16px}
+.ms-xg{font-size:.92rem;color:#0f3d2e;margin-bottom:8px;text-align:center}
+.sec{margin-bottom:16px}
+.sec h3{font-size:1.02rem;color:#0f3d2e;margin-bottom:7px}
+.sec p{line-height:1.7;color:#2c3a44;font-size:.95rem}
+.sec.pred{background:#fff8f0;border:1px solid #f0e0c8;border-radius:12px;padding:13px}
+.lineups{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lu{background:#fafdfb;border:1px solid #e9eeec;border-radius:11px;padding:11px}
+.luhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.form{background:#0f3d2e;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:.8rem}
+.xi{margin:0 18px;font-size:.86rem;line-height:1.75;color:#2c3a44}
+.lunews{font-size:.78rem;color:#7a8794;margin-top:8px;line-height:1.5}
+.kps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.kp{background:#fafdfb;border:1px solid #e9eeec;border-radius:10px;padding:10px}
+.kpn{font-weight:800;color:#0f3d2e}.kpt{font-size:.75rem;color:#7a8794;margin-right:6px}
+.kp p{font-size:.82rem;color:#41525c;margin-top:5px;line-height:1.5}
+.placeholder{text-align:center;padding:24px 12px;color:#7a8794}
+.placeholder h3{color:#0f3d2e;margin-bottom:8px}
+.sec a,.note a{color:#11a36b}
+/* betting */
+.sec.betting{background:#f6f4fb;border:1px solid #e4ddf2;border-radius:12px;padding:14px}
+.sec.betting p{margin-bottom:7px;font-size:.92rem}
+.odds{display:flex;gap:8px;margin:6px 0}
+.oc{flex:1;background:#fff;border:1px solid #e4ddf2;border-radius:9px;padding:9px 6px;text-align:center;
+ display:flex;flex-direction:column;gap:2px}
+.oc span{font-size:.74rem;color:#6b7785}
+.oc b{font-size:1.15rem;color:#4b2e83}
+.oc.fav{border-color:#4b2e83;background:#efe9fb}
+.dim{color:#9089a6;font-size:.78rem}.sm{font-size:.72rem;margin-top:2px}
+.tip{background:#efe9fb;border-radius:8px;padding:8px 10px;color:#3d2569}
+.rg{font-size:.72rem;color:#9089a6;margin-top:10px;border-top:1px dashed #ddd5ee;padding-top:8px}
+/* odds page */
+.bars{display:flex;flex-direction:column;gap:9px}
+.brow{display:grid;grid-template-columns:130px 1fr 52px;align-items:center;gap:10px}
+.btrack{background:#eef3f1;border-radius:8px;height:22px;overflow:hidden}
+.bfill{height:100%;background:linear-gradient(90deg,#11a36b,#1ad19a);border-radius:8px}
+.bval{font-weight:700;color:#0f3d2e;font-size:.9rem;text-align:left}
+.tbl-wrap{overflow-x:auto}
+table.grid{width:100%;border-collapse:collapse;font-size:.85rem;min-width:520px}
+table.grid th,table.grid td{padding:7px 6px;text-align:center;border-bottom:1px solid #eef2f0}
+table.grid th{background:#0f3d2e;color:#fff;font-weight:600}
+.tl{text-align:right!important}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.gcard{border:1px solid #eaefed;border-radius:12px;padding:10px;background:#fafdfb}
+.gcard h3{font-size:.95rem;color:#0f3d2e;margin-bottom:6px}
+.gtab{width:100%;border-collapse:collapse;font-size:.82rem}
+.gtab th{font-size:.7rem;color:#8694a0;font-weight:600;padding:3px}
+.gtab td{padding:5px 3px;text-align:center;border-top:1px solid #eef2f0}
+.gtab .adv{font-weight:700;color:#0f3d2e}
+footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 8px 28px;line-height:1.7}
+</style></head>
+<body><div class="wrap">
+<div class="topbar"><a class="nav" href="index.html">← חזרה למשחקים</a>
+  <button class="nav" onclick="location.reload()">🔄 רענן</button></div>
+<section class="card analysis">
+  <div class="ahead"><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/cze.png" alt="" loading="lazy">צ'כיה</span><span class="avs">נגד</span><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/mex.png" alt="" loading="lazy">מקסיקו</span></div>
+  <div class="asub">בית A · 25/06 04:00 · גביע העולם 2026</div>
+  
+      <div class="headline">מקסיקו מחפשת לסיים את הבית בצורה מושלמת מול צ'כיה הנלחמת על חייה</div>
+      <div class="modelstrip">
+      <div class="ms-xg"><b>גולים צפויים:</b> צ'כיה 0.8 – 2.4 מקסיקו
+        · תוצאה סבירה 0–2</div>
+      <div class="probbar big"><div class="ph" style="width:10%">10%</div>
+        <div class="pd" style="width:19%">19%</div>
+        <div class="pa" style="width:72%">72%</div></div>
+      <div class="problbl"><span>ניצחון צ'כיה</span><span>תיקו</span><span>ניצחון מקסיקו</span></div></div>
+      <div class="sec"><h3>📋 מה על הכף</h3><p>מקסיקו כבר הבטיחה את עלייתה לשלב 32 האחרונות כראש הבית עם 6 נקודות והפרש שערים חיובי של 3. צ'כיה, לעומת זאת, עם נקודה אחת בלבד, חייבת ניצחון כדי לשמור על סיכוי לעלות מהמקום השלישי, שכן 8 מתוך 12 הקבוצות שיסיימו במקום השלישי יעלו לשלב הבא. תיקו או הפסד יסיימו את דרכה של צ'כיה בטורניר. מקסיקו תפגוש בשלב הבא קבוצה שתסיים במקום השלישי מבתים C, E, F, H או I.</p></div>
+      <div class="sec"><h3>👥 הרכבים צפויים</h3>
+        <div class="lineups"><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/cze.png" alt="" loading="lazy">צ'כיה</span><span class="form">3-5-2</span></div>
+          <ol class="xi"><li>Matej Kovar</li><li>Ladislav Krejci</li><li>Robin Hranac</li><li>Tomas Holes</li><li>Vladimir Coufal</li><li>Tomas Soucek</li><li>Michal Sadilek</li><li>Pavel Sulc</li><li>Alexandr Sojka</li><li>Patrik Schick</li><li>Adam Hlozek</li></ol>
+          <p class="lunews">דויד יוראסק (David Jurásek) פצוע בשריר הירך האחורי וייעדר מהמשחק וקרוב לוודאי משארית הטורניר. לאדיסלב קרייצ'י (Ladislav Krejčí) בסכנת השעיה אם יקבל כרטיס צהוב נוסף ויעפיל עם נבחרתו לשלב הבא.</p></div><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/mex.png" alt="" loading="lazy">מקסיקו</span><span class="form">4-3-3</span></div>
+          <ol class="xi"><li>Guillermo Ochoa</li><li>Jorge Sanchez</li><li>Israel Reyes</li><li>Cesar Montes</li><li>Jesus Gallardo</li><li>Edson Alvarez</li><li>Luis Romo</li><li>Gilberto Mora</li><li>Roberto Alvarado</li><li>Santiago Gimenez</li><li>Cesar Huerta</li></ol>
+          <p class="lunews">מקסיקו צפויה לבצע רוטציות בהרכב לאור העפלתה המובטחת. ראול חימנס (Raúl Jiménez) עשוי לקבל מנוחה. סנטיאגו חימנס (Santiago Giménez) וגילברטו מורה (Gilberto Mora) צפויים לפתוח. ססאר מונטס (Cesar Montes) חוזר מהשעיה.</p></div></div></div>
+      <div class="sec"><h3>♟️ טקטיקה צפויה</h3><p>צ'כיה תצטרך להיות התקפית ולחפש את הניצחון, מה שעשוי לחשוף אותה למתפרצות של מקסיקו. המאמן מירוסלב קואובק צפוי להישאר עם מערך של שלושה בלמים (3-5-2) אך יצטרך להכניס שחקני יצירה. פטריק שיק (Patrik Schick) יהיה חוד החנית בהתקפה הצ'כית, ויצטרך לנצל את מהירותו, יכולת הנגיחה שלו וקצב העבודה הגבוה כדי למתוח את הגנת מקסיקו. מקסיקו, שכבר הבטיחה את מקומה, עשויה לשחק יותר משוחרר. המאמן חאבייר אגירה (Javier Aguirre) צפוי להשתמש בסגל רחב יותר, מה שיכול להעניק הזדמנויות לשחקנים שרוצים להוכיח את מקומם. למרות זאת, מקסיקו צפויה לשמור על מיקוד הגנתי ויעילות קלינית, תוך הסתמכות על הקשרים הדינמיים שלה כמו לואיס רומו (Luis Romo) ושחקני כנף מהירים.</p></div>
+      <div class="sec"><h3>📈 כושר אחרון</h3>
+        <p><b>צ'כיה:</b> צ'כיה רשמה תיקו (1-1 מול דרום אפריקה) והפסד (2-1 מול דרום קוריאה) בשני משחקיה הראשונים בטורניר. בחמשת המשחקים האחרונים בכל המסגרות, צ'כיה ניצחה 3 פעמים, סיימה בתיקו פעם אחת והפסידה פעם אחת.</p>
+        <p><b>מקסיקו:</b> מקסיקו נמצאת בכושר מצוין, עם שני ניצחונות משני משחקים בטורניר (2-0 מול דרום אפריקה, 1-0 מול דרום קוריאה) וללא ספיגת שער. בחמשת המשחקים האחרונים בכל המסגרות, מקסיקו ניצחה את כולם, כבשה 11 שערים וספגה שער אחד בלבד.</p></div>
+      <div class="sec"><h3>🤝 ראש בראש</h3><p>צ'כיה ומקסיקו נפגשו פעם אחת בלבד בעבר, במשחק ידידות בגביע השנה הירחית החדשה בשנת 2000. צ'כיה ניצחה 2-1 באותו משחק.</p></div>
+      <div class="sec"><h3>⚽ גולים צפויים — המאצ'אפ</h3><p>מקסיקו מגיעה למשחק עם מומנטום, יתרון ביתיות וגורם הגובה (המשחק באצטדיון אצטקה בגובה 2,250 מטר), וסגל נקי יותר מפציעות. צ'כיה חייבת לתקוף, מה שמתאים למקסיקו שנראתה במיטבה במעברים בשני משחקי הקבוצה. צ'כיה עדיין לא הבקיעה יותר משער אחד בטורניר. למרות שמקסיקו עשויה לבצע רוטציות, השחקנים שיעלו יהיו נחושים להוכיח את עצמם. המודל שלי חוזה 0.79 שערים לצ'כיה ו-2.37 למקסיקו.</p></div>
+      <div class="sec betting"><h3>💰 תחזיות והימורים — מהאתרים המובילים</h3><p><b>תחזית Opta:</b> ניצחון מקסיקו 72% · תיקו 19% · ניצחון צ'כיה 10% <span class="dim">(לא פורסמה תחזית ספציפית של Opta למשחק זה. הנתונים המוצגים מבוססים על תחזית המודל שלי.)</span></p><div class="odds">
+              <div class="oc"><span>ניצחון צ'כיה</span><b>4.75</b><span class="dim">23.00%</span></div>
+              <div class="oc"><span>תיקו</span><b>4.08</b><span class="dim">26.00%</span></div>
+              <div class="oc fav"><span>ניצחון מקסיקו</span><b>1.75</b><span class="dim">51.00%</span></div>
+            </div><p class="dim sm">יחס עשרוני · באחוזים = הסתברות משתמעת מהיחס</p><p><b>תחזיות תוצאה סופית:</b> Sports Illustrated: <b>1-1</b> · Sports Mole: <b>1-2</b> · Football Whispers: <b>0-1</b> · Squawka: <b>1-2</b> · TNT Sports: <b>1-3</b></p><p><b>הפרש שערים (הנדיקפ):</b> מקסיקו -1 (יחס 2.02)</p><p><b>סך שערים:</b> מעל/מתחת 2.5 שערים (קו 2.5 שערים, יחס 1.91 למתחת)</p><p><b>הימור ערך:</b> מקסיקו לניצחון (יחס 1.75) או מקסיקו לניצחון ושני הקבוצות יבקיעו (יחס 3.75)</p><p class="tip">💡 <b>המלצה:</b> מקסיקו צפויה לנצח, אך צ'כיה חייבת להבקיע כדי לשמור על סיכוי. לכן, הימור על 'שתי הקבוצות יבקיעו' הוא בעל ערך.</p><p class="rg">⚠️ מידע למטרות ניתוח בלבד, לא ייעוץ הימורים. הימור אחראי · גיל 18+.</p></div>
+      <div class="sec"><h3>⭐ שחקני מפתח</h3><div class="kps"><div class="kp"><span class="kpn">Patrik Schick</span> <span class="kpt">צ'כיה</span><p>חלוץ באייר לברקוזן הוא הכוח ההתקפי העיקרי של צ'כיה, ועל אף שטרם כבש בטורניר, הוא חייב לבוא לידי ביטוי כדי שלצ'כיה יהיה סיכוי.</p></div><div class="kp"><span class="kpn">Luis Romo</span> <span class="kpt">מקסיקו</span><p>הקשר המרכזי היה בולט בשני המשחקים הראשונים, כבש את שער הניצחון מול דרום קוריאה ומשמש כמנוע הקישור של מקסיקו.</p></div><div class="kp"><span class="kpn">Santiago Gimenez</span> <span class="kpt">מקסיקו</span><p>עם צפי לרוטציה בהרכב מקסיקו, חימנס צפוי לקבל הזדמנות בהרכב הפותח ולהוביל את ההתקפה.</p></div></div></div>
+      <div class="sec pred"><h3>🎯 שורה תחתונה</h3><p>מקסיקו, למרות שתבצע רוטציות, נהנית מיתרון ביתיות, מומנטום חיובי ואיכות סגל עדיפה. צ'כיה חייבת לנצח, אך תתקשה מול ההגנה המקסיקנית המאורגנת וגורם הגובה. אני צופה ניצחון למקסיקו, ככל הנראה בתוצאה נמוכה. תוצאה צפויה: 0-2 למקסיקו.</p></div>
+      <p class="note"><a href="https://www.sportsillustrated.com/soccer/world-cup/2026/czechia-vs-mexico-preview-predictions-and-lineups" target="_blank">מקור 1</a> · <a href="https://www.rotowire.com/soccer/match-previews.php?id=12361" target="_blank">מקור 2</a> · <a href="https://www.sportsmole.co.uk/football/world-cup/czech-republic/vs/mexico/preview" target="_blank">מקור 3</a> · <a href="https://footballwhispers.com/blog/czechia-vs-mexico-prediction/" target="_blank">מקור 4</a> · <a href="https://www.oddschecker.com/football/world-cup/czech-republic-v-mexico/betting-odds" target="_blank">מקור 5</a></p>
+</section>
+<footer>ניתוח טקסטואלי · נבנה ע"י Claude</footer>
+</div></body></html>

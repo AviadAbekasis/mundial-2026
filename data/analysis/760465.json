@@ -1,0 +1,63 @@
+{
+  "match_id": "760465",
+  "home": "SCO",
+  "away": "BRA",
+  "group": "C",
+  "generated_by": "sample (Claude) — to be produced by Gemini",
+  "headline": "סקוטלנד חייבת לנצח את ברזיל כדי להעפיל — משימה שמעולם לא צלחה",
+  "context": "המשחק המכריע בבית C באצטדיון Hard Rock במיאמי. המצב בבית: ברזיל ומרוקו עם 4 נקודות, סקוטלנד עם 3, האיטי 0. סקוטלנד חייבת תוצאה מול ברזיל כדי להבטיח העפלה (ניצחון מבטיח; תיקו משאיר אותה תלויה בתוצאת מרוקו–האיטי ובמרוץ המקומות השלישיים). לברזיל מספיק לרוב תיקו כדי לסיים בראש הבית.",
+  "lineups": {
+    "SCO": {
+      "formation": "3-5-2",
+      "xi": ["Gunn", "Patterson", "Hendry", "Hanley", "Robertson", "Tierney", "Christie", "Ferguson", "McTominay", "McGinn", "Adams"],
+      "news": "Kieran Tierney חזר לאימונים אחרי שיצא פצוע מול מרוקו וצפוי לשחק. סקוטלנד תיכנס בהגנת 5 וקו אמצע צפוף."
+    },
+    "BRA": {
+      "formation": "4-2-3-1",
+      "xi": ["Alisson", "Danilo", "Marquinhos", "Gabriel", "Douglas Santos", "Guimaraes", "Casemiro", "Rayan", "Paqueta", "Vinicius Jr", "Cunha"],
+      "news": "Raphinha בחוץ (פציעת שריר מול האיטי) — Rayan מחליף אותו. Neymar דוחף להופעה ראשונה בטורניר מהספסל."
+    }
+  },
+  "tactics": "ברזיל תשלוט בכדור ב-4-2-3-1, עם Casemiro ו-Bruno Guimaraes כבולם כפול ששובר את ההתפרצויות של McTominay. הנשק המסוכן ביותר: Vinicius Jr שינצל את המרחב מאחורי מגיני האגף הסקוטים העולים, בעיקר בצד ימין בהתפרצויות מהירות. סקוטלנד תשב בבלוק נמוך, תסמוך על משמעת הגנתית, על מסירות הרוחב של Robertson ו-Tierney, ובעיקר על כדורים נייחים — ועל ההגעה של McTominay לרחבה כאיום האמיתי שלה.",
+  "form": {
+    "SCO": "3 נקודות בשני משחקים, הגנה מאורגנת. צריכה לצאת מהקליפה ההגנתית ולתקוף — לא הסגנון הטבעי שלה מול נבחרת מסוג ברזיל.",
+    "BRA": "ניצחה 3-0 את האיטי, נראית בשליטה. עדיין לא בשיא — שתי תוצאות שהספיקו לפסגת הבית, וכעת רוטציה אפשרית עם עין לנוקאאוט."
+  },
+  "h2h": "סקוטלנד מעולם לא ניצחה את ברזיל — 2 תיקו ו-8 הפסדים בעימותים ההיסטוריים (D2 L8).",
+  "matchup": "פער הכוח גדול: ברזיל (Elo 1986) מול סקוטלנד (Elo 1768). המודל מצפה לכ-2.1 שערים לברזיל מול כ-0.9 לסקוטלנד — תואם כמעט במדויק את ה-supercomputer של Opta (68% ברזיל מול 13% סקוטלנד). היתרון הסקוטי היחיד הוא תרחיש 'משחק נמוך' — אם תצליח לשמור על 0-0 לזמן רב, לחץ הזמן יעבור לברזיל.",
+  "opta": {"home": "12.9%", "draw": "19%", "away": "68.1%", "sims": "25,000 סימולציות"},
+  "betting": {
+    "odds": {
+      "home": {"dec": "7.81", "imp": "13%"},
+      "draw": {"dec": "5.50", "imp": "18%"},
+      "away": {"dec": "1.38", "imp": "73%"}
+    },
+    "ou": "קו 2.5 שערים (Over -117 / Under -106) — נוטה מעט מעל",
+    "handicap": "השוק נוטה לברזיל בהפרש כ-1–2 שערים (ברזיל -1).",
+    "predicted_scores": [
+      {"src": "מומחים (SportsLine)", "score": "2-0 ברזיל"},
+      {"src": "Sports Mole", "score": "1-3 ברזיל"},
+      {"src": "Opta", "score": "ניצחון ברזיל מבוקר"}
+    ],
+    "value": "Matheus Cunha לכבוש בכל עת (+230).",
+    "tip": "ברזיל לנצח · תוצאה סבירה 2-0",
+    "sources": [
+      "https://www.sportsline.com/insiders/brazil-vs-scotland-odds-predictions-2026-world-cup-picks-from-proven-soccer-expert/",
+      "https://www.racingpost.com/sport/football-tips/world-cup-2026/",
+      "https://sports.yahoo.com/articles/brazil-vs-scotland-predictions-picks-140000910.html"
+    ]
+  },
+  "key_players": [
+    {"team": "BRA", "name": "Vinicius Jr", "why": "מהירות ודריבל בהתפרצות מול מגיני אגף עולים — האיום מספר 1."},
+    {"team": "BRA", "name": "Casemiro", "why": "בולם שמנטרל את ההגעות של McTominay לקו האחורי."},
+    {"team": "SCO", "name": "Scott McTominay", "why": "ההגעות שלו מהעומק לרחבה — הסיכוי הריאלי היחיד של סקוטלנד."},
+    {"team": "SCO", "name": "Andrew Robertson", "why": "מסירות רוחב וכדורים נייחים — מטבע הסיכויים של סקוטלנד."}
+  ],
+  "prediction": "ברזיל פייבוריטית ברורה. סקוטלנד תזדקק למשחק חייה ולמעט מזל בכדורים נייחים. תרחיש סביר: ניצחון ברזיל 0-2 / 1-2; הפתעה סקוטית תהיה אחת הגדולות בתולדות הנבחרת.",
+  "score_hint": "0-2",
+  "sources": [
+    "https://www.rotowire.com/soccer/article/scotland-vs-brazil-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-119341",
+    "https://theanalyst.com/articles/scotland-vs-brazil-prediction-world-cup-2026-match-preview",
+    "https://www.skysports.com/football/news/12098/13543087"
+  ]
+}

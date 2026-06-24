@@ -1,0 +1,10 @@
+# secrets — never commit the API key
+.gemini_key
+.env
+
+# python
+__pycache__/
+*.pyc
+
+# local raw dumps
+data/_raw_*

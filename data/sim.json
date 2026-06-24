@@ -1,0 +1,993 @@
+{
+ "n": 50000,
+ "seed": 42,
+ "teams": {
+  "MEX": {
+   "elo": 1896,
+   "group": "A",
+   "p_adv": 1.0,
+   "p_win_group": 1.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.6421,
+   "p_qf": 0.25442,
+   "p_sf": 0.10348,
+   "p_final": 0.02644,
+   "p_champion": 0.00728
+  },
+  "CZE": {
+   "elo": 1696,
+   "group": "A",
+   "p_adv": 0.12042,
+   "p_win_group": 0.0,
+   "p_runner": 0.01194,
+   "p_third_q": 0.10848,
+   "p_r16": 0.04508,
+   "p_qf": 0.01566,
+   "p_sf": 0.00148,
+   "p_final": 0.00018,
+   "p_champion": 2e-05
+  },
+  "KOR": {
+   "elo": 1771,
+   "group": "A",
+   "p_adv": 0.96928,
+   "p_win_group": 0.0,
+   "p_runner": 0.87276,
+   "p_third_q": 0.09652,
+   "p_r16": 0.39684,
+   "p_qf": 0.11792,
+   "p_sf": 0.02192,
+   "p_final": 0.0042,
+   "p_champion": 0.00062
+  },
+  "RSA": {
+   "elo": 1527,
+   "group": "A",
+   "p_adv": 0.12822,
+   "p_win_group": 0.0,
+   "p_runner": 0.1153,
+   "p_third_q": 0.01292,
+   "p_r16": 0.01734,
+   "p_qf": 0.00134,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "CAN": {
+   "elo": 1777,
+   "group": "B",
+   "p_adv": 1.0,
+   "p_win_group": 0.5871,
+   "p_runner": 0.41182,
+   "p_third_q": 0.00108,
+   "p_r16": 0.53238,
+   "p_qf": 0.13852,
+   "p_sf": 0.02352,
+   "p_final": 0.0052,
+   "p_champion": 0.00102
+  },
+  "BIH": {
+   "elo": 1596,
+   "group": "B",
+   "p_adv": 0.57528,
+   "p_win_group": 0.0,
+   "p_runner": 0.00108,
+   "p_third_q": 0.5742,
+   "p_r16": 0.1027,
+   "p_qf": 0.0224,
+   "p_sf": 0.00116,
+   "p_final": 2e-05,
+   "p_champion": 0.0
+  },
+  "SUI": {
+   "elo": 1885,
+   "group": "B",
+   "p_adv": 1.0,
+   "p_win_group": 0.4129,
+   "p_runner": 0.5871,
+   "p_third_q": 0.0,
+   "p_r16": 0.68054,
+   "p_qf": 0.2797,
+   "p_sf": 0.08148,
+   "p_final": 0.02594,
+   "p_champion": 0.00688
+  },
+  "QAT": {
+   "elo": 1437,
+   "group": "B",
+   "p_adv": 0.20028,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.20028,
+   "p_r16": 0.01222,
+   "p_qf": 0.0013,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "BRA": {
+   "elo": 1986,
+   "group": "C",
+   "p_adv": 1.0,
+   "p_win_group": 0.5996,
+   "p_runner": 0.2644,
+   "p_third_q": 0.136,
+   "p_r16": 0.57032,
+   "p_qf": 0.34454,
+   "p_sf": 0.18232,
+   "p_final": 0.07214,
+   "p_champion": 0.02952
+  },
+  "SCO": {
+   "elo": 1768,
+   "group": "C",
+   "p_adv": 0.86756,
+   "p_win_group": 0.02994,
+   "p_runner": 0.1159,
+   "p_third_q": 0.72172,
+   "p_r16": 0.19286,
+   "p_qf": 0.05478,
+   "p_sf": 0.01282,
+   "p_final": 0.00212,
+   "p_champion": 0.00026
+  },
+  "HAI": {
+   "elo": 1528,
+   "group": "C",
+   "p_adv": 0.0,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.0,
+   "p_qf": 0.0,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "MAR": {
+   "elo": 1866,
+   "group": "C",
+   "p_adv": 1.0,
+   "p_win_group": 0.37046,
+   "p_runner": 0.6197,
+   "p_third_q": 0.00984,
+   "p_r16": 0.40328,
+   "p_qf": 0.19946,
+   "p_sf": 0.06556,
+   "p_final": 0.01736,
+   "p_champion": 0.0045
+  },
+  "PAR": {
+   "elo": 1816,
+   "group": "D",
+   "p_adv": 0.87918,
+   "p_win_group": 0.0,
+   "p_runner": 0.39168,
+   "p_third_q": 0.4875,
+   "p_r16": 0.34236,
+   "p_qf": 0.0573,
+   "p_sf": 0.0208,
+   "p_final": 0.00578,
+   "p_champion": 0.00108
+  },
+  "TUR": {
+   "elo": 1813,
+   "group": "D",
+   "p_adv": 0.0,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.0,
+   "p_qf": 0.0,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "AUS": {
+   "elo": 1799,
+   "group": "D",
+   "p_adv": 0.94592,
+   "p_win_group": 0.0,
+   "p_runner": 0.60832,
+   "p_third_q": 0.3376,
+   "p_r16": 0.38776,
+   "p_qf": 0.05246,
+   "p_sf": 0.0168,
+   "p_final": 0.00394,
+   "p_champion": 0.0006
+  },
+  "USA": {
+   "elo": 1820,
+   "group": "D",
+   "p_adv": 1.0,
+   "p_win_group": 1.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.73386,
+   "p_qf": 0.39212,
+   "p_sf": 0.07694,
+   "p_final": 0.02136,
+   "p_champion": 0.00458
+  },
+  "ECU": {
+   "elo": 1864,
+   "group": "E",
+   "p_adv": 0.28008,
+   "p_win_group": 0.0,
+   "p_runner": 0.0277,
+   "p_third_q": 0.25238,
+   "p_r16": 0.1265,
+   "p_qf": 0.06054,
+   "p_sf": 0.01822,
+   "p_final": 0.00524,
+   "p_champion": 0.0011
+  },
+  "GER": {
+   "elo": 1954,
+   "group": "E",
+   "p_adv": 1.0,
+   "p_win_group": 1.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.73336,
+   "p_qf": 0.29514,
+   "p_sf": 0.16612,
+   "p_final": 0.06518,
+   "p_champion": 0.02312
+  },
+  "CIV": {
+   "elo": 1728,
+   "group": "E",
+   "p_adv": 0.96266,
+   "p_win_group": 0.0,
+   "p_runner": 0.89784,
+   "p_third_q": 0.06482,
+   "p_r16": 0.17726,
+   "p_qf": 0.04028,
+   "p_sf": 0.00774,
+   "p_final": 0.00082,
+   "p_champion": 8e-05
+  },
+  "CUW": {
+   "elo": 1453,
+   "group": "E",
+   "p_adv": 0.10214,
+   "p_win_group": 0.0,
+   "p_runner": 0.07446,
+   "p_third_q": 0.02768,
+   "p_r16": 0.00292,
+   "p_qf": 0.00014,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "NED": {
+   "elo": 1972,
+   "group": "F",
+   "p_adv": 1.0,
+   "p_win_group": 0.71134,
+   "p_runner": 0.28666,
+   "p_third_q": 0.002,
+   "p_r16": 0.59956,
+   "p_qf": 0.40104,
+   "p_sf": 0.1877,
+   "p_final": 0.07804,
+   "p_champion": 0.02988
+  },
+  "SWE": {
+   "elo": 1727,
+   "group": "F",
+   "p_adv": 0.93024,
+   "p_win_group": 0.02448,
+   "p_runner": 0.13988,
+   "p_third_q": 0.76588,
+   "p_r16": 0.23482,
+   "p_qf": 0.05186,
+   "p_sf": 0.00902,
+   "p_final": 0.00116,
+   "p_champion": 0.00014
+  },
+  "JPN": {
+   "elo": 1925,
+   "group": "F",
+   "p_adv": 1.0,
+   "p_win_group": 0.26418,
+   "p_runner": 0.57346,
+   "p_third_q": 0.16236,
+   "p_r16": 0.50736,
+   "p_qf": 0.26496,
+   "p_sf": 0.11314,
+   "p_final": 0.03632,
+   "p_champion": 0.01222
+  },
+  "TUN": {
+   "elo": 1570,
+   "group": "F",
+   "p_adv": 0.0,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.0,
+   "p_qf": 0.0,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "BEL": {
+   "elo": 1869,
+   "group": "G",
+   "p_adv": 0.92194,
+   "p_win_group": 0.28092,
+   "p_runner": 0.55724,
+   "p_third_q": 0.08378,
+   "p_r16": 0.5446,
+   "p_qf": 0.17274,
+   "p_sf": 0.05126,
+   "p_final": 0.01774,
+   "p_champion": 0.0044
+  },
+  "IRN": {
+   "elo": 1766,
+   "group": "G",
+   "p_adv": 0.69006,
+   "p_win_group": 0.21288,
+   "p_runner": 0.21314,
+   "p_third_q": 0.26404,
+   "p_r16": 0.29848,
+   "p_qf": 0.07904,
+   "p_sf": 0.0122,
+   "p_final": 0.00266,
+   "p_champion": 0.00058
+  },
+  "EGY": {
+   "elo": 1740,
+   "group": "G",
+   "p_adv": 1.0,
+   "p_win_group": 0.5062,
+   "p_runner": 0.1821,
+   "p_third_q": 0.3117,
+   "p_r16": 0.41068,
+   "p_qf": 0.12282,
+   "p_sf": 0.01626,
+   "p_final": 0.00362,
+   "p_champion": 0.00052
+  },
+  "NZL": {
+   "elo": 1549,
+   "group": "G",
+   "p_adv": 0.07972,
+   "p_win_group": 0.0,
+   "p_runner": 0.04752,
+   "p_third_q": 0.0322,
+   "p_r16": 0.01202,
+   "p_qf": 0.0004,
+   "p_sf": 4e-05,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "ESP": {
+   "elo": 2134,
+   "group": "H",
+   "p_adv": 1.0,
+   "p_win_group": 0.89868,
+   "p_runner": 0.06258,
+   "p_third_q": 0.03874,
+   "p_r16": 0.85566,
+   "p_qf": 0.6245,
+   "p_sf": 0.55072,
+   "p_final": 0.38282,
+   "p_champion": 0.23118
+  },
+  "URU": {
+   "elo": 1851,
+   "group": "H",
+   "p_adv": 0.29416,
+   "p_win_group": 0.08044,
+   "p_runner": 0.05088,
+   "p_third_q": 0.16284,
+   "p_r16": 0.11556,
+   "p_qf": 0.05202,
+   "p_sf": 0.01892,
+   "p_final": 0.00582,
+   "p_champion": 0.00148
+  },
+  "KSA": {
+   "elo": 1593,
+   "group": "H",
+   "p_adv": 0.33644,
+   "p_win_group": 0.0,
+   "p_runner": 0.30344,
+   "p_third_q": 0.033,
+   "p_r16": 0.00692,
+   "p_qf": 0.00132,
+   "p_sf": 0.00014,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "CPV": {
+   "elo": 1625,
+   "group": "H",
+   "p_adv": 0.67492,
+   "p_win_group": 0.02088,
+   "p_runner": 0.5831,
+   "p_third_q": 0.07094,
+   "p_r16": 0.02474,
+   "p_qf": 0.00556,
+   "p_sf": 0.00074,
+   "p_final": 0.0001,
+   "p_champion": 4e-05
+  },
+  "NOR": {
+   "elo": 1951,
+   "group": "I",
+   "p_adv": 1.0,
+   "p_win_group": 0.2203,
+   "p_runner": 0.7797,
+   "p_third_q": 0.0,
+   "p_r16": 0.7853,
+   "p_qf": 0.41392,
+   "p_sf": 0.21182,
+   "p_final": 0.0742,
+   "p_champion": 0.0263
+  },
+  "FRA": {
+   "elo": 2090,
+   "group": "I",
+   "p_adv": 1.0,
+   "p_win_group": 0.7797,
+   "p_runner": 0.2203,
+   "p_third_q": 0.0,
+   "p_r16": 0.87056,
+   "p_qf": 0.63034,
+   "p_sf": 0.46314,
+   "p_final": 0.26422,
+   "p_champion": 0.14884
+  },
+  "SEN": {
+   "elo": 1817,
+   "group": "I",
+   "p_adv": 0.64038,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.64038,
+   "p_r16": 0.2671,
+   "p_qf": 0.11668,
+   "p_sf": 0.029,
+   "p_final": 0.0065,
+   "p_champion": 0.0013
+  },
+  "IRQ": {
+   "elo": 1586,
+   "group": "I",
+   "p_adv": 0.06668,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.06668,
+   "p_r16": 0.00948,
+   "p_qf": 0.00168,
+   "p_sf": 0.00012,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "ARG": {
+   "elo": 2144,
+   "group": "J",
+   "p_adv": 1.0,
+   "p_win_group": 1.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.94966,
+   "p_qf": 0.8461,
+   "p_sf": 0.64816,
+   "p_final": 0.46868,
+   "p_champion": 0.29242
+  },
+  "AUT": {
+   "elo": 1841,
+   "group": "J",
+   "p_adv": 0.96668,
+   "p_win_group": 0.0,
+   "p_runner": 0.69704,
+   "p_third_q": 0.26964,
+   "p_r16": 0.25384,
+   "p_qf": 0.11092,
+   "p_sf": 0.03556,
+   "p_final": 0.0098,
+   "p_champion": 0.00184
+  },
+  "ALG": {
+   "elo": 1780,
+   "group": "J",
+   "p_adv": 0.8389,
+   "p_win_group": 0.0,
+   "p_runner": 0.30296,
+   "p_third_q": 0.53594,
+   "p_r16": 0.2685,
+   "p_qf": 0.11642,
+   "p_sf": 0.02068,
+   "p_final": 0.00448,
+   "p_champion": 0.00062
+  },
+  "JOR": {
+   "elo": 1632,
+   "group": "J",
+   "p_adv": 0.0,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.0,
+   "p_qf": 0.0,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "COL": {
+   "elo": 1998,
+   "group": "K",
+   "p_adv": 1.0,
+   "p_win_group": 0.64362,
+   "p_runner": 0.35638,
+   "p_third_q": 0.0,
+   "p_r16": 0.80374,
+   "p_qf": 0.5206,
+   "p_sf": 0.22296,
+   "p_final": 0.11516,
+   "p_champion": 0.04962
+  },
+  "POR": {
+   "elo": 1988,
+   "group": "K",
+   "p_adv": 1.0,
+   "p_win_group": 0.35638,
+   "p_runner": 0.64014,
+   "p_third_q": 0.00348,
+   "p_r16": 0.72998,
+   "p_qf": 0.39076,
+   "p_sf": 0.19672,
+   "p_final": 0.09864,
+   "p_champion": 0.03938
+  },
+  "UZB": {
+   "elo": 1677,
+   "group": "K",
+   "p_adv": 0.13584,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.13584,
+   "p_r16": 0.01542,
+   "p_qf": 0.00366,
+   "p_sf": 0.00054,
+   "p_final": 4e-05,
+   "p_champion": 0.0
+  },
+  "COD": {
+   "elo": 1674,
+   "group": "K",
+   "p_adv": 0.404,
+   "p_win_group": 0.0,
+   "p_runner": 0.00348,
+   "p_third_q": 0.40052,
+   "p_r16": 0.0485,
+   "p_qf": 0.01108,
+   "p_sf": 0.00158,
+   "p_final": 0.0001,
+   "p_champion": 0.0
+  },
+  "ENG": {
+   "elo": 2028,
+   "group": "L",
+   "p_adv": 1.0,
+   "p_win_group": 0.8298,
+   "p_runner": 0.16936,
+   "p_third_q": 0.00084,
+   "p_r16": 0.8047,
+   "p_qf": 0.55468,
+   "p_sf": 0.3367,
+   "p_final": 0.15096,
+   "p_champion": 0.0722
+  },
+  "CRO": {
+   "elo": 1896,
+   "group": "L",
+   "p_adv": 0.98926,
+   "p_win_group": 0.14464,
+   "p_runner": 0.62844,
+   "p_third_q": 0.21618,
+   "p_r16": 0.41574,
+   "p_qf": 0.16766,
+   "p_sf": 0.07196,
+   "p_final": 0.023,
+   "p_champion": 0.00638
+  },
+  "PAN": {
+   "elo": 1668,
+   "group": "L",
+   "p_adv": 0.0,
+   "p_win_group": 0.0,
+   "p_runner": 0.0,
+   "p_third_q": 0.0,
+   "p_r16": 0.0,
+   "p_qf": 0.0,
+   "p_sf": 0.0,
+   "p_final": 0.0,
+   "p_champion": 0.0
+  },
+  "GHA": {
+   "elo": 1584,
+   "group": "L",
+   "p_adv": 0.99976,
+   "p_win_group": 0.02556,
+   "p_runner": 0.2022,
+   "p_third_q": 0.772,
+   "p_r16": 0.0674,
+   "p_qf": 0.01122,
+   "p_sf": 0.00056,
+   "p_final": 2e-05,
+   "p_champion": 0.0
+  }
+ },
+ "groups": {
+  "A": [
+   {
+    "abbr": "MEX",
+    "p_win_group": 1.0,
+    "p_runner": 0.0,
+    "p_adv": 1.0,
+    "p_champion": 0.00728
+   },
+   {
+    "abbr": "KOR",
+    "p_win_group": 0.0,
+    "p_runner": 0.87276,
+    "p_adv": 0.96928,
+    "p_champion": 0.00062
+   },
+   {
+    "abbr": "RSA",
+    "p_win_group": 0.0,
+    "p_runner": 0.1153,
+    "p_adv": 0.12822,
+    "p_champion": 0.0
+   },
+   {
+    "abbr": "CZE",
+    "p_win_group": 0.0,
+    "p_runner": 0.01194,
+    "p_adv": 0.12042,
+    "p_champion": 2e-05
+   }
+  ],
+  "B": [
+   {
+    "abbr": "CAN",
+    "p_win_group": 0.5871,
+    "p_runner": 0.41182,
+    "p_adv": 1.0,
+    "p_champion": 0.00102
+   },
+   {
+    "abbr": "SUI",
+    "p_win_group": 0.4129,
+    "p_runner": 0.5871,
+    "p_adv": 1.0,
+    "p_champion": 0.00688
+   },
+   {
+    "abbr": "BIH",
+    "p_win_group": 0.0,
+    "p_runner": 0.00108,
+    "p_adv": 0.57528,
+    "p_champion": 0.0
+   },
+   {
+    "abbr": "QAT",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.20028,
+    "p_champion": 0.0
+   }
+  ],
+  "C": [
+   {
+    "abbr": "BRA",
+    "p_win_group": 0.5996,
+    "p_runner": 0.2644,
+    "p_adv": 1.0,
+    "p_champion": 0.02952
+   },
+   {
+    "abbr": "MAR",
+    "p_win_group": 0.37046,
+    "p_runner": 0.6197,
+    "p_adv": 1.0,
+    "p_champion": 0.0045
+   },
+   {
+    "abbr": "SCO",
+    "p_win_group": 0.02994,
+    "p_runner": 0.1159,
+    "p_adv": 0.86756,
+    "p_champion": 0.00026
+   },
+   {
+    "abbr": "HAI",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.0,
+    "p_champion": 0.0
+   }
+  ],
+  "D": [
+   {
+    "abbr": "USA",
+    "p_win_group": 1.0,
+    "p_runner": 0.0,
+    "p_adv": 1.0,
+    "p_champion": 0.00458
+   },
+   {
+    "abbr": "AUS",
+    "p_win_group": 0.0,
+    "p_runner": 0.60832,
+    "p_adv": 0.94592,
+    "p_champion": 0.0006
+   },
+   {
+    "abbr": "PAR",
+    "p_win_group": 0.0,
+    "p_runner": 0.39168,
+    "p_adv": 0.87918,
+    "p_champion": 0.00108
+   },
+   {
+    "abbr": "TUR",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.0,
+    "p_champion": 0.0
+   }
+  ],
+  "E": [
+   {
+    "abbr": "GER",
+    "p_win_group": 1.0,
+    "p_runner": 0.0,
+    "p_adv": 1.0,
+    "p_champion": 0.02312
+   },
+   {
+    "abbr": "CIV",
+    "p_win_group": 0.0,
+    "p_runner": 0.89784,
+    "p_adv": 0.96266,
+    "p_champion": 8e-05
+   },
+   {
+    "abbr": "ECU",
+    "p_win_group": 0.0,
+    "p_runner": 0.0277,
+    "p_adv": 0.28008,
+    "p_champion": 0.0011
+   },
+   {
+    "abbr": "CUW",
+    "p_win_group": 0.0,
+    "p_runner": 0.07446,
+    "p_adv": 0.10214,
+    "p_champion": 0.0
+   }
+  ],
+  "F": [
+   {
+    "abbr": "NED",
+    "p_win_group": 0.71134,
+    "p_runner": 0.28666,
+    "p_adv": 1.0,
+    "p_champion": 0.02988
+   },
+   {
+    "abbr": "JPN",
+    "p_win_group": 0.26418,
+    "p_runner": 0.57346,
+    "p_adv": 1.0,
+    "p_champion": 0.01222
+   },
+   {
+    "abbr": "SWE",
+    "p_win_group": 0.02448,
+    "p_runner": 0.13988,
+    "p_adv": 0.93024,
+    "p_champion": 0.00014
+   },
+   {
+    "abbr": "TUN",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.0,
+    "p_champion": 0.0
+   }
+  ],
+  "G": [
+   {
+    "abbr": "EGY",
+    "p_win_group": 0.5062,
+    "p_runner": 0.1821,
+    "p_adv": 1.0,
+    "p_champion": 0.00052
+   },
+   {
+    "abbr": "BEL",
+    "p_win_group": 0.28092,
+    "p_runner": 0.55724,
+    "p_adv": 0.92194,
+    "p_champion": 0.0044
+   },
+   {
+    "abbr": "IRN",
+    "p_win_group": 0.21288,
+    "p_runner": 0.21314,
+    "p_adv": 0.69006,
+    "p_champion": 0.00058
+   },
+   {
+    "abbr": "NZL",
+    "p_win_group": 0.0,
+    "p_runner": 0.04752,
+    "p_adv": 0.07972,
+    "p_champion": 0.0
+   }
+  ],
+  "H": [
+   {
+    "abbr": "ESP",
+    "p_win_group": 0.89868,
+    "p_runner": 0.06258,
+    "p_adv": 1.0,
+    "p_champion": 0.23118
+   },
+   {
+    "abbr": "CPV",
+    "p_win_group": 0.02088,
+    "p_runner": 0.5831,
+    "p_adv": 0.67492,
+    "p_champion": 4e-05
+   },
+   {
+    "abbr": "KSA",
+    "p_win_group": 0.0,
+    "p_runner": 0.30344,
+    "p_adv": 0.33644,
+    "p_champion": 0.0
+   },
+   {
+    "abbr": "URU",
+    "p_win_group": 0.08044,
+    "p_runner": 0.05088,
+    "p_adv": 0.29416,
+    "p_champion": 0.00148
+   }
+  ],
+  "I": [
+   {
+    "abbr": "NOR",
+    "p_win_group": 0.2203,
+    "p_runner": 0.7797,
+    "p_adv": 1.0,
+    "p_champion": 0.0263
+   },
+   {
+    "abbr": "FRA",
+    "p_win_group": 0.7797,
+    "p_runner": 0.2203,
+    "p_adv": 1.0,
+    "p_champion": 0.14884
+   },
+   {
+    "abbr": "SEN",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.64038,
+    "p_champion": 0.0013
+   },
+   {
+    "abbr": "IRQ",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.06668,
+    "p_champion": 0.0
+   }
+  ],
+  "J": [
+   {
+    "abbr": "ARG",
+    "p_win_group": 1.0,
+    "p_runner": 0.0,
+    "p_adv": 1.0,
+    "p_champion": 0.29242
+   },
+   {
+    "abbr": "AUT",
+    "p_win_group": 0.0,
+    "p_runner": 0.69704,
+    "p_adv": 0.96668,
+    "p_champion": 0.00184
+   },
+   {
+    "abbr": "ALG",
+    "p_win_group": 0.0,
+    "p_runner": 0.30296,
+    "p_adv": 0.8389,
+    "p_champion": 0.00062
+   },
+   {
+    "abbr": "JOR",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.0,
+    "p_champion": 0.0
+   }
+  ],
+  "K": [
+   {
+    "abbr": "COL",
+    "p_win_group": 0.64362,
+    "p_runner": 0.35638,
+    "p_adv": 1.0,
+    "p_champion": 0.04962
+   },
+   {
+    "abbr": "POR",
+    "p_win_group": 0.35638,
+    "p_runner": 0.64014,
+    "p_adv": 1.0,
+    "p_champion": 0.03938
+   },
+   {
+    "abbr": "COD",
+    "p_win_group": 0.0,
+    "p_runner": 0.00348,
+    "p_adv": 0.404,
+    "p_champion": 0.0
+   },
+   {
+    "abbr": "UZB",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.13584,
+    "p_champion": 0.0
+   }
+  ],
+  "L": [
+   {
+    "abbr": "ENG",
+    "p_win_group": 0.8298,
+    "p_runner": 0.16936,
+    "p_adv": 1.0,
+    "p_champion": 0.0722
+   },
+   {
+    "abbr": "GHA",
+    "p_win_group": 0.02556,
+    "p_runner": 0.2022,
+    "p_adv": 0.99976,
+    "p_champion": 0.0
+   },
+   {
+    "abbr": "CRO",
+    "p_win_group": 0.14464,
+    "p_runner": 0.62844,
+    "p_adv": 0.98926,
+    "p_champion": 0.00638
+   },
+   {
+    "abbr": "PAN",
+    "p_win_group": 0.0,
+    "p_runner": 0.0,
+    "p_adv": 0.0,
+    "p_champion": 0.0
+   }
+  ]
+ },
+ "elapsed_s": 11.8
+}
