@@ -86,6 +86,22 @@ def match_probs(lh, la, rho=RHO):
 
 
 # --- Monte-Carlo sampling (independent Poisson, Knuth) ---
+def surprise_index(pH, pD, pA, chaos=0.0):
+    """0-100 'upset-prone' index: blends the match's unpredictability (chance the
+    model favourite fails to win) with how upset-heavy the tournament has been."""
+    p_fav = max(pH, pA)
+    raw = 0.75 * (1.0 - p_fav) + 0.25 * chaos
+    return int(round(max(1.0, min(99.0, raw * 100))))
+
+
+def surprise_level(si):
+    if si >= 55:
+        return "גבוה", "hi"
+    if si >= 35:
+        return "בינוני", "mid"
+    return "נמוך", "lo"
+
+
 def sample_goals(lam, rnd):
     L = math.exp(-lam)
     k, p = 0, 1.0

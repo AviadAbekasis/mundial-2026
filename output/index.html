@@ -40,6 +40,15 @@ img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto
 .probbar div{display:flex;align-items:center;justify-content:center;min-width:20px}
 .ph{background:#11a36b}.pd{background:#9aa7b0}.pa{background:#e0654b}
 .problbl{display:flex;justify-content:space-between;font-size:.66rem;color:#8694a0;margin-top:4px}
+.sirow{margin-top:9px;text-align:center}
+.ms-si{margin-top:9px;text-align:center}
+.si{display:inline-block;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:20px}
+.si.hi{background:#fdeaea;color:#c0392b;border:1px solid #f1b8b0}
+.si.mid{background:#fff4e0;color:#b9770e;border:1px solid #f0d9a8}
+.si.lo{background:#e9f5ee;color:#1f7a4d;border:1px solid #c2e4ce}
+.chaos{background:#241b33;color:#e9defb;border-radius:12px;padding:11px 14px;
+ font-size:.85rem;text-align:center;border:1px solid #4b2e83;line-height:1.5}
+.chaos b{color:#fff}
 .abtn{margin-top:11px;text-align:center;background:#0f3d2e;color:#fff;border-radius:9px;
  padding:9px;font-weight:700;text-decoration:none;font-size:.9rem}
 .abtn:hover{background:#16513c}
@@ -107,6 +116,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
   <button class="nav" onclick="refresh()">🔄 רענן</button>
   <a class="nav" href="odds.html">📊 סיכויי הטורניר</a></div>
 <div class="upd" id="updated">עודכן: 26/06 09:54</div></header>
+<div class="chaos">🎲 <b>מדד ההפתעות של הטורניר:</b> 6 ניצחונות מוחלשת · המוחלשת לא הפסידה ב-37% מ-60 המשחקים שנשחקו</div>
 <section class="card"><div class="matches"><div class="match" data-mid="760475" data-fday="2026-06-26">
       <div class="mtop"><span class="mgrp">בית I</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">26/06 22:00</span></span></div>
       <div class="mteams">
@@ -118,6 +128,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:26%">26%</div>
         <div class="pa" style="width:53%">53%</div></div>
       <div class="problbl"><span>נורבגיה</span><span>תיקו</span><span>צרפת</span></div>
+      <div class="sirow"><span class="si mid" title="מדד הפתעה">🎲 הפתעה 44 · בינוני</span></div>
       <a class="abtn" href="match-760475.html">ניתוח מלא ←</a></div><div class="match" data-mid="760474" data-fday="2026-06-26">
       <div class="mtop"><span class="mgrp">בית I</span><span class="mstat"><span class="mscore pred">2–0</span><span class="badge soon">26/06 22:00</span></span></div>
       <div class="mteams">
@@ -129,6 +140,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:21%">21%</div>
         <div class="pa" style="width:12%">12%</div></div>
       <div class="problbl"><span>סנגל</span><span>תיקו</span><span>עיראק</span></div>
+      <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 34 · נמוך</span></div>
       <a class="abtn" href="match-760474.html">ניתוח מלא ←</a></div><div class="match" data-mid="760478" data-fday="2026-06-26">
       <div class="mtop"><span class="mgrp">בית H</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">27/06 03:00</span></span></div>
       <div class="mteams">
@@ -140,6 +152,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:29%">29%</div>
         <div class="pa" style="width:32%">32%</div></div>
       <div class="problbl"><span>כף ורדה</span><span>תיקו</span><span>ערב הסעודית</span></div>
+      <div class="sirow"><span class="si hi" title="מדד הפתעה">🎲 הפתעה 55 · גבוה</span></div>
       <a class="abtn" href="match-760478.html">ניתוח מלא ←</a></div><div class="match" data-mid="760479" data-fday="2026-06-26">
       <div class="mtop"><span class="mgrp">בית H</span><span class="mstat"><span class="mscore pred">0–2</span><span class="badge soon">27/06 03:00</span></span></div>
       <div class="mteams">
@@ -151,6 +164,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:18%">18%</div>
         <div class="pa" style="width:73%">73%</div></div>
       <div class="problbl"><span>אורוגוואי</span><span>תיקו</span><span>ספרד</span></div>
+      <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 29 · נמוך</span></div>
       <a class="abtn" href="match-760479.html">ניתוח מלא ←</a></div><div class="match" data-mid="760476" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית G</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">27/06 06:00</span></span></div>
       <div class="mteams">
@@ -162,6 +176,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:29%">29%</div>
         <div class="pa" style="width:38%">38%</div></div>
       <div class="problbl"><span>מצרים</span><span>תיקו</span><span>איראן</span></div>
+      <div class="sirow"><span class="si hi" title="מדד הפתעה">🎲 הפתעה 55 · גבוה</span></div>
       <a class="abtn" href="match-760476.html">ניתוח מלא ←</a></div><div class="match" data-mid="760477" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית G</span><span class="mstat"><span class="mscore pred">0–2</span><span class="badge soon">27/06 06:00</span></span></div>
       <div class="mteams">
@@ -173,6 +188,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:16%">16%</div>
         <div class="pa" style="width:77%">77%</div></div>
       <div class="problbl"><span>ניו זילנד</span><span>תיקו</span><span>בלגיה</span></div>
+      <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 26 · נמוך</span></div>
       <a class="abtn" href="match-760477.html">ניתוח מלא ←</a></div><div class="match" data-mid="760480" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית L</span><span class="mstat"><span class="mscore pred">2–0</span><span class="badge soon">28/06 00:00</span></span></div>
       <div class="mteams">
@@ -184,6 +200,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:16%">16%</div>
         <div class="pa" style="width:7%">7%</div></div>
       <div class="problbl"><span>קרואטיה</span><span>תיקו</span><span>גאנה</span></div>
+      <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 27 · נמוך</span></div>
       <a class="abtn" href="match-760480.html">ניתוח מלא ←</a></div><div class="match" data-mid="760485" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית L</span><span class="mstat"><span class="mscore pred">0–2</span><span class="badge soon">28/06 00:00</span></span></div>
       <div class="mteams">
@@ -195,6 +212,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:14%">14%</div>
         <div class="pa" style="width:81%">81%</div></div>
       <div class="problbl"><span>פנמה</span><span>תיקו</span><span>אנגליה</span></div>
+      <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 24 · נמוך</span></div>
       <a class="abtn" href="match-760485.html">ניתוח מלא ←</a></div><div class="match" data-mid="760481" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית K</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">28/06 02:30</span></span></div>
       <div class="mteams">
@@ -206,6 +224,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:29%">29%</div>
         <div class="pa" style="width:33%">33%</div></div>
       <div class="problbl"><span>קולומביה</span><span>תיקו</span><span>פורטוגל</span></div>
+      <div class="sirow"><span class="si hi" title="מדד הפתעה">🎲 הפתעה 56 · גבוה</span></div>
       <a class="abtn" href="match-760481.html">ניתוח מלא ←</a></div><div class="match" data-mid="760482" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית K</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">28/06 02:30</span></span></div>
       <div class="mteams">
@@ -217,6 +236,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:29%">29%</div>
         <div class="pa" style="width:37%">37%</div></div>
       <div class="problbl"><span>קונגו</span><span>תיקו</span><span>אוזבקיסטן</span></div>
+      <div class="sirow"><span class="si hi" title="מדד הפתעה">🎲 הפתעה 57 · גבוה</span></div>
       <a class="abtn" href="match-760482.html">ניתוח מלא ←</a></div><div class="match" data-mid="760484" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית J</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">28/06 05:00</span></span></div>
       <div class="mteams">
@@ -228,6 +248,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:29%">29%</div>
         <div class="pa" style="width:42%">42%</div></div>
       <div class="problbl"><span>אלג'יריה</span><span>תיקו</span><span>אוסטריה</span></div>
+      <div class="sirow"><span class="si mid" title="מדד הפתעה">🎲 הפתעה 52 · בינוני</span></div>
       <a class="abtn" href="match-760484.html">ניתוח מלא ←</a></div><div class="match" data-mid="760483" data-fday="2026-06-27">
       <div class="mtop"><span class="mgrp">בית J</span><span class="mstat"><span class="mscore pred">0–4</span><span class="badge soon">28/06 05:00</span></span></div>
       <div class="mteams">
@@ -239,6 +260,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pd" style="width:4%">4%</div>
         <div class="pa" style="width:95%">95%</div></div>
       <div class="problbl"><span>ירדן</span><span>תיקו</span><span>ארגנטינה</span></div>
+      <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 13 · נמוך</span></div>
       <a class="abtn" href="match-760483.html">ניתוח מלא ←</a></div></div>
 <p class="note" id="noday" style="display:none;text-align:center">אין משחקים היום — מוצגים המשחקים הקרובים.</p>
 <p class="note">לחיצה על "ניתוח מלא" פותחת ניתוח טקסטואלי של המשחק (הרכבים, טקטיקה, קריאת משחק). xG = גולים צפויים לפי המודל.</p>

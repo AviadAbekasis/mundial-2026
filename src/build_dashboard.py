@@ -21,6 +21,7 @@ DATA_DIR = os.path.join(ROOT, "data")
 OUT_DIR = os.path.join(ROOT, "output")
 IL = dt.timezone(dt.timedelta(hours=3))
 _LOGOS = {}
+_CHAOS = {"rate": 0.0, "big": 0, "n": 0}
 
 
 # ---------- helpers ----------
@@ -65,6 +66,37 @@ def predict(state, fx):
     pH, pD, pA, score = M.match_probs(lh, la)
     t = pH + pD + pA
     return {"lh": lh, "la": la, "pH": pH/t, "pD": pD/t, "pA": pA/t, "score": score}
+
+
+def tournament_chaos(state):
+    """How upset-heavy the tournament has been: among completed group matches, how
+    often the lower-Elo team avoided defeat, plus the count of outright underdog wins."""
+    elo = state["teams"]
+    n = 0
+    not_lost = 0
+    big = 0
+    for fx in state["group_fixtures"]:
+        if not (fx["completed"] and fx.get("hg") is not None):
+            continue
+        h, a = fx["home"], fx["away"]
+        eh, ea = elo[h]["elo"], elo[a]["elo"]
+        if eh == ea:
+            continue
+        n += 1
+        und = h if eh < ea else a
+        hg, ag = fx["hg"], fx["ag"]
+        und_won = (und == h and hg > ag) or (und == a and ag > hg)
+        if hg == ag or und_won:
+            not_lost += 1
+        if und_won:
+            big += 1
+    return {"rate": (not_lost / n) if n else 0.0, "big": big, "n": n}
+
+
+def surprise_pill(pr):
+    si = M.surprise_index(pr["pH"], pr["pD"], pr["pA"], _CHAOS["rate"])
+    label, cls = M.surprise_level(si)
+    return f'<span class="si {cls}" title="מדד הפתעה">🎲 הפתעה {si} · {label}</span>'
 
 
 def today_matches(state):
@@ -127,6 +159,7 @@ def match_card(state, fx):
         <div class="pd" style="width:{wd:.0f}%">{wd:.0f}%</div>
         <div class="pa" style="width:{wa:.0f}%">{wa:.0f}%</div></div>
       <div class="problbl"><span>{he(h)}</span><span>תיקו</span><span>{he(a)}</span></div>
+      <div class="sirow">{surprise_pill(pr)}</div>
       {btn}</div>'''
 
 
@@ -139,6 +172,10 @@ def render_landing(state, analyses):
     de = (max(il_dt(f["date"]).astimezone(dt.timezone.utc) for f in fxs)
           + dt.timedelta(days=1)).strftime("%Y%m%d")
     upd = il_time(state["fetched_at"])
+    c = _CHAOS
+    banner = (f'<div class="chaos">🎲 <b>מדד ההפתעות של הטורניר:</b> '
+              f'{c["big"]} ניצחונות מוחלשת · המוחלשת לא הפסידה ב-{c["rate"]*100:.0f}% '
+              f'מ-{c["n"]} המשחקים שנשחקו</div>') if c["n"] else ""
     return f'''<!DOCTYPE html><html lang="he" dir="rtl"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>חיזוי מונדיאל 2026 — משחקי היום</title><style>{CSS}</style></head>
@@ -149,6 +186,7 @@ def render_landing(state, analyses):
   <button class="nav" onclick="refresh()">🔄 רענן</button>
   <a class="nav" href="odds.html">📊 סיכויי הטורניר</a></div>
 <div class="upd" id="updated">עודכן: {upd}</div></header>
+{banner}
 <section class="card"><div class="matches">{cards}</div>
 <p class="note" id="noday" style="display:none;text-align:center">אין משחקים היום — מוצגים המשחקים הקרובים.</p>
 <p class="note">לחיצה על "ניתוח מלא" פותחת ניתוח טקסטואלי של המשחק (הרכבים, טקטיקה, קריאת משחק). xG = גולים צפויים לפי המודל.</p>
@@ -244,7 +282,8 @@ def render_analysis_page(state, fx, analysis):
       <div class="probbar big"><div class="ph" style="width:{wh:.0f}%">{wh:.0f}%</div>
         <div class="pd" style="width:{wd:.0f}%">{wd:.0f}%</div>
         <div class="pa" style="width:{wa:.0f}%">{wa:.0f}%</div></div>
-      <div class="problbl"><span>ניצחון {he(h)}</span><span>תיקו</span><span>ניצחון {he(a)}</span></div></div>'''
+      <div class="problbl"><span>ניצחון {he(h)}</span><span>תיקו</span><span>ניצחון {he(a)}</span></div>
+      <div class="ms-si">{surprise_pill(pr)}</div></div>'''
 
     if not analysis:
         body = f'''{model_strip}
@@ -378,6 +417,8 @@ def render_odds(state, sim):
 def render(state, sim):
     _LOGOS.clear()
     _LOGOS.update({a: t.get("logo") for a, t in state["teams"].items()})
+    _CHAOS.clear()
+    _CHAOS.update(tournament_chaos(state))
     os.makedirs(OUT_DIR, exist_ok=True)
     analyses = load_analyses()
     fx_by_id = {str(f["id"]): f for f in state["group_fixtures"]}
@@ -436,6 +477,15 @@ img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto
 .probbar div{display:flex;align-items:center;justify-content:center;min-width:20px}
 .ph{background:#11a36b}.pd{background:#9aa7b0}.pa{background:#e0654b}
 .problbl{display:flex;justify-content:space-between;font-size:.66rem;color:#8694a0;margin-top:4px}
+.sirow{margin-top:9px;text-align:center}
+.ms-si{margin-top:9px;text-align:center}
+.si{display:inline-block;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:20px}
+.si.hi{background:#fdeaea;color:#c0392b;border:1px solid #f1b8b0}
+.si.mid{background:#fff4e0;color:#b9770e;border:1px solid #f0d9a8}
+.si.lo{background:#e9f5ee;color:#1f7a4d;border:1px solid #c2e4ce}
+.chaos{background:#241b33;color:#e9defb;border-radius:12px;padding:11px 14px;
+ font-size:.85rem;text-align:center;border:1px solid #4b2e83;line-height:1.5}
+.chaos b{color:#fff}
 .abtn{margin-top:11px;text-align:center;background:#0f3d2e;color:#fff;border-radius:9px;
  padding:9px;font-weight:700;text-decoration:none;font-size:.9rem}
 .abtn:hover{background:#16513c}
