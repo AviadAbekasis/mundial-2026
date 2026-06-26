@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-06-26T06:54:13.438822+00:00",
+ "fetched_at": "2026-06-26T22:22:10.069206+00:00",
  "teams": {
   "MEX": {
    "abbr": "MEX",
@@ -89,28 +89,28 @@
    "abbr": "PAR",
    "group": "D",
    "name_he": "פרגוואי",
-   "elo": 1816,
+   "elo": 1815,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/par.png"
   },
   "TUR": {
    "abbr": "TUR",
    "group": "D",
    "name_he": "טורקיה",
-   "elo": 1813,
+   "elo": 1852,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png"
   },
   "AUS": {
    "abbr": "AUS",
    "group": "D",
    "name_he": "אוסטרליה",
-   "elo": 1799,
+   "elo": 1800,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
   },
   "USA": {
    "abbr": "USA",
    "group": "D",
    "name_he": "ארה\"ב",
-   "elo": 1820,
+   "elo": 1781,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
   },
   "ECU": {
@@ -1260,9 +1260,11 @@
    "away_name": "France",
    "home": "NOR",
    "away": "FRA",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 1,
+   "ag": 4,
    "group": "I"
   },
   {
@@ -1272,9 +1274,11 @@
    "away_name": "Iraq",
    "home": "SEN",
    "away": "IRQ",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 5,
+   "ag": 0,
    "group": "I"
   },
   {
@@ -1447,9 +1451,9 @@
    "id": "760490",
    "date": "2026-06-30T17:00Z",
    "home_name": "Ivory Coast",
-   "away_name": "Group I 2nd Place",
+   "away_name": "Norway",
    "home": "CIV",
-   "away": "2I",
+   "away": "NOR",
    "completed": false,
    "state": "pre",
    "status": "Scheduled"
@@ -1457,9 +1461,9 @@
   {
    "id": "760492",
    "date": "2026-06-30T21:00Z",
-   "home_name": "Group I Winner",
+   "home_name": "France",
    "away_name": "Third Place Group C/D/F/G/H",
-   "home": "1I",
+   "home": "FRA",
    "away": "3RD",
    "completed": false,
    "state": "pre",

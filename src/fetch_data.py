@@ -9,6 +9,7 @@ import io
 import json
 import os
 import sys
+import time
 import datetime as dt
 import requests
 
@@ -22,15 +23,41 @@ ESPN_STANDINGS = "https://site.api.espn.com/apis/v2/sports/soccer/fifa.world/sta
 ELO_URL = "https://www.eloratings.net/2026_World_Cup.tsv"
 
 
-def fetch_elo():
-    r = requests.get(ELO_URL, headers=HEADERS, timeout=30)
-    r.encoding = "utf-8"
-    out = {}
-    for ln in r.text.splitlines():
-        c = ln.split("\t")
-        if len(c) > 3 and c[2] in ELO_CODE_TO_ABBR:
-            out[ELO_CODE_TO_ABBR[c[2]]] = int(c[3])
-    return out
+def fetch_elo(retries=3):
+    """Fetch current Elo. eloratings.net occasionally returns empty / blocks an IP,
+    so retry a few times; the caller falls back to cached Elo if this returns empty."""
+    last = None
+    for i in range(retries):
+        try:
+            r = requests.get(ELO_URL, headers=HEADERS, timeout=30)
+            if r.status_code == 200:
+                r.encoding = "utf-8"
+                out = {}
+                for ln in r.text.splitlines():
+                    c = ln.split("\t")
+                    if len(c) > 3 and c[2] in ELO_CODE_TO_ABBR:
+                        out[ELO_CODE_TO_ABBR[c[2]]] = int(c[3])
+                if out:
+                    return out
+            last = f"status {r.status_code}, {len(r.text)} bytes, 0 parsed"
+        except Exception as ex:
+            last = str(ex)
+        time.sleep(2 * (i + 1))
+    print(f"  [elo] live fetch failed ({last}) -> will use cache")
+    return {}
+
+
+def cached_elo():
+    """Last known Elo from the previously-saved state.json (resilience fallback)."""
+    path = os.path.join(DATA_DIR, "state.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            return {a: t.get("elo") for a, t in json.load(f).get("teams", {}).items()
+                    if t.get("elo")}
+    except Exception:
+        return {}
 
 
 def fetch_groups():
@@ -97,10 +124,21 @@ def parse_events(events, team_group, logos):
 def main():
     print("Fetching Elo ...")
     elo = fetch_elo()
-    print(f"  {len(elo)} teams")
+    print(f"  {len(elo)} teams (live)")
     print("Fetching groups/standings ...")
     team_group, groups = fetch_groups()
     print(f"  {len(team_group)} teams in {len(groups)} groups")
+    # resilience: if eloratings was unavailable/incomplete, fill from cache, then default
+    if len(elo) < len(team_group):
+        cache = cached_elo()
+        filled = defaulted = 0
+        for ab in team_group:
+            if ab not in elo:
+                if cache.get(ab):
+                    elo[ab] = cache[ab]; filled += 1
+                else:
+                    elo[ab] = 1500; defaulted += 1
+        print(f"  [elo] filled {filled} from cache, {defaulted} defaulted to 1500")
     print("Fetching events ...")
     events = fetch_events()
     print(f"  {len(events)} events")
