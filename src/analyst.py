@@ -207,13 +207,12 @@ _IL = _dt.timezone(_dt.timedelta(hours=3))
 
 
 def _fday(iso):
-    d = _dt.datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(_IL)
-    return (d - _dt.timedelta(hours=6)).date()
+    return BD.matchday(iso)
 
 
 def upcoming_fixtures(state, days=2):
-    """(now_day, fixtures) for the next `days` football-days that have matches."""
-    now_day = (_dt.datetime.now(_IL) - _dt.timedelta(hours=6)).date()
+    """(now_day, fixtures) for the next `days` matchdays that have games."""
+    now_day = (_dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(hours=8)).date()
     byday = {}
     for fx in state["group_fixtures"]:
         byday.setdefault(_fday(fx["date"]), []).append(fx)

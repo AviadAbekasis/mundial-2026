@@ -36,9 +36,12 @@ def il_time(iso):
         return iso[:10]
 
 
-def football_day(iso):
-    """Football day runs 06:00->06:00 Israel time, so late-night games group with their day."""
-    return (il_dt(iso) - dt.timedelta(hours=6)).date()
+def matchday(iso):
+    """US-style matchday key: all games of one slate (US afternoon/evening, which spills
+    into Israel's small hours) group under one date. Boundary at 08:00 UTC sits in the
+    daily no-match gap. Kick-off times are still DISPLAYED in Israel time elsewhere."""
+    u = dt.datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(dt.timezone.utc)
+    return (u - dt.timedelta(hours=8)).date()
 
 
 def pct(x, d=0):
@@ -99,24 +102,13 @@ def surprise_pill(pr):
     return f'<span class="si {cls}" title="מדד הפתעה">🎲 הפתעה {si} · {label}</span>'
 
 
-def today_matches(state):
-    now_day = (dt.datetime.now(IL) - dt.timedelta(hours=6)).date()
-    by_day = {}
-    for fx in state["group_fixtures"]:
-        by_day.setdefault(football_day(fx["date"]), []).append(fx)
-    # today's slate, else the next day that has matches
-    day = now_day if now_day in by_day else min((d for d in by_day if d >= now_day),
-                                                default=min(by_day))
-    return day, sorted(by_day[day], key=lambda f: f["date"])
-
-
 def window_matches(state, days=2):
-    """Fixtures for the next `days` football-days that have matches (today + tomorrow).
-    Baking two days lets the browser switch to the new day instantly at the rollover."""
+    """Fixtures for the next `days` matchdays that have games (today + tomorrow).
+    Baking two matchdays lets the browser switch instantly at the rollover."""
     by_day = {}
     for fx in state["group_fixtures"]:
-        by_day.setdefault(football_day(fx["date"]), []).append(fx)
-    now_day = (dt.datetime.now(IL) - dt.timedelta(hours=6)).date()
+        by_day.setdefault(matchday(fx["date"]), []).append(fx)
+    now_day = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=8)).date()
     target = sorted(d for d in by_day if d >= now_day)[:days]
     if not target:
         target = sorted(by_day)[-days:]
@@ -139,7 +131,7 @@ def load_analyses():
 def match_card(state, fx):
     pr = predict(state, fx)
     h, a = fx["home"], fx["away"]
-    fday = football_day(fx["date"]).isoformat()
+    fday = matchday(fx["date"]).isoformat()
     wh, wd, wa = pr["pH"]*100, pr["pD"]*100, pr["pA"]*100
     completed = fx["completed"] and fx.get("hg") is not None
     if completed:
@@ -165,7 +157,7 @@ def match_card(state, fx):
 
 def render_landing(state, analyses):
     fxs = window_matches(state, days=2)
-    daylabel = football_day(fxs[0]["date"]).strftime("%d/%m/%Y")
+    daylabel = matchday(fxs[0]["date"]).strftime("%d/%m/%Y")
     cards = "".join(match_card(state, fx) for fx in fxs)
     # date range for client-side live score refresh (covers the whole window)
     ds = min(il_dt(f["date"]).astimezone(dt.timezone.utc) for f in fxs).strftime("%Y%m%d")
@@ -217,8 +209,8 @@ async function refresh(){{
     u.textContent='עודכן: '+new Date().toLocaleString('he-IL');
   }}catch(e){{ /* offline / CORS: keep the data baked at build time */ }}
 }}
-// football-day (06:00->06:00 IL) computed in the browser = UTC date of (now - 3h)
-function fdayNow(){{return new Date(Date.now()-10800000).toISOString().slice(0,10);}}
+// matchday key in the browser = UTC date of (now - 8h), matching the server's matchday()
+function fdayNow(){{return new Date(Date.now()-28800000).toISOString().slice(0,10);}}
 function showDay(){{
   const t=fdayNow();
   const cards=[...document.querySelectorAll('.match')];

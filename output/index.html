@@ -173,7 +173,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pa" style="width:73%">73%</div></div>
       <div class="problbl"><span>אורוגוואי</span><span>תיקו</span><span>ספרד</span></div>
       <div class="sirow"><span class="si lo" title="מדד הפתעה">🎲 הפתעה 29 · נמוך</span></div>
-      <a class="abtn" href="match-760479.html">ניתוח מלא ←</a></div><div class="match" data-mid="760476" data-fday="2026-06-27">
+      <a class="abtn" href="match-760479.html">ניתוח מלא ←</a></div><div class="match" data-mid="760476" data-fday="2026-06-26">
       <div class="mtop"><span class="mgrp">בית G</span><span class="mstat"><span class="mscore pred">1–1</span><span class="badge soon">27/06 06:00</span></span></div>
       <div class="mteams">
         <div class="mt"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/egy.png" alt="" loading="lazy">מצרים</span><span class="xg" data-side="h">1.3</span></div>
@@ -185,7 +185,7 @@ footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 
         <div class="pa" style="width:38%">38%</div></div>
       <div class="problbl"><span>מצרים</span><span>תיקו</span><span>איראן</span></div>
       <div class="sirow"><span class="si hi" title="מדד הפתעה">🎲 הפתעה 55 · גבוה</span></div>
-      <a class="abtn" href="match-760476.html">ניתוח מלא ←</a></div><div class="match" data-mid="760477" data-fday="2026-06-27">
+      <a class="abtn" href="match-760476.html">ניתוח מלא ←</a></div><div class="match" data-mid="760477" data-fday="2026-06-26">
       <div class="mtop"><span class="mgrp">בית G</span><span class="mstat"><span class="mscore pred">0–2</span><span class="badge soon">27/06 06:00</span></span></div>
       <div class="mteams">
         <div class="mt"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/nzl.png" alt="" loading="lazy">ניו זילנד</span><span class="xg" data-side="h">0.7</span></div>
@@ -299,8 +299,8 @@ async function refresh(){
     u.textContent='עודכן: '+new Date().toLocaleString('he-IL');
   }catch(e){ /* offline / CORS: keep the data baked at build time */ }
 }
-// football-day (06:00->06:00 IL) computed in the browser = UTC date of (now - 3h)
-function fdayNow(){return new Date(Date.now()-10800000).toISOString().slice(0,10);}
+// matchday key in the browser = UTC date of (now - 8h), matching the server's matchday()
+function fdayNow(){return new Date(Date.now()-28800000).toISOString().slice(0,10);}
 function showDay(){
   const t=fdayNow();
   const cards=[...document.querySelectorAll('.match')];
