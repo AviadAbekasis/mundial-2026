@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>אלג'יריה נגד אוסטריה — חיזוי מונדיאל 2026</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(160deg,#0f2027,#1c3a4a 60%,#16222a);
+ color:#1b2733;direction:rtl;padding:14px;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto}
+header{text-align:center;color:#eafff4;padding:12px 8px 6px}
+header h1{font-size:1.8rem}
+header .sub{opacity:.85;margin-top:4px}
+.upd{opacity:.65;font-size:.8rem;margin-top:6px;color:#eafff4}
+.navbtns{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.nav{display:inline-block;background:#11a36b;color:#fff;border:none;border-radius:9px;
+ padding:8px 14px;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit}
+.nav:hover{background:#0d8a5a}
+.card{background:#fff;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.22)}
+.card h2{font-size:1.15rem;margin-bottom:12px;color:#0f3d2e;border-bottom:2px solid #e7f1ec;padding-bottom:8px}
+.note{font-size:.78rem;color:#7a8794;margin-top:10px;line-height:1.5}
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
+img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto}
+.chip.big{font-size:1.25rem;gap:9px}.chip.big img.fl{width:34px;height:34px}
+.fl{font-size:1.15rem}
+/* matches */
+.matches{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.match{border:1px solid #e9eeec;border-radius:13px;padding:12px;background:#fafdfb;display:flex;flex-direction:column}
+.mtop{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#80909a;margin-bottom:9px}
+.mgrp{font-weight:700;color:#0f3d2e}
+.mstat{display:flex;align-items:center;gap:6px}
+.mscore{background:#0f3d2e;color:#fff;border-radius:6px;padding:1px 8px;font-weight:700}
+.mscore.pred{background:#cdd8d2;color:#33433b}
+.badge{font-size:.66rem;padding:2px 7px;border-radius:20px;font-weight:700}
+.badge.soon{background:#eef3f1;color:#7a8794}.badge.done{background:#dfeee6;color:#0f7a4f}
+.badge.live{background:#e0654b;color:#fff}
+.mteams{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:10px}
+.mt{display:flex;align-items:center;gap:6px}
+.xg{font-weight:800;color:#11a36b;font-size:1.05rem}.vs{font-size:.7rem;color:#9aa7b0}
+.probbar{display:flex;height:24px;border-radius:7px;overflow:hidden;font-size:.72rem;font-weight:700;color:#fff}
+.probbar.big{height:30px;font-size:.82rem;margin-top:6px}
+.probbar div{display:flex;align-items:center;justify-content:center;min-width:20px}
+.ph{background:#11a36b}.pd{background:#9aa7b0}.pa{background:#e0654b}
+.problbl{display:flex;justify-content:space-between;font-size:.66rem;color:#8694a0;margin-top:4px}
+.abtn{margin-top:11px;text-align:center;background:#0f3d2e;color:#fff;border-radius:9px;
+ padding:9px;font-weight:700;text-decoration:none;font-size:.9rem}
+.abtn:hover{background:#16513c}
+/* analysis page */
+.analysis .ahead{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+ padding-bottom:8px;border-bottom:2px solid #e7f1ec}
+.avs{color:#9aa7b0;font-weight:600}
+.asub{text-align:center;color:#7a8794;font-size:.85rem;margin:8px 0 14px}
+.headline{font-size:1.15rem;font-weight:800;color:#0f3d2e;text-align:center;margin-bottom:14px;line-height:1.5}
+.modelstrip{background:#f3f9f6;border:1px solid #dcefe6;border-radius:12px;padding:12px;margin-bottom:16px}
+.ms-xg{font-size:.92rem;color:#0f3d2e;margin-bottom:8px;text-align:center}
+.sec{margin-bottom:16px}
+.sec h3{font-size:1.02rem;color:#0f3d2e;margin-bottom:7px}
+.sec p{line-height:1.7;color:#2c3a44;font-size:.95rem}
+.sec.pred{background:#fff8f0;border:1px solid #f0e0c8;border-radius:12px;padding:13px}
+.lineups{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lu{background:#fafdfb;border:1px solid #e9eeec;border-radius:11px;padding:11px}
+.luhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.form{background:#0f3d2e;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:.8rem}
+.xi{margin:0 18px;font-size:.86rem;line-height:1.75;color:#2c3a44}
+.lunews{font-size:.78rem;color:#7a8794;margin-top:8px;line-height:1.5}
+.kps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.kp{background:#fafdfb;border:1px solid #e9eeec;border-radius:10px;padding:10px}
+.kpn{font-weight:800;color:#0f3d2e}.kpt{font-size:.75rem;color:#7a8794;margin-right:6px}
+.kp p{font-size:.82rem;color:#41525c;margin-top:5px;line-height:1.5}
+.placeholder{text-align:center;padding:24px 12px;color:#7a8794}
+.placeholder h3{color:#0f3d2e;margin-bottom:8px}
+.sec a,.note a{color:#11a36b}
+/* betting */
+.sec.betting{background:#f6f4fb;border:1px solid #e4ddf2;border-radius:12px;padding:14px}
+.sec.betting p{margin-bottom:7px;font-size:.92rem}
+.odds{display:flex;gap:8px;margin:6px 0}
+.oc{flex:1;background:#fff;border:1px solid #e4ddf2;border-radius:9px;padding:9px 6px;text-align:center;
+ display:flex;flex-direction:column;gap:2px}
+.oc span{font-size:.74rem;color:#6b7785}
+.oc b{font-size:1.15rem;color:#4b2e83}
+.oc.fav{border-color:#4b2e83;background:#efe9fb}
+.dim{color:#9089a6;font-size:.78rem}.sm{font-size:.72rem;margin-top:2px}
+.tip{background:#efe9fb;border-radius:8px;padding:8px 10px;color:#3d2569}
+.rg{font-size:.72rem;color:#9089a6;margin-top:10px;border-top:1px dashed #ddd5ee;padding-top:8px}
+/* odds page */
+.bars{display:flex;flex-direction:column;gap:9px}
+.brow{display:grid;grid-template-columns:130px 1fr 52px;align-items:center;gap:10px}
+.btrack{background:#eef3f1;border-radius:8px;height:22px;overflow:hidden}
+.bfill{height:100%;background:linear-gradient(90deg,#11a36b,#1ad19a);border-radius:8px}
+.bval{font-weight:700;color:#0f3d2e;font-size:.9rem;text-align:left}
+.tbl-wrap{overflow-x:auto}
+table.grid{width:100%;border-collapse:collapse;font-size:.85rem;min-width:520px}
+table.grid th,table.grid td{padding:7px 6px;text-align:center;border-bottom:1px solid #eef2f0}
+table.grid th{background:#0f3d2e;color:#fff;font-weight:600}
+.tl{text-align:right!important}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.gcard{border:1px solid #eaefed;border-radius:12px;padding:10px;background:#fafdfb}
+.gcard h3{font-size:.95rem;color:#0f3d2e;margin-bottom:6px}
+.gtab{width:100%;border-collapse:collapse;font-size:.82rem}
+.gtab th{font-size:.7rem;color:#8694a0;font-weight:600;padding:3px}
+.gtab td{padding:5px 3px;text-align:center;border-top:1px solid #eef2f0}
+.gtab .adv{font-weight:700;color:#0f3d2e}
+footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 8px 28px;line-height:1.7}
+</style></head>
+<body><div class="wrap">
+<div class="topbar"><a class="nav" href="index.html">← חזרה למשחקים</a>
+  <button class="nav" onclick="location.reload()">🔄 רענן</button></div>
+<section class="card analysis">
+  <div class="ahead"><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/alg.png" alt="" loading="lazy">אלג'יריה</span><span class="avs">נגד</span><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/aut.png" alt="" loading="lazy">אוסטריה</span></div>
+  <div class="asub">בית J · 28/06 05:00 · גביע העולם 2026</div>
+  
+      <div class="headline">קרב על ההעפלה: אלג'יריה נגד אוסטריה בגביע העולם 2026</div>
+      <div class="modelstrip">
+      <div class="ms-xg"><b>גולים צפויים:</b> אלג'יריה 1.2 – 1.5 אוסטריה
+        · תוצאה סבירה 1–1</div>
+      <div class="probbar big"><div class="ph" style="width:29%">29%</div>
+        <div class="pd" style="width:29%">29%</div>
+        <div class="pa" style="width:42%">42%</div></div>
+      <div class="problbl"><span>ניצחון אלג'יריה</span><span>תיקו</span><span>ניצחון אוסטריה</span></div></div>
+      <div class="sec"><h3>📋 מה על הכף</h3><p>המשחק בין אלג'יריה לאוסטריה הוא למעשה גמר על המקום השני בבית J. ארגנטינה הבטיחה כבר את המקום הראשון עם 6 נקודות. אוסטריה ממוקמת כרגע במקום השני עם 3 נקודות והפרש שערים 0, בעוד אלג'יריה שלישית עם 3 נקודות והפרש שערים 2-. תיקו יספיק לאוסטריה כדי להעפיל לשלב הנוקאאוט, בעוד אלג'יריה חייבת לנצח כדי להבטיח את העלייה. הפסד לאלג'יריה, או תיקו שישאיר אותה עם הפרש שערים נחות יותר, יסיים את דרכה בטורניר.</p></div>
+      <div class="sec"><h3>👥 הרכבים צפויים</h3>
+        <div class="lineups"><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/alg.png" alt="" loading="lazy">אלג'יריה</span><span class="form">4-2-3-1 (הערכה)</span></div>
+          <ol class="xi"><li>Luca Zidane</li><li>Rafik Belghali</li><li>Aïssa Mandi</li><li>Ramy Bensebaini</li><li>Rayan Aït-Nouri</li><li>Nabil Bentaleb</li><li>Nadhir Benbouali</li><li>Riyad Mahrez</li><li>Ibrahim Maza</li><li>Farès Chaïbi</li><li>Amine Gouiri</li></ol>
+          <p class="lunews">אלג'יריה צפויה לבצע שינויים בקישור לאחר הקאמבק מול ירדן. מוחמד אמורה, שכבש 10 שערים במוקדמות אך סבל מפציעה בשריר הירך האחורי ולא שיחק מול ירדן, בספק. נביל בנטאלב ונאדיר בנבואלי, שנכנסו כמחליפים ושינו את המשחק מול ירדן, צפויים לפתוח.</p></div><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/aut.png" alt="" loading="lazy">אוסטריה</span><span class="form">4-2-3-1 (הערכה)</span></div>
+          <ol class="xi"><li>Alexander Schlager</li><li>Stefan Posch</li><li>Kevin Danso</li><li>David Alaba</li><li>Konrad Laimer</li><li>Nicolas Seiwald</li><li>Xaver Schlager</li><li>Romano Schmid</li><li>Patrick Wimmer</li><li>Marcel Sabitzer</li><li>Marko Arnautović</li></ol>
+          <p class="lunews">אוסטריה צפויה לפתוח עם מרקו ארנאוטוביץ' בהרכב, לאחר שכבש כמחליף מול ירדן. מיכאל גרגוריץ' צפוי לרדת לספסל. דויד אלאבה, שחזר מפציעה בברך, צפוי לפתוח במרכז ההגנה לצד קווין דנסו.</p></div></div></div>
+      <div class="sec"><h3>♟️ טקטיקה צפויה</h3><p>אלג'יריה תחת המאמן ולדימיר פטקוביץ' צפויה לשחק בסגנון התקפי יותר, במיוחד לאור הצורך בניצחון. הם ינסו לנצל את המהירות והאנכיות במשחקם, אך עלולים להיות חשופים למתפרצות. אוסטריה, תחת ראלף רנגניק, ידועה בסגנון ה'גגנפרסינג' האגרסיבי שלה, עם דגש על לחץ גבוה, חילוצי כדור מהירים ומעברים ישירים להתקפה. הם ישחקו בצורה ממושמעת וקומפקטית, וינסו לסגור את המרכז ולכפות על אלג'יריה לשחק באגפים. אוסטריה צפויה לספוג ולצאת למתפרצות.</p></div>
+      <div class="sec"><h3>📈 כושר אחרון</h3>
+        <p><b>אלג'יריה:</b> אלג'יריה ניצחה 8 מ-11 משחקיה האחרונים בכל המסגרות. בטורניר הנוכחי, הם הפסידו 3-0 לארגנטינה וניצחו 2-1 את ירדן.</p>
+        <p><b>אוסטריה:</b> אוסטריה ניצחה 4 מ-5 משחקיה האחרונים, כולל ניצחון 3-1 על ירדן. הפסדם היחיד היה 2-0 לארגנטינה.</p></div>
+      <div class="sec"><h3>🤝 ראש בראש</h3><p>שתי הקבוצות נפגשו פעם אחת בלבד בעבר, בגביע העולם 1982, אז ניצחה אוסטריה 2-0.</p></div>
+      <div class="sec"><h3>⚽ גולים צפויים — המאצ'אפ</h3><p>אוסטריה נחשבת לבעלת יתרון קל בזכות עומק הסגל ואיכות השחקנים המשחקים בליגות בכירות באירופה. אלג'יריה תלויה ביכולת היצירתית של ריאד מחרז ומוחמד אמורה (אם ישחק). אוסטריה צפויה לשלוט בקצב המשחק ולנצל את הלחץ הגבוה שלה. מודל החיזוי שלי צופה 1.19 שערים לאלג'יריה ו-1.49 שערים לאוסטריה.</p></div>
+      <div class="sec betting"><h3>💰 תחזיות והימורים — מהאתרים המובילים</h3><p><b>תחזית Opta:</b> ניצחון אוסטריה 42% · תיקו 29% · ניצחון אלג'יריה 29% <span class="dim">(Opta לא פרסמה תחזית ספציפית למשחק זה. הנתונים המוצגים מבוססים על תחזית המודל שלי.)</span></p><div class="odds">
+              <div class="oc"><span>ניצחון אלג'יריה</span><b>4.05</b><span class="dim">24.69%</span></div>
+              <div class="oc"><span>תיקו</span><b>3.30</b><span class="dim">30.30%</span></div>
+              <div class="oc fav"><span>ניצחון אוסטריה</span><b>2.15</b><span class="dim">46.51%</span></div>
+            </div><p class="dim sm">יחס עשרוני · באחוזים = הסתברות משתמעת מהיחס</p><p><b>תחזיות תוצאה סופית:</b> Racing Post: <b>1-1</b></p><p><b>הפרש שערים (הנדיקפ):</b> אוסטריה 0 (שוויון ללא הימור) (הערכה)</p><p><b>סך שערים:</b> קו 2.5 שערים (הערכה, בהתבסס על תחזיות של מעל 2 שערים)</p><p><b>הימור ערך:</b> תיקו (שוויון, בהתחשב בכך שתיקו מספיק לאוסטריה וגם אלג'יריה תנסה להימנע מהפסד), אוסטריה לניצחון (בהתבסס על יתרון האיכות והכושר האחרון).</p><p class="tip">💡 <b>המלצה:</b> אוסטריה לא תפסיד (תיקו או ניצחון) וגם שתי הקבוצות יבקיעו.</p><p class="rg">⚠️ מידע למטרות ניתוח בלבד, לא ייעוץ הימורים. הימור אחראי · גיל 18+.</p></div>
+      <div class="sec"><h3>⭐ שחקני מפתח</h3><div class="kps"><div class="kp"><span class="kpn">Riyad Mahrez</span> <span class="kpt">אלג'יריה</span><p>הקפטן והמוח היצירתי של אלג'יריה, למרות גילו (35), עדיין מהווה איום התקפי משמעותי.</p></div><div class="kp"><span class="kpn">Amine Gouiri</span> <span class="kpt">אלג'יריה</span><p>חלוץ מרסיי, כבש את שער הניצחון מול ירדן ונמצא בכושר הבקעה טוב.</p></div><div class="kp"><span class="kpn">David Alaba</span> <span class="kpt">אוסטריה</span><p>קפטן אוסטריה ומנהיג ההגנה, מביא ניסיון רב מריאל מדריד ומהווה עוגן טקטי.</p></div><div class="kp"><span class="kpn">Marcel Sabitzer</span> <span class="kpt">אוסטריה</span><p>קשר מרכזי עם קצב עבודה גבוה, יכולת בעיטה מרחוק ויכולת הגעה מאוחרת לאזורים מסוכנים. חיוני למערך הלחץ של רנגניק.</p></div><div class="kp"><span class="kpn">Marko Arnautović</span> <span class="kpt">אוסטריה</span><p>הכובש המוביל של אוסטריה בכל הזמנים, חלוץ פיזי ונקודת מיקוד בהתקפה. כבש שער אחד בטורניר הנוכחי.</p></div></div></div>
+      <div class="sec pred"><h3>🎯 שורה תחתונה</h3><p>אוסטריה נראית חזקה יותר מבחינת סגל וכושר, וגם תיקו יספיק לה. אלג'יריה חייבת לנצח, מה שיפתח את המשחק ויאפשר לאוסטריה לנצל את יכולות המתפרצת שלה. אני צופה ניצחון לאוסטריה במשחק צמוד. תוצאה צפויה: 2-1 לאוסטריה.</p></div>
+      <p class="note"><a href="https://thesportsrush.com/algeria-vs-austria-world-cup-2026-predictions-and-best-bets/" target="_blank">מקור 1</a> · <a href="https://www.racingpost.com/sport/football/world-cup/algeria-v-austria-prediction-betting-tips-team-news-and-odds-for-group-j-clash-a106869" target="_blank">מקור 2</a> · <a href="https://www.onefootball.com/en/news/algeria-vs-austria-prediction-world-cup-2026-preview-best-bets-39575459" target="_blank">מקור 3</a> · <a href="https://www.juvefc.com/algeria-vs-austria-prediction-world-cup-2026-preview-best-bets/" target="_blank">מקור 4</a> · <a href="https://shekicks.net/algeria-vs-austria-prediction-world-cup-2026-preview-best-bets/" target="_blank">מקור 5</a></p>
+</section>
+<footer>ניתוח טקסטואלי · נבנה ע"י Claude</footer>
+</div></body></html>

@@ -4,8 +4,9 @@ on:
   push:
     branches: [main]
   schedule:
-    # several times daily (UTC). Israel = UTC+3.
-    - cron: '0 5,12,16,19,22 * * *'
+    # every 2 hours (UTC). Catches the football-day rollover (03:00 UTC = 06:00 IL)
+    # and keeps scores/odds/analyses fresh. Free on a public repo.
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 permissions:

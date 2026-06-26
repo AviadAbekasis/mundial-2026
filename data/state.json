@@ -1,88 +1,88 @@
 {
- "fetched_at": "2026-06-24T06:47:48.654406+00:00",
+ "fetched_at": "2026-06-26T06:54:13.438822+00:00",
  "teams": {
   "MEX": {
    "abbr": "MEX",
    "group": "A",
    "name_he": "מקסיקו",
-   "elo": 1896,
+   "elo": 1912,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png"
   },
   "CZE": {
    "abbr": "CZE",
    "group": "A",
    "name_he": "צ'כיה",
-   "elo": 1696,
+   "elo": 1680,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"
   },
   "KOR": {
    "abbr": "KOR",
    "group": "A",
    "name_he": "דרום קוריאה",
-   "elo": 1771,
+   "elo": 1723,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png"
   },
   "RSA": {
    "abbr": "RSA",
    "group": "A",
    "name_he": "דרום אפריקה",
-   "elo": 1527,
+   "elo": 1575,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png"
   },
   "CAN": {
    "abbr": "CAN",
    "group": "B",
    "name_he": "קנדה",
-   "elo": 1777,
+   "elo": 1748,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png"
   },
   "BIH": {
    "abbr": "BIH",
    "group": "B",
    "name_he": "בוסניה",
-   "elo": 1596,
+   "elo": 1622,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png"
   },
   "SUI": {
    "abbr": "SUI",
    "group": "B",
    "name_he": "שווייץ",
-   "elo": 1885,
+   "elo": 1914,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png"
   },
   "QAT": {
    "abbr": "QAT",
    "group": "B",
    "name_he": "קטאר",
-   "elo": 1437,
+   "elo": 1411,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png"
   },
   "BRA": {
    "abbr": "BRA",
    "group": "C",
    "name_he": "ברזיל",
-   "elo": 1986,
+   "elo": 2009,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png"
   },
   "SCO": {
    "abbr": "SCO",
    "group": "C",
    "name_he": "סקוטלנד",
-   "elo": 1768,
+   "elo": 1745,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png"
   },
   "HAI": {
    "abbr": "HAI",
    "group": "C",
    "name_he": "האיטי",
-   "elo": 1528,
+   "elo": 1517,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png"
   },
   "MAR": {
    "abbr": "MAR",
    "group": "C",
    "name_he": "מרוקו",
-   "elo": 1866,
+   "elo": 1877,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png"
   },
   "PAR": {
@@ -117,56 +117,56 @@
    "abbr": "ECU",
    "group": "E",
    "name_he": "אקוודור",
-   "elo": 1864,
+   "elo": 1902,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png"
   },
   "GER": {
    "abbr": "GER",
    "group": "E",
    "name_he": "גרמניה",
-   "elo": 1954,
+   "elo": 1916,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"
   },
   "CIV": {
    "abbr": "CIV",
    "group": "E",
    "name_he": "חוף השנהב",
-   "elo": 1728,
+   "elo": 1743,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png"
   },
   "CUW": {
    "abbr": "CUW",
    "group": "E",
    "name_he": "קוראסאו",
-   "elo": 1453,
+   "elo": 1438,
    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png"
   },
   "NED": {
    "abbr": "NED",
    "group": "F",
    "name_he": "הולנד",
-   "elo": 1972,
+   "elo": 1980,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png"
   },
   "SWE": {
    "abbr": "SWE",
    "group": "F",
    "name_he": "שוודיה",
-   "elo": 1727,
+   "elo": 1742,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png"
   },
   "JPN": {
    "abbr": "JPN",
    "group": "F",
    "name_he": "יפן",
-   "elo": 1925,
+   "elo": 1910,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png"
   },
   "TUN": {
    "abbr": "TUN",
    "group": "F",
    "name_he": "תוניסיה",
-   "elo": 1570,
+   "elo": 1562,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png"
   },
   "BEL": {
@@ -285,7 +285,7 @@
    "abbr": "COL",
    "group": "K",
    "name_he": "קולומביה",
-   "elo": 1998,
+   "elo": 2006,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png"
   },
   "POR": {
@@ -306,7 +306,7 @@
    "abbr": "COD",
    "group": "K",
    "name_he": "קונגו",
-   "elo": 1674,
+   "elo": 1666,
    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png"
   },
   "ENG": {
@@ -1092,9 +1092,11 @@
    "away_name": "Qatar",
    "home": "BIH",
    "away": "QAT",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 3,
+   "ag": 1,
    "group": "B"
   },
   {
@@ -1104,9 +1106,11 @@
    "away_name": "Canada",
    "home": "SUI",
    "away": "CAN",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 2,
+   "ag": 1,
    "group": "B"
   },
   {
@@ -1116,9 +1120,11 @@
    "away_name": "Haiti",
    "home": "MAR",
    "away": "HAI",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 4,
+   "ag": 2,
    "group": "C"
   },
   {
@@ -1128,9 +1134,11 @@
    "away_name": "Brazil",
    "home": "SCO",
    "away": "BRA",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 0,
+   "ag": 3,
    "group": "C"
   },
   {
@@ -1140,9 +1148,11 @@
    "away_name": "Mexico",
    "home": "CZE",
    "away": "MEX",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 0,
+   "ag": 3,
    "group": "A"
   },
   {
@@ -1152,9 +1162,11 @@
    "away_name": "South Korea",
    "home": "RSA",
    "away": "KOR",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 1,
+   "ag": 0,
    "group": "A"
   },
   {
@@ -1164,9 +1176,11 @@
    "away_name": "Ivory Coast",
    "home": "CUW",
    "away": "CIV",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 0,
+   "ag": 2,
    "group": "E"
   },
   {
@@ -1176,9 +1190,11 @@
    "away_name": "Germany",
    "home": "ECU",
    "away": "GER",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 2,
+   "ag": 1,
    "group": "E"
   },
   {
@@ -1188,9 +1204,11 @@
    "away_name": "Sweden",
    "home": "JPN",
    "away": "SWE",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 1,
+   "ag": 1,
    "group": "F"
   },
   {
@@ -1200,9 +1218,11 @@
    "away_name": "Netherlands",
    "home": "TUN",
    "away": "NED",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 1,
+   "ag": 3,
    "group": "F"
   },
   {
@@ -1212,9 +1232,11 @@
    "away_name": "Australia",
    "home": "PAR",
    "away": "AUS",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 0,
+   "ag": 0,
    "group": "D"
   },
   {
@@ -1224,9 +1246,11 @@
    "away_name": "United States",
    "home": "TUR",
    "away": "USA",
-   "completed": false,
-   "state": "pre",
-   "status": "Scheduled",
+   "completed": true,
+   "state": "post",
+   "status": "Full Time",
+   "hg": 3,
+   "ag": 2,
    "group": "D"
   },
   {
@@ -1378,10 +1402,10 @@
   {
    "id": "760486",
    "date": "2026-06-28T19:00Z",
-   "home_name": "Group A 2nd Place",
-   "away_name": "Group B 2nd Place",
-   "home": "2A",
-   "away": "2B",
+   "home_name": "South Africa",
+   "away_name": "Canada",
+   "home": "RSA",
+   "away": "CAN",
    "completed": false,
    "state": "pre",
    "status": "Scheduled"
@@ -1389,10 +1413,10 @@
   {
    "id": "760487",
    "date": "2026-06-29T17:00Z",
-   "home_name": "Group C Winner",
-   "away_name": "Group F 2nd Place",
-   "home": "1C",
-   "away": "2F",
+   "home_name": "Brazil",
+   "away_name": "Japan",
+   "home": "BRA",
+   "away": "JPN",
    "completed": false,
    "state": "pre",
    "status": "Scheduled"
@@ -1411,10 +1435,10 @@
   {
    "id": "760488",
    "date": "2026-06-30T01:00Z",
-   "home_name": "Group F Winner",
-   "away_name": "Group C 2nd Place",
-   "home": "1F",
-   "away": "2C",
+   "home_name": "Netherlands",
+   "away_name": "Morocco",
+   "home": "NED",
+   "away": "MAR",
    "completed": false,
    "state": "pre",
    "status": "Scheduled"
@@ -1422,9 +1446,9 @@
   {
    "id": "760490",
    "date": "2026-06-30T17:00Z",
-   "home_name": "Group E 2nd Place",
+   "home_name": "Ivory Coast",
    "away_name": "Group I 2nd Place",
-   "home": "2E",
+   "home": "CIV",
    "away": "2I",
    "completed": false,
    "state": "pre",
@@ -1478,9 +1502,9 @@
    "id": "760494",
    "date": "2026-07-02T00:00Z",
    "home_name": "United States",
-   "away_name": "Third Place Group B/E/F/I/J",
+   "away_name": "Bosnia-Herzegovina",
    "home": "USA",
-   "away": "3RD",
+   "away": "BIH",
    "completed": false,
    "state": "pre",
    "status": "Scheduled"
@@ -1510,9 +1534,9 @@
   {
    "id": "760498",
    "date": "2026-07-03T03:00Z",
-   "home_name": "Group B Winner",
+   "home_name": "Switzerland",
    "away_name": "Third Place Group E/F/G/I/J",
-   "home": "1B",
+   "home": "SUI",
    "away": "3RD",
    "completed": false,
    "state": "pre",
@@ -1521,9 +1545,9 @@
   {
    "id": "760499",
    "date": "2026-07-03T18:00Z",
-   "home_name": "Group D 2nd Place",
+   "home_name": "Australia",
    "away_name": "Group G 2nd Place",
-   "home": "2D",
+   "home": "AUS",
    "away": "2G",
    "completed": false,
    "state": "pre",

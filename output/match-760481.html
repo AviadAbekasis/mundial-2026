@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>קולומביה נגד פורטוגל — חיזוי מונדיאל 2026</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(160deg,#0f2027,#1c3a4a 60%,#16222a);
+ color:#1b2733;direction:rtl;padding:14px;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto}
+header{text-align:center;color:#eafff4;padding:12px 8px 6px}
+header h1{font-size:1.8rem}
+header .sub{opacity:.85;margin-top:4px}
+.upd{opacity:.65;font-size:.8rem;margin-top:6px;color:#eafff4}
+.navbtns{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.nav{display:inline-block;background:#11a36b;color:#fff;border:none;border-radius:9px;
+ padding:8px 14px;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit}
+.nav:hover{background:#0d8a5a}
+.card{background:#fff;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.22)}
+.card h2{font-size:1.15rem;margin-bottom:12px;color:#0f3d2e;border-bottom:2px solid #e7f1ec;padding-bottom:8px}
+.note{font-size:.78rem;color:#7a8794;margin-top:10px;line-height:1.5}
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
+img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto}
+.chip.big{font-size:1.25rem;gap:9px}.chip.big img.fl{width:34px;height:34px}
+.fl{font-size:1.15rem}
+/* matches */
+.matches{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.match{border:1px solid #e9eeec;border-radius:13px;padding:12px;background:#fafdfb;display:flex;flex-direction:column}
+.mtop{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#80909a;margin-bottom:9px}
+.mgrp{font-weight:700;color:#0f3d2e}
+.mstat{display:flex;align-items:center;gap:6px}
+.mscore{background:#0f3d2e;color:#fff;border-radius:6px;padding:1px 8px;font-weight:700}
+.mscore.pred{background:#cdd8d2;color:#33433b}
+.badge{font-size:.66rem;padding:2px 7px;border-radius:20px;font-weight:700}
+.badge.soon{background:#eef3f1;color:#7a8794}.badge.done{background:#dfeee6;color:#0f7a4f}
+.badge.live{background:#e0654b;color:#fff}
+.mteams{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:10px}
+.mt{display:flex;align-items:center;gap:6px}
+.xg{font-weight:800;color:#11a36b;font-size:1.05rem}.vs{font-size:.7rem;color:#9aa7b0}
+.probbar{display:flex;height:24px;border-radius:7px;overflow:hidden;font-size:.72rem;font-weight:700;color:#fff}
+.probbar.big{height:30px;font-size:.82rem;margin-top:6px}
+.probbar div{display:flex;align-items:center;justify-content:center;min-width:20px}
+.ph{background:#11a36b}.pd{background:#9aa7b0}.pa{background:#e0654b}
+.problbl{display:flex;justify-content:space-between;font-size:.66rem;color:#8694a0;margin-top:4px}
+.abtn{margin-top:11px;text-align:center;background:#0f3d2e;color:#fff;border-radius:9px;
+ padding:9px;font-weight:700;text-decoration:none;font-size:.9rem}
+.abtn:hover{background:#16513c}
+/* analysis page */
+.analysis .ahead{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+ padding-bottom:8px;border-bottom:2px solid #e7f1ec}
+.avs{color:#9aa7b0;font-weight:600}
+.asub{text-align:center;color:#7a8794;font-size:.85rem;margin:8px 0 14px}
+.headline{font-size:1.15rem;font-weight:800;color:#0f3d2e;text-align:center;margin-bottom:14px;line-height:1.5}
+.modelstrip{background:#f3f9f6;border:1px solid #dcefe6;border-radius:12px;padding:12px;margin-bottom:16px}
+.ms-xg{font-size:.92rem;color:#0f3d2e;margin-bottom:8px;text-align:center}
+.sec{margin-bottom:16px}
+.sec h3{font-size:1.02rem;color:#0f3d2e;margin-bottom:7px}
+.sec p{line-height:1.7;color:#2c3a44;font-size:.95rem}
+.sec.pred{background:#fff8f0;border:1px solid #f0e0c8;border-radius:12px;padding:13px}
+.lineups{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lu{background:#fafdfb;border:1px solid #e9eeec;border-radius:11px;padding:11px}
+.luhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.form{background:#0f3d2e;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:.8rem}
+.xi{margin:0 18px;font-size:.86rem;line-height:1.75;color:#2c3a44}
+.lunews{font-size:.78rem;color:#7a8794;margin-top:8px;line-height:1.5}
+.kps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.kp{background:#fafdfb;border:1px solid #e9eeec;border-radius:10px;padding:10px}
+.kpn{font-weight:800;color:#0f3d2e}.kpt{font-size:.75rem;color:#7a8794;margin-right:6px}
+.kp p{font-size:.82rem;color:#41525c;margin-top:5px;line-height:1.5}
+.placeholder{text-align:center;padding:24px 12px;color:#7a8794}
+.placeholder h3{color:#0f3d2e;margin-bottom:8px}
+.sec a,.note a{color:#11a36b}
+/* betting */
+.sec.betting{background:#f6f4fb;border:1px solid #e4ddf2;border-radius:12px;padding:14px}
+.sec.betting p{margin-bottom:7px;font-size:.92rem}
+.odds{display:flex;gap:8px;margin:6px 0}
+.oc{flex:1;background:#fff;border:1px solid #e4ddf2;border-radius:9px;padding:9px 6px;text-align:center;
+ display:flex;flex-direction:column;gap:2px}
+.oc span{font-size:.74rem;color:#6b7785}
+.oc b{font-size:1.15rem;color:#4b2e83}
+.oc.fav{border-color:#4b2e83;background:#efe9fb}
+.dim{color:#9089a6;font-size:.78rem}.sm{font-size:.72rem;margin-top:2px}
+.tip{background:#efe9fb;border-radius:8px;padding:8px 10px;color:#3d2569}
+.rg{font-size:.72rem;color:#9089a6;margin-top:10px;border-top:1px dashed #ddd5ee;padding-top:8px}
+/* odds page */
+.bars{display:flex;flex-direction:column;gap:9px}
+.brow{display:grid;grid-template-columns:130px 1fr 52px;align-items:center;gap:10px}
+.btrack{background:#eef3f1;border-radius:8px;height:22px;overflow:hidden}
+.bfill{height:100%;background:linear-gradient(90deg,#11a36b,#1ad19a);border-radius:8px}
+.bval{font-weight:700;color:#0f3d2e;font-size:.9rem;text-align:left}
+.tbl-wrap{overflow-x:auto}
+table.grid{width:100%;border-collapse:collapse;font-size:.85rem;min-width:520px}
+table.grid th,table.grid td{padding:7px 6px;text-align:center;border-bottom:1px solid #eef2f0}
+table.grid th{background:#0f3d2e;color:#fff;font-weight:600}
+.tl{text-align:right!important}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.gcard{border:1px solid #eaefed;border-radius:12px;padding:10px;background:#fafdfb}
+.gcard h3{font-size:.95rem;color:#0f3d2e;margin-bottom:6px}
+.gtab{width:100%;border-collapse:collapse;font-size:.82rem}
+.gtab th{font-size:.7rem;color:#8694a0;font-weight:600;padding:3px}
+.gtab td{padding:5px 3px;text-align:center;border-top:1px solid #eef2f0}
+.gtab .adv{font-weight:700;color:#0f3d2e}
+footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 8px 28px;line-height:1.7}
+</style></head>
+<body><div class="wrap">
+<div class="topbar"><a class="nav" href="index.html">← חזרה למשחקים</a>
+  <button class="nav" onclick="location.reload()">🔄 רענן</button></div>
+<section class="card analysis">
+  <div class="ahead"><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/col.png" alt="" loading="lazy">קולומביה</span><span class="avs">נגד</span><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/por.png" alt="" loading="lazy">פורטוגל</span></div>
+  <div class="asub">בית K · 28/06 02:30 · גביע העולם 2026</div>
+  
+      <div class="headline">מאבק על ראשות הבית: קולומביה מול פורטוגל במונדיאל 2026</div>
+      <div class="modelstrip">
+      <div class="ms-xg"><b>גולים צפויים:</b> קולומביה 1.4 – 1.3 פורטוגל
+        · תוצאה סבירה 1–1</div>
+      <div class="probbar big"><div class="ph" style="width:37%">37%</div>
+        <div class="pd" style="width:29%">29%</div>
+        <div class="pa" style="width:33%">33%</div></div>
+      <div class="problbl"><span>ניצחון קולומביה</span><span>תיקו</span><span>ניצחון פורטוגל</span></div></div>
+      <div class="sec"><h3>📋 מה על הכף</h3><p>קולומביה כבר הבטיחה את מקומה בשלב הנוקאאוט של גביע העולם 2026, ואף תוכל לסיים בראשות בית K עם ניצחון או תיקו מול פורטוגל. פורטוגל, לעומת זאת, צריכה ניצחון כדי להבטיח את המקום הראשון בבית ולזכות בהגרלה נוחה יותר בשלב 32 האחרונות. תיקו גם יספיק לפורטוגל כדי לעלות, אך ישאיר את קולומביה במקום הראשון. הפסד של פורטוגל עלול לסבך את מצבה מול הרפובליקה הדמוקרטית של קונגו ואוזבקיסטן בגלל הפרש שערים, אם כי שתיהן צפויות לעלות לשלב הבא בכל מקרה.</p></div>
+      <div class="sec"><h3>👥 הרכבים צפויים</h3>
+        <div class="lineups"><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/col.png" alt="" loading="lazy">קולומביה</span><span class="form">4-3-3</span></div>
+          <ol class="xi"><li>Camilo Vargas</li><li>Daniel Munoz</li><li>Davinson Sanchez</li><li>Jhon Lucumi</li><li>Johan Mojica</li><li>Gustavo Puerta</li><li>Jefferson Lerma</li><li>James Rodriguez</li><li>Jhon Arias</li><li>Luis Suarez</li><li>Luis Diaz</li></ol>
+          <p class="lunews">לקולומביה אין דיווחים על פציעות, אך הם מנהלים את דקות המשחק של הקשר ג'יימס רודריגס, שהוחלף בדקה ה-58 נגד הרפובליקה הדמוקרטית של קונגו.</p></div><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/por.png" alt="" loading="lazy">פורטוגל</span><span class="form">4-2-3-1</span></div>
+          <ol class="xi"><li>Diogo Costa</li><li>Joao Cancelo</li><li>Ruben Dias</li><li>Renato Veiga</li><li>Nuno Mendes</li><li>Joao Neves</li><li>Vitinha</li><li>Bernardo Silva</li><li>Bruno Fernandes</li><li>Pedro Neto</li><li>Cristiano Ronaldo</li></ol>
+          <p class="lunews">בלם בנפיקה, תומאס אראוחו, נפצע במשחק הפתיחה מול קונגו וייבדק כשירותו. ייתכן שרפאל ליאו יפתח במקום פדרו נטו.</p></div></div></div>
+      <div class="sec"><h3>♟️ טקטיקה צפויה</h3><p>קולומביה צפויה להציג מערך 4-3-3 עם דגש על משחק הגנתי ממושמע וניצול מהירותם של שחקני ההתקפה כמו לואיס דיאז. המאמן נסטור לורנצו ידוע ביכולתו לארגן את הקבוצה הגנתית ולשלוט במשחק. פורטוגל, תחת רוברטו מרטינס, צפויה לשחק במערך 4-2-3-1 התקפי, עם כריסטיאנו רונאלדו בחוד וברונו פרננדש כפליימייקר. פורטוגל תנסה לשלוט בכדור וליצור מצבי הבקעה רבים דרך האגפים ומרכז השדה העשיר שלה.</p></div>
+      <div class="sec"><h3>📈 כושר אחרון</h3>
+        <p><b>קולומביה:</b> קולומביה נמצאת בכושר מצוין, עם ארבעה ניצחונות רצופים בכל המסגרות. הם לא הפסידו בשבעת המשחקים האחרונים שלהם. בשני משחקי הפתיחה במונדיאל, קולומביה ניצחה את אוזבקיסטן 3-1 ואת הרפובליקה הדמוקרטית של קונגו 1-0.</p>
+        <p><b>פורטוגל:</b> פורטוגל לא הפסידה בשבעת המשחקים האחרונים שלה, עם ארבעה ניצחונות ושתי תוצאות תיקו בשישה המשחקים האחרונים. במונדיאל, פורטוגל סיימה בתיקו 1-1 מול הרפובליקה הדמוקרטית של קונגו ולאחר מכן הביסה את אוזבקיסטן 5-0.</p></div>
+      <div class="sec"><h3>🤝 ראש בראש</h3><p>אין תיעוד למפגשים קודמים בין קולומביה לפורטוגל, מה שהופך את המשחק הזה למפגש היסטורי ראשון בין שתי הנבחרות.</p></div>
+      <div class="sec"><h3>⚽ גולים צפויים — המאצ'אפ</h3><p>פורטוגל נחשבת לקבוצה חזקה יותר על הנייר, עם כוח אש התקפי מרשים. עם זאת, קולומביה הציגה יכולת הגנתית חזקה וספגה שער אחד בלבד בשני משחקי הבית. ניתוח המודל שלי צופה 1.37 גולים לקולומביה ו-1.28 גולים לפורטוגל, מה שמרמז על משחק צמוד ושקול. שני הקבוצות הראו יכולת להבקיע לפחות שני שערים בשלושה מחמשת המשחקים האחרונים שלהן, מה שמעיד על פוטנציאל למשחק עם שערים רבים.</p></div>
+      <div class="sec betting"><h3>💰 תחזיות והימורים — מהאתרים המובילים</h3><p><b>תחזית Opta:</b> ניצחון פורטוגל 33% · תיקו 29% · ניצחון קולומביה 37% <span class="dim">(הערכה - Opta לא פרסמה תחזית ספציפית למשחק זה. הנתונים מבוססים על תחזית המודל שלי.)</span></p><div class="odds">
+              <div class="oc"><span>ניצחון קולומביה</span><b>2.50</b><span class="dim">40%</span></div>
+              <div class="oc"><span>תיקו</span><b>3.50</b><span class="dim">28.5%</span></div>
+              <div class="oc fav"><span>ניצחון פורטוגל</span><b>2.20</b><span class="dim">45.4%</span></div>
+            </div><p class="dim sm">יחס עשרוני · באחוזים = הסתברות משתמעת מהיחס</p><p><b>תחזיות תוצאה סופית:</b> Whispers: <b>2-2</b> · Oddschecker: <b>1-1</b> · FanDuel: <b>0-1</b></p><p><b>הפרש שערים (הנדיקפ):</b> פורטוגל עם יתרון קל (-0.25).</p><p><b>סך שערים:</b> מעל/מתחת 2.5 שערים (Over/Under 2.5 goals) - קו 2.5 שערים הוא המומלץ. יש ציפייה לשער אחד לפחות, עם סיכוי של כ-85% לשני שערים או יותר. ישנם גם המלצות להימור על מעל 3.5 שערים.</p><p><b>הימור ערך:</b> תיקו או ניצחון של קולומביה (Double Chance) ביחס של 1.95 (Evs) נחשב להימור ערך, בהתחשב בכושר הטוב של קולומביה ויכולתם לשמור על יציבות הגנתית.</p><p class="tip">💡 <b>המלצה:</b> ההמלצה היא תיקו או ניצחון של קולומביה (Colombia or Draw Double Chance) ביחס של 1.95. כמו כן, הימור על לואיס דיאז שיבקיע או יבשל שער ביחס 3.00 נראה אטרקטיבי.</p><p class="rg">⚠️ מידע למטרות ניתוח בלבד, לא ייעוץ הימורים. הימור אחראי · גיל 18+.</p></div>
+      <div class="sec"><h3>⭐ שחקני מפתח</h3><div class="kps"><div class="kp"><span class="kpn">Luis Diaz</span> <span class="kpt">קולומביה</span><p>שחקן מפתח התקפי של קולומביה, הציג יכולת מצוינת במונדיאל עם שער ובישול. מהווה איום מתמיד על הגנת היריב.</p></div><div class="kp"><span class="kpn">Daniel Munoz</span> <span class="kpt">קולומביה</span><p>המגן הימני של קולומביה, כבש בשני משחקי הבית והוא שחקן מפתח בהתקפה.</p></div><div class="kp"><span class="kpn">Jefferson Lerma</span> <span class="kpt">קולומביה</span><p>קשר אחורי קשוח עם אחריות רבה במרכז המגרש, צפוי להיות מעורב בחילוצי כדור רבים.</p></div><div class="kp"><span class="kpn">Cristiano Ronaldo</span> <span class="kpt">פורטוגל</span><p>הכובש המוביל של פורטוגל, כבש צמד במשחק האחרון והוא סקורר מוכח.</p></div><div class="kp"><span class="kpn">Bruno Fernandes</span> <span class="kpt">פורטוגל</span><p>קשר יצירתי ומוביל בקישור הפורטוגלי, אחראי על יצירת מצבי הבקעה.</p></div><div class="kp"><span class="kpn">Nuno Mendes</span> <span class="kpt">פורטוגל</span><p>מגן שמאלי התקפי עם יכולת פריצה וכבש שער במשחק האחרון.</p></div></div></div>
+      <div class="sec pred"><h3>🎯 שורה תחתונה</h3><p>צפוי משחק צמוד ואינטנסיבי בין שתי נבחרות חזקות. קולומביה מגיעה בכושר מצוין ועם ביטחון עצמי, בעוד פורטוגל תרצה להבטיח את ראשות הבית. למרות שפורטוגל נחשבת למועדפת על הנייר, קולומביה יכולה להפתיע או להשיג תיקו. התוצאה הסבירה ביותר היא תיקו, עם פוטנציאל למשחק עם שערים רבים.</p></div>
+      <p class="note"><a href="https://www.racingpost.com/sport/football/world-cup/colombia-vs-portugal-prediction-bet-builder-tip-odds-team-news-a78e7c" target="_blank">מקור 1</a> · <a href="https://www.onefootball.com/en/news/colombia-vs-portugal-prediction-world-cup-2026-preview-best-bets-39659345" target="_blank">מקור 2</a> · <a href="https://www.tips.gg/football/colombia-vs-portugal-match/" target="_blank">מקור 3</a> · <a href="https://thesportsrush.com/football-news-colombia-vs-portugal-world-cup-2026-picks-predictions-betting-odds-preview/" target="_blank">מקור 4</a> · <a href="https://www.totalfootballanalysis.com/match-previews/colombia-vs-portugal-world-cup-2026-predictions-and-best-bets" target="_blank">מקור 5</a></p>
+</section>
+<footer>ניתוח טקסטואלי · נבנה ע"י Claude</footer>
+</div></body></html>

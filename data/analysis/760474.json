@@ -1,0 +1,141 @@
+{
+ "headline": "סנגל מול עיראק: קרב על התקווה בבית I של המונדיאל",
+ "context": "שתי הנבחרות, סנגל ועיראק, מגיעות למשחק האחרון בבית I ללא נקודות ולמעשה מודחות מהתחרות על שני המקומות הראשונים. עם זאת, ניצחון משכנע יכול להשאיר להן סיכוי קלוש להעפיל לשלב הנוקאאוט כאחת משמונה הקבוצות הטובות ביותר שיסיימו במקום השלישי בבתים השונים. הפרש השערים יהיה קריטי במצב כזה. סנגל עם הפרש שערים -3, בעוד שעיראק עם -6, כך שלסנגל סיכויים מעט טובים יותר במאבק על המקום השלישי. תיקו או הפסד יסיימו את דרכן של שתי הנבחרות בטורניר באופן ודאי.",
+ "lineups": {
+  "SEN": {
+   "formation": "4-3-3",
+   "xi": [
+    "Mory Diaw",
+    "Krepin Diatta",
+    "Kalidou Koulibaly",
+    "Moussa Niakhate",
+    "Malick Diouf",
+    "Idrissa Gana Gueye",
+    "Pape Gueye",
+    "Lamine Camara",
+    "Ismaila Sarr",
+    "Nicolas Jackson",
+    "Sadio Mane"
+   ],
+   "news": "שוער סנגל, אדוארד מנדי, נפצע בברכו במשחק נגד נורבגיה וייעדר מהמשחק. מורי דיאו צפוי להחליפו בין הקורות."
+  },
+  "IRQ": {
+   "formation": "4-3-3",
+   "xi": [
+    "Ahmed Basil Fadhil",
+    "Hussein Ali",
+    "Zaid Tahseen",
+    "Akam Hashem",
+    "Merchas Doski",
+    "Zidane Iqbal",
+    "Marko Lawk Farji",
+    "Amir Al-Ammari",
+    "Ali Jasim",
+    "Ali Al Hamadi",
+    "Ibrahim Bayesh"
+   ],
+   "news": "חלוץ עיראק, איימן חוסיין, שהבקיע את השער היחיד של נבחרתו בטורניר, נפצע במפשעה במשחק מול צרפת וקיים ספק גדול לגבי שיתופו. עלי אל-חמאדי צפוי להחליפו בהרכב הפותח."
+  }
+ },
+ "tactics": "סנגל צפויה לנקוט בגישה התקפית מאוד, בפורמציית 4-3-3, על מנת להשיג ניצחון בהפרש שערים גדול, שישפר את סיכוייה לעלות מהמקום השלישי. הם ינסו לנצל את המהירות והכישרון של שחקני ההתקפה שלהם כמו סאדיו מאנה, איסמעילה סאר וניקולא ג'קסון. עיראק, לעומת זאת, צפויה לשחק ב-4-3-3 גם כן, אך תתמקד יותר בהגנה וביציאה למתפרצות, בניסיון להפתיע את סנגל. הקפטן שלהם, זידאן איקבאל, יהיה המנוע היצירתי בקישור.",
+ "form": {
+  "SEN": "L L D L W W L W W W (שני הפסדים במונדיאל, תיקו אחד ושני הפסדים במשחקי חימום, וארבעה ניצחונות קודמים)",
+  "IRQ": "L L L D W L L W W W (שני הפסדים במונדיאל, שלושה הפסדים במשחקי חימום, תיקו אחד וארבעה ניצחונות קודמים)"
+ },
+ "h2h": "זהו המפגש הראשון בהיסטוריה בין נבחרות סנגל ועיראק.",
+ "matchup": "סנגל נחשבת לפייבוריטית ברורה במשחק, עם יתרון משמעותי באיכות הסגל וביכולת ההתקפית. עיראק התקשתה מאוד בהגנה בטורניר, ספגה 7 שערים בשני משחקים. סנגל, למרות שני ההפסדים, הראתה יכולת התקפית טובה עם 3 שערים. המודל שלי חוזה 2.18 שערים לסנגל ו-0.86 שערים לעיראק, מה שמצביע על ניצחון סנגלי ברור.",
+ "opta": {
+  "home": "66%",
+  "draw": "21%",
+  "away": "12%",
+  "sims": "Opta לא פרסמה תחזית ספציפית למשחק זה. הנתונים המצוינים מבוססים על מודל פנימי."
+ },
+ "betting": {
+  "odds": {
+   "home": {
+    "dec": "1.27",
+    "imp": "78.7%"
+   },
+   "draw": {
+    "dec": "5.50",
+    "imp": "18.2%"
+   },
+   "away": {
+    "dec": "12.00",
+    "imp": "8.3%"
+   }
+  },
+  "ou": "מעל/מתחת 2.5 שערים (קו 2.5 שערים, עם נטייה למעל 2.5 שערים). קו 3.5 שערים מוצע גם כן.",
+  "handicap": "סנגל -1.5 (כלומר, סנגל תנצח בהפרש של שני שערים ומעלה).",
+  "predicted_scores": [
+   {
+    "src": "המודל שלי",
+    "score": "2-0"
+   },
+   {
+    "src": "Sportsgambler",
+    "score": "3-1"
+   },
+   {
+    "src": "Racing Post",
+    "score": "3-1"
+   },
+   {
+    "src": "Sports Illustrated",
+    "score": "4-1"
+   },
+   {
+    "src": "Sports Mole",
+    "score": "3-1"
+   },
+   {
+    "src": "HOOLIGAN SOCCER",
+    "score": "3-1"
+   },
+   {
+    "src": "Football Whispers",
+    "score": "3-1"
+   }
+  ],
+  "value": "הימור על 'שתי הקבוצות יבקיעו - כן' (+115) נראה כהימור ערך, שכן סנגל ספגה שערים בשלושה מתוך ארבעת המשחקים האחרונים, ועיראק הראתה נכונות לתקוף.",
+  "tip": "סנגל צפויה לנצח בהפרש של לפחות שני שערים. הימור על סנגל עם האנדיקפ -1.5 או -2.5 (תלוי ביחסי הזכייה). איסמעילה סאר להבקיע בכל זמן.",
+  "sources": [
+   "https://www.sportsgambler.com/football/world-cup/predictions/senegal-vs-iraq-prediction-picks-preview-lineups-best-bets/",
+   "https://www.sportsgambler.com/football/world-cup/predictions/senegal-vs-iraq-prediction-betting-tips-lineups-odds/",
+   "https://www.si.com/soccer/world-cup/news/senegal-vs-iraq-world-cup-preview-predictions-and-lineups",
+   "https://www.sportsmole.co.uk/football/world-cup/senegal/preview/prediction-senegal-vs-iraq_sm",
+   "https://hooligansoccer.com/2026-world-cup-senegal-vs-iraq-match-preview-a-battle-for-pride/"
+  ]
+ },
+ "key_players": [
+  {
+   "team": "SEN",
+   "name": "Ismaila Sarr",
+   "why": "הבקיע צמד נגד נורבגיה והראה יכולת סיום מצוינת. מהירותו תהווה איום מתמיד על הגנת עיראק."
+  },
+  {
+   "team": "SEN",
+   "name": "Sadio Mane",
+   "why": "הכוכב הגדול של סנגל ומלך השערים שלה בכל הזמנים. למרות שטרם הבקיע בטורניר, הוא תמיד מסוכן ויכול ליצור מצבים עבור עצמו וחבריו."
+  },
+  {
+   "team": "IRQ",
+   "name": "Zidane Iqbal",
+   "why": "הקשר הצעיר ממועדון מנצ'סטר יונייטד לשעבר הוא המנוע היצירתי של עיראק בקישור וינסה לספק כדורים לחלוצים."
+  }
+ ],
+ "prediction": "סנגל עדיפה באופן ניכר על עיראק ותגיע למשחק עם מוטיבציה גבוהה להשיג ניצחון משכנע שישפר את סיכוייה להעפיל. למרות היעדרותו של מנדי, הכוח ההתקפי של סנגל צפוי להיות גדול מדי עבור הגנת עיראק החלשה. אני צופה ניצחון קל לסנגל. תוצאה צפויה: סנגל 3-1 עיראק.",
+ "score_hint": "3-1",
+ "sources": [
+  "https://www.sportsgambler.com/football/world-cup/predictions/senegal-vs-iraq-prediction-picks-preview-lineups-best-bets/",
+  "https://www.sportsgambler.com/football/world-cup/predictions/senegal-vs-iraq-prediction-betting-tips-lineups-odds/",
+  "https://www.si.com/soccer/world-cup/news/senegal-vs-iraq-world-cup-preview-predictions-and-lineups",
+  "https://www.sportsmole.co.uk/football/world-cup/senegal/preview/prediction-senegal-vs-iraq_sm",
+  "https://hooligansoccer.com/2026-world-cup-senegal-vs-iraq-match-preview-a-battle-for-pride/"
+ ],
+ "match_id": "760474",
+ "home": "SEN",
+ "away": "IRQ",
+ "group": "I",
+ "generated_by": "gemini (gemini-2.5-flash)"
+}

@@ -1,0 +1,138 @@
+{
+ "headline": "קונגו ואוזבקיסטן בקרב הישרדות: מי תשיג ניצחון ראשון במונדיאל 2026?",
+ "context": "קונגו (COD) ואוזבקיסטן (UZB) נפגשות למשחק קריטי בבית K של מונדיאל 2026. קולומביה כבר הבטיחה את עלייתה עם 6 נקודות, ופורטוגל במקום השני עם 4 נקודות. קונגו מדורגת שלישית עם נקודה אחת והפרש שערים -1, בעוד אוזבקיסטן בתחתית הבית ללא נקודות ועם הפרש שערים -7. ניצחון הכרחי לשתי הקבוצות כדי לשמור על סיכוי תיאורטי להעפיל לשלב הנוקאאוט כאחת מהמדורגות במקום השלישי הטובות ביותר. עבור אוזבקיסטן, זהו גם סיכוי אחרון לזכות בנקודות ראשונות בטורניר גביע העולם הבכורה שלה.",
+ "lineups": {
+  "COD": {
+   "formation": "3-5-2 (הערכה)",
+   "xi": [
+    "Lionel Mpasi-Nzau",
+    "Chancel Mbemba",
+    "Axel Tuanzebe",
+    "Steve Kapuadi",
+    "Aaron Wan-Bissaka",
+    "Arthur Masuaku",
+    "Ngal'ayel Mukau",
+    "Samuel Moutoussamy",
+    "Edo Kayembe",
+    "Cédric Bakambu",
+    "Yoane Wissa"
+   ],
+   "news": "אין דיווחים על פציעות או השעיות בקונגו. ייתכן שקונגו תעבור למערך 4-3-3 או 4-2-3-1 בניסיון להיות התקפית יותר, אך סביר שתשמור על מערך הגנתי יציב."
+  },
+  "UZB": {
+   "formation": "3-4-2-1 (הערכה)",
+   "xi": [
+    "Utkir Yusupov (או Abduvokhid Nematov)",
+    "Abdukodir Khusanov",
+    "Rustam Ashurmatov",
+    "Abdulla Abdullaev",
+    "Bekhruz Karimov",
+    "Akmal Mozgovoy",
+    "Otabek Shukurov",
+    "Khojiakbar Alijonov",
+    "Azizjon Ganiev",
+    "Abbosbek Fayzullaev",
+    "Eldor Shomurodov"
+   ],
+   "news": "אין דיווחים על פציעות או השעיות באוזבקיסטן. ייתכנו שינויים בהרכב לאחר התבוסה 5-0 לפורטוגל, במטרה לשפר את האיזון בין הגנה להתקפה."
+  }
+ },
+ "tactics": "קונגו צפויה להמשיך עם גישה הגנתית ומאורגנת, כפי שהציגה מול פורטוגל וקולומביה. היא תנסה לסגור שטחים במרכז השדה ולצאת להתקפות מתפרצות מהירות דרך שחקני כנף כמו וויסה. אוזבקיסטן, לעומת זאת, תצטרך למצוא איזון בין חיזוק ההגנה הפגיעה שלה לבין יצירת הזדמנויות התקפיות. הם ינסו להשתמש ביכולות היצירתיות של פייזולאייב כדי להזין את שומורודוב בחוד.",
+ "form": {
+  "COD": "קונגו הציגה יכולת תחרותית בשני משחקי הפתיחה שלה במונדיאל, עם תיקו 1-1 מול פורטוגל והפסד 1-0 לקולומביה. בחמשת המשחקים האחרונים שלה בכל המסגרות, קונגו רשמה ניצחון אחד, שתי תוצאות תיקו ושני הפסדים. היא ספגה 4 שערים וכבשה 4 שערים ב-6 המשחקים האחרונים.",
+  "UZB": "אוזבקיסטן חוותה פתיחה קשה למונדיאל, עם הפסד 3-1 לקולומביה ותבוסה 5-0 לפורטוגל. הקבוצה הפסידה בארבעת משחקיה האחרונים בכל המסגרות. ב-6 המשחקים האחרונים שלה, אוזבקיסטן רשמה ניצחון אחד, תיקו אחד וארבעה הפסדים, כבשה 5 שערים וספגה 13."
+ },
+ "h2h": "זהו המפגש הראשון בהיסטוריה בין נבחרות קונגו ואוזבקיסטן.",
+ "matchup": "קונגו נראית כקבוצה המאורגנת והיציבה יותר הגנתית מבין השתיים, לאחר שספגה רק שני שערים מול פורטוגל וקולומביה. אוזבקיסטן, לעומת זאת, הציגה הגנה פגיעה מאוד וספגה שמונה שערים בשני משחקים. היתרון של קונגו טמון ביכולת ההתקפית של שחקנים כמו יואן וויסה, שכבש את שערה היחיד בטורניר. המודל שלי חוזה 1.3-1.35 שערים צפויים לכל קבוצה, מה שמרמז על משחק שקול יחסית מבחינת יצירת מצבים, אך הנתונים ההגנתיים של אוזבקיסטן מצביעים על פוטנציאל גבוה יותר לקונגו לנצל את המצבים שלה.",
+ "opta": {
+  "home": "34%",
+  "draw": "29%",
+  "away": "37%",
+  "sims": "Opta לא פרסמה תחזית ספציפית למשחק זה. הנתונים הנ\"ל הם מודל ההסתברות שלי. סביר להניח ש-Opta תראה את קונגו כבעלת סיכויים טובים יותר לניצחון בהתבסס על הופעותיהם בטורניר עד כה."
+ },
+ "betting": {
+  "odds": {
+   "home": {
+    "dec": "1.80-2.10",
+    "imp": "48%-56%"
+   },
+   "draw": {
+    "dec": "3.25-4.49",
+    "imp": "22%-31%"
+   },
+   "away": {
+    "dec": "3.40-4.80",
+    "imp": "21%-29%"
+   }
+  },
+  "ou": "קו 2.5 שערים (אובר 2.5 בערך 1/1, אנדר 2.5 בערך 4/6)",
+  "handicap": "קונגו -0.5 (בסביבות -140 עד -115)",
+  "predicted_scores": [
+   {
+    "src": "SportsLine",
+    "score": "הימור על אנדר 2.5 שערים"
+   },
+   {
+    "src": "Total Football Analysis",
+    "score": "קונגו 2-0"
+   },
+   {
+    "src": "MrFixitsTips",
+    "score": "קונגו 1-0"
+   },
+   {
+    "src": "Whispers (SportsLine)",
+    "score": "קונגו 1-0"
+   },
+   {
+    "src": "FreeSuperTips",
+    "score": "קונגו 2-1"
+   }
+  ],
+  "value": "קונגו לניצחון נראית כהימור ערך טוב, בהתחשב ביכולת ההגנתית שלהם מול ההגנה הפגיעה של אוזבקיסטן. כמו כן, הימור על 'אנדר 2.5 שערים' עשוי להיות בעל ערך, לאור סגנון המשחק הזהיר של קונגו והצורך של אוזבקיסטן לייצב את ההגנה.",
+  "tip": "קונגו לניצחון. יואן וויסה לכבוש או לבשל.",
+  "sources": [
+   "https://www.sportsline.com/soccer/world-cup-2026-picks-predictions-odds-congo-dr-vs-uzbekistan-best-bets-from-proven-soccer-expert/",
+   "https://totalfootballanalysis.com/match-previews/dr-congo-vs-uzbekistan-world-cup-2026-predictions-and-picks",
+   "https://www.mrfixitstips.co.uk/dr-congo-vs-uzbekistan-prediction-betting-tips/",
+   "https://www.freesupertips.com/predictions/congo-dr-vs-uzbekistan-predictions/",
+   "https://www.sportytrader.com/en/soccer/prediction/dr-congo-uzbekistan-300626/"
+  ]
+ },
+ "key_players": [
+  {
+   "team": "COD",
+   "name": "Yoane Wissa",
+   "why": "הכובש היחיד של קונגו בטורניר, מביא איכות מהפרמייר ליג ויכולת סיום טובה."
+  },
+  {
+   "team": "COD",
+   "name": "Chancel Mbemba",
+   "why": "השחקן המנוסה ביותר בקונגו ומנהיג קו ההגנה, קריטי ליציבות ההגנתית."
+  },
+  {
+   "team": "UZB",
+   "name": "Abbosbek Fayzullaev",
+   "why": "השחקן היצירתי ביותר של אוזבקיסטן והכובש היחיד שלהם בטורניר, יהיה המפתח לכל התקפה."
+  },
+  {
+   "team": "UZB",
+   "name": "Eldor Shomurodov",
+   "why": "החלוץ המרכזי והמנוסה של אוזבקיסטן, עם 44 שערים בינלאומיים, יחפש הזדמנויות לכבוש."
+  }
+ ],
+ "prediction": "קונגו נראית כקבוצה החזקה והמאורגנת יותר מבין השתיים, עם הגנה יציבה יותר ויכולת התקפית מספקת כדי לנצל את חולשותיה של אוזבקיסטן. אוזבקיסטן תתקשה להתמודד עם הלחץ והיא צפויה לספוג שערים. אני צופה ניצחון לקונגו שישאיר אותה בחיים במאבק על המקום השלישי. תוצאה צפויה: קונגו 2-0 אוזבקיסטן.",
+ "score_hint": "2-0",
+ "sources": [
+  "https://www.sportsline.com/soccer/world-cup-2026-picks-predictions-odds-congo-dr-vs-uzbekistan-best-bets-from-proven-soccer-expert/",
+  "https://totalfootballanalysis.com/match-previews/dr-congo-vs-uzbekistan-world-cup-2026-predictions-and-picks",
+  "https://www.mrfixitstips.co.uk/dr-congo-vs-uzbekistan-prediction-betting-tips/",
+  "https://www.sportytrader.com/en/soccer/prediction/dr-congo-uzbekistan-300626/",
+  "https://www.freesupertips.com/predictions/congo-dr-vs-uzbekistan-predictions/"
+ ],
+ "match_id": "760482",
+ "home": "COD",
+ "away": "UZB",
+ "group": "K",
+ "generated_by": "gemini (gemini-2.5-flash)"
+}

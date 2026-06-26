@@ -31,10 +31,10 @@ def main(n=50000, force_analysis=False):
         json.dump(sim, f, ensure_ascii=False, indent=1)
 
     print("=" * 56)
-    print("STEP 3/4  Generating Gemini analyses for today's matches ...")
+    print("STEP 3/4  Generating Gemini analyses (today + tomorrow) ...")
     try:
         analyst.get_key()
-        done, failed = analyst.generate_today(state, force=force_analysis)
+        done, failed = analyst.generate_upcoming(state, days=2, force=force_analysis)
         print(f"  analyses: {len(done)} new, {len(failed)} failed")
     except Exception as ex:
         print(f"  (skipped — {ex})")

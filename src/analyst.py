@@ -168,10 +168,18 @@ REQUIRED = ("headline", "context", "lineups", "tactics", "form", "h2h",
             "matchup", "key_players", "prediction")
 
 
-def generate_match(state, fx, model=DEFAULT_MODEL):
+def generate_match(state, fx, model=DEFAULT_MODEL, attempts=3):
     f = match_facts(state, fx)
-    text = gemini_generate(build_prompt(f), model=model)
-    a = extract_json(text)
+    prompt = build_prompt(f)
+    a, last = None, None
+    for _ in range(attempts):
+        try:
+            a = extract_json(gemini_generate(prompt, model=model))
+            break
+        except Exception as ex:           # malformed JSON → retry (resampling fixes it)
+            last = ex
+    if a is None:
+        raise RuntimeError(f"no valid JSON after {attempts} attempts: {last}")
     a["match_id"] = f["id"]
     a["home"], a["away"], a["group"] = f["home"], f["away"], f["group"]
     a["generated_by"] = f"gemini ({model})"
@@ -185,30 +193,43 @@ def generate_match(state, fx, model=DEFAULT_MODEL):
     return path
 
 
-def today_fixtures(state):
-    import datetime as dt
-    IL = dt.timezone(dt.timedelta(hours=3))
-    def fday(iso):
-        d = dt.datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(IL)
-        return (d - dt.timedelta(hours=6)).date()
-    now_day = (dt.datetime.now(IL) - dt.timedelta(hours=6)).date()
+import datetime as _dt
+_IL = _dt.timezone(_dt.timedelta(hours=3))
+
+
+def _fday(iso):
+    d = _dt.datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(_IL)
+    return (d - _dt.timedelta(hours=6)).date()
+
+
+def upcoming_fixtures(state, days=2):
+    """(now_day, fixtures) for the next `days` football-days that have matches."""
+    now_day = (_dt.datetime.now(_IL) - _dt.timedelta(hours=6)).date()
     byday = {}
     for fx in state["group_fixtures"]:
-        byday.setdefault(fday(fx["date"]), []).append(fx)
-    day = now_day if now_day in byday else min((d for d in byday if d >= now_day), default=min(byday))
-    return sorted(byday[day], key=lambda f: f["date"])
+        byday.setdefault(_fday(fx["date"]), []).append(fx)
+    target = sorted(d for d in byday if d >= now_day)[:days]
+    if not target:
+        target = sorted(byday)[-days:]
+    out = []
+    for d in target:
+        out.extend(sorted(byday[d], key=lambda f: f["date"]))
+    return now_day, out
 
 
-def generate_today(state, model=DEFAULT_MODEL, force=False):
+def generate_upcoming(state, days=2, model=DEFAULT_MODEL, force=False):
+    """Refresh TODAY's analyses (force) and pre-generate the NEXT day's if missing."""
+    now_day, fxs = upcoming_fixtures(state, days)
     done, failed = [], []
-    for fx in today_fixtures(state):
+    for fx in fxs:
+        is_today = _fday(fx["date"]) == now_day
         path = os.path.join(ANALYSIS_DIR, f"{fx['id']}.json")
-        if os.path.exists(path) and not force:
+        if os.path.exists(path) and not (force and is_today):
             continue
         try:
             generate_match(state, fx, model=model)
             done.append(fx["id"])
-            print(f"  ✓ {fx['home']}–{fx['away']}")
+            print(f"  ✓ {fx['home']}–{fx['away']}{'' if is_today else ' (מחר)'}")
         except Exception as ex:
             failed.append((fx["id"], str(ex)))
             print(f"  ✗ {fx['home']}–{fx['away']}: {ex}")
@@ -228,6 +249,6 @@ if __name__ == "__main__":
         print("Generating", mid, "...")
         print("Wrote", generate_match(state, fx))
     else:
-        print("Generating today's analyses ...")
-        done, failed = generate_today(state, force=force)
+        print("Generating analyses (today + tomorrow) ...")
+        done, failed = generate_upcoming(state, days=2, force=force)
         print(f"Done: {len(done)} generated, {len(failed)} failed")

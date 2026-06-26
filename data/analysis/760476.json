@@ -1,0 +1,138 @@
+{
+ "headline": "קרב על העלייה: מצרים נגד איראן בגביע העולם 2026",
+ "context": "המשחק בין מצרים לאיראן הוא קריטי עבור שתי הנבחרות בבית G. מצרים מובילה את הבית עם 4 נקודות (ניצחון ותיקו), ואילו איראן במקום השני עם 2 נקודות (שתי תוצאות תיקו), בתיקו נקודות עם בלגיה אך ביתרון הפרש שערים. ניצחון יבטיח למצרים את המקום הראשון בבית, מה שיכול להוביל ליריבה נוחה יותר בשלב שמינית הגמר. איראן חייבת להימנע מהפסד כדי לשמור על סיכוי לעלות, כאשר ניצחון יבטיח להן כמעט בוודאות מקום בשלב הבא, בין אם במקום השני או כאחת מהקבוצות הטובות ביותר במקום השלישי.",
+ "lineups": {
+  "EGY": {
+   "formation": "4-2-3-1",
+   "xi": [
+    "Mostafa Shobeir",
+    "Mohamed Hany",
+    "Yasser Ibrahim",
+    "Ramy Rabia",
+    "Ahmed Abou El Fotouh",
+    "Marwan Ateya",
+    "Mohanad Lasheen",
+    "Mostafa Ziko",
+    "Mohamed Salah",
+    "Emam Ashour",
+    "Omar Marmoush"
+   ],
+   "news": "מצרים תחסר את הקשר האחורי חמדי פתחי (Hamdy Fathy) עקב פציעה בשריר הירך האחורי, ואת הבלם חוסאם עבד אל-מג'יד (Hossam Abdelmaguid) שסובל מפציעת ראש. רמי רביעה צפוי לפתוח במקומו של פתחי. איסלאם עיסא (Islam Issa) נפצע בברכו וייעדר מהמונדיאל."
+  },
+  "IRN": {
+   "formation": "5-4-1",
+   "xi": [
+    "Alireza Beiranvand",
+    "Ramin Rezaeian",
+    "Hossein Kanaani",
+    "Shoja Khalilzadeh",
+    "Ali Nemati",
+    "Ehsan Hajsafi",
+    "Alireza Jahanbakhsh",
+    "Saeid Ezatolahi",
+    "Saman Ghoddos",
+    "Mohammad Mohebi",
+    "Mehdi Taremi"
+   ],
+   "news": "איראן צפויה לפתוח עם מערך הגנתי יותר, ככל הנראה עם חמישה שחקני הגנה. רוזבה צ'שמי (Roozbeh Cheshmi) בספק עקב פציעה ולא צפוי לפתוח. ייתכן שאמיר גלנואי (Amir Ghalenoei) יבצע שינויים קלים בהרכב לאחר התיקו מול בלגיה, כשעלירזא ג'האנבאקש (Alireza Jahanbakhsh) עשוי לחזור להרכב הפותח."
+  }
+ },
+ "tactics": "מצרים, תחת הובסאם חסן, צפויה לשחק במערך 4-2-3-1 התקפי ודינמי, תוך ניצול המהירות והיכולות של מוחמד סלאח (Mohamed Salah) ואומר מרמוש (Omar Marmoush) במעברים מהירים. הם ינסו לשלוט בקצב המשחק וללחוץ גבוה כדי להכריע את המשחק. איראן, בהדרכת אמיר גלנואי, צפויה לנקוט בגישה זהירה והגנתית במערך 5-4-1, עם דגש על סולידיות הגנתית וניסיונות לצאת למתפרצות מהירות דרך מהדי טארמי (Mehdi Taremi) ועלירזא ג'האנבאקש (Alireza Jahanbakhsh). למרות הצורך בניצחון, הם עשויים להתבסס על הגנה חזקה ולקוות לרגעים בודדים בהתקפה.",
+ "form": {
+  "EGY": "מצרים נמצאת בכושר טוב, עם שני ניצחונות, שתי תוצאות תיקו והפסד אחד בחמשת משחקיה האחרונים. במונדיאל הנוכחי, הם סיימו בתיקו 1-1 מול בלגיה וניצחו 3-1 את ניו זילנד.",
+  "IRN": "איראן הציגה כושר סולידי, עם שני ניצחונות, תיקו אחד והפסד אחד בארבעת משחקיה האחרונים. במונדיאל הנוכחי, הם סיימו בתיקו 2-2 מול ניו זילנד ותיקו 0-0 מול בלגיה."
+ },
+ "h2h": "מצרים ואיראן נפגשו רק פעמיים בעבר, בשני משחקי ידידות. ב-1975, איראן ניצחה 2-1. ב-2000, המשחק הסתיים בתיקו 1-1. זהו המפגש התחרותי הראשון בין שתי הנבחרות.",
+ "matchup": "מצרים מציגה עליונות התקפית ומשמעת טקטית טובה יותר. איראן תנסה להסתגר, אך פגיעותיה ההגנתיות עלולות להיחשף על ידי התנועה העדיפה של מצרים בשליש האחרון. מצרים צפויה לייצר יותר מצבי הבקעה, עם ממוצע של 1.55 שערים למשחק העונה, לעומת 2.23 שערים למשחק של איראן. מודל ה-xG לשני המשחקים של מצרים עומד על 2.77 בממוצע, בעוד שאיראן עומדת על 2.58. המודל שלי חוזה 1.26-1.39 גולים למצרים ו-1.39-1.26 גולים לאיראן.",
+ "opta": {
+  "home": "32%",
+  "draw": "29%",
+  "away": "38%",
+  "sims": "אין נתון Opta ספציפי למשחק זה. אלו הערכות המודל שלי."
+ },
+ "betting": {
+  "odds": {
+   "home": {
+    "dec": "2.45",
+    "imp": "40.8%"
+   },
+   "draw": {
+    "dec": "3.40",
+    "imp": "29.4%"
+   },
+   "away": {
+    "dec": "3.40",
+    "imp": "29.4%"
+   }
+  },
+  "ou": "קו 2.5 שערים (אנדר 2.5 הוא התוצאה הסבירה ביותר, עם יחס של 1.44. אובר 2.5 ביחס של 2.70).",
+  "handicap": "מצרים -0.25 (יחס -105), כלומר ההימור מתחלק בין 0 ל-0.5-. תשלום מלא אם מצרים מנצחת, וחצי מההימור מוחזר אם יש תיקו.",
+  "predicted_scores": [
+   {
+    "src": "Sports Mole",
+    "score": "2-1"
+   },
+   {
+    "src": "Gooners Guide",
+    "score": "2-0"
+   },
+   {
+    "src": "Covers.com",
+    "score": "1-1"
+   },
+   {
+    "src": "Sports Illustrated",
+    "score": "1-1"
+   },
+   {
+    "src": "WhoScored.com",
+    "score": "2-0"
+   }
+  ],
+  "value": "מצרים לניצחון ביחס 2.45 נחשב להימור ערך, בהתחשב במומנטום שלהם והתמריץ לנצח את הבית.",
+  "tip": "תיקו במחצית (יחס 1.91) נראה סביר, בהתחשב בזהירות הצפויה מצד שתי הקבוצות בפתיחת המשחק. הימור נוסף: מעל 1.5 שערים במשחק.",
+  "sources": [
+   "https://sportsgambler.com/football/world-cup/predictions/egypt-vs-iran-prediction-betting-tips-lineups-odds/",
+   "https://www.toffeeweb.com/season/25-26/match/world-cup/12716/",
+   "https://deadspin.com/egypt-vs-iran-world-cup-betting-preview-lines-predictions-1851566415",
+   "https://www.goonersguide.com/football/world-cup/2026-06-26/egypt-vs-iran-betting-pick-191023",
+   "https://www.covers.com/soccer/world-cup/egypt-iran-picks-predictions-june-26-2026"
+  ]
+ },
+ "key_players": [
+  {
+   "team": "EGY",
+   "name": "Mohamed Salah",
+   "why": "הכוכב הגדול של מצרים, מנוע ההתקפה עם שער ושני בישולים בטורניר עד כה. משחק בתפקיד פליימייקר מרכזי."
+  },
+  {
+   "team": "EGY",
+   "name": "Omar Marmoush",
+   "why": "חלוץ מנצ'סטר סיטי, מהווה איום התקפי משמעותי יחד עם סלאח ומספק יכולת סיום טובה."
+  },
+  {
+   "team": "IRN",
+   "name": "Mehdi Taremi",
+   "why": "החלוץ המוביל של איראן, עם ניסיון רב ויכולת הבקעה מוכחת. מהווה את האיום ההתקפי העיקרי של הנבחרת."
+  },
+  {
+   "team": "IRN",
+   "name": "Alireza Beiranvand",
+   "why": "השוער המנוסה של איראן, הציג יכולת טובה במשחקים קודמים ויהיה קריטי לשמירה על שער נקי."
+  }
+ ],
+ "prediction": "מצרים מגיעה למשחק עם מומנטום חיובי ומוטיבציה גבוהה לסיים במקום הראשון בבית. למרות שאיראן קבוצה קשוחה הגנתית, היתרון ההתקפי של מצרים, בראשות מוחמד סלאח, צפוי להכריע את המשחק לטובתם. אני צופה ניצחון למצרים.",
+ "score_hint": "2-1",
+ "sources": [
+  "https://sportsgambler.com/football/world-cup/predictions/egypt-vs-iran-prediction-betting-tips-lineups-odds/",
+  "https://www.rotowire.com/soccer/world-cup/match-previews/egypt-vs-iran-preview-lineups-team-news-20260625/",
+  "https://www.toffeeweb.com/season/25-26/match/world-cup/12716/",
+  "https://www.sportsmole.co.uk/football/world-cup/egypt/preview/preview-egypt-vs-iran-prediction-team-news-lineups_592534.html",
+  "https://deadspin.com/egypt-vs-iran-world-cup-betting-preview-lines-predictions-1851566415"
+ ],
+ "match_id": "760476",
+ "home": "EGY",
+ "away": "IRN",
+ "group": "G",
+ "generated_by": "gemini (gemini-2.5-flash)"
+}

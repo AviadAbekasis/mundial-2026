@@ -78,6 +78,22 @@ def today_matches(state):
     return day, sorted(by_day[day], key=lambda f: f["date"])
 
 
+def window_matches(state, days=2):
+    """Fixtures for the next `days` football-days that have matches (today + tomorrow).
+    Baking two days lets the browser switch to the new day instantly at the rollover."""
+    by_day = {}
+    for fx in state["group_fixtures"]:
+        by_day.setdefault(football_day(fx["date"]), []).append(fx)
+    now_day = (dt.datetime.now(IL) - dt.timedelta(hours=6)).date()
+    target = sorted(d for d in by_day if d >= now_day)[:days]
+    if not target:
+        target = sorted(by_day)[-days:]
+    out = []
+    for d in target:
+        out.extend(sorted(by_day[d], key=lambda f: f["date"]))
+    return out
+
+
 def load_analyses():
     out = {}
     for p in glob.glob(os.path.join(DATA_DIR, "analysis", "*.json")):
@@ -88,9 +104,10 @@ def load_analyses():
 
 
 # ---------- landing: today's matches ----------
-def match_card(state, fx, has_analysis):
+def match_card(state, fx):
     pr = predict(state, fx)
     h, a = fx["home"], fx["away"]
+    fday = football_day(fx["date"]).isoformat()
     wh, wd, wa = pr["pH"]*100, pr["pD"]*100, pr["pA"]*100
     completed = fx["completed"] and fx.get("hg") is not None
     if completed:
@@ -99,7 +116,7 @@ def match_card(state, fx, has_analysis):
         score_html = (f'<span class="mscore pred">{pr["score"][0]}–{pr["score"][1]}</span>'
                       f'<span class="badge soon">{il_time(fx["date"])}</span>')
     btn = (f'<a class="abtn" href="match-{fx["id"]}.html">ניתוח מלא ←</a>')
-    return f'''<div class="match" data-mid="{fx['id']}">
+    return f'''<div class="match" data-mid="{fx['id']}" data-fday="{fday}">
       <div class="mtop"><span class="mgrp">בית {fx['group']}</span><span class="mstat">{score_html}</span></div>
       <div class="mteams">
         <div class="mt">{team_chip(h)}<span class="xg" data-side="h">{pr['lh']:.1f}</span></div>
@@ -114,10 +131,10 @@ def match_card(state, fx, has_analysis):
 
 
 def render_landing(state, analyses):
-    day, fxs = today_matches(state)
-    daylabel = day.strftime("%d/%m/%Y")
-    cards = "".join(match_card(state, fx, str(fx["id"]) in analyses) for fx in fxs)
-    # date range for client-side live score refresh
+    fxs = window_matches(state, days=2)
+    daylabel = football_day(fxs[0]["date"]).strftime("%d/%m/%Y")
+    cards = "".join(match_card(state, fx) for fx in fxs)
+    # date range for client-side live score refresh (covers the whole window)
     ds = min(il_dt(f["date"]).astimezone(dt.timezone.utc) for f in fxs).strftime("%Y%m%d")
     de = (max(il_dt(f["date"]).astimezone(dt.timezone.utc) for f in fxs)
           + dt.timedelta(days=1)).strftime("%Y%m%d")
@@ -127,12 +144,13 @@ def render_landing(state, analyses):
 <title>חיזוי מונדיאל 2026 — משחקי היום</title><style>{CSS}</style></head>
 <body><div class="wrap">
 <header><h1>🏆 חיזוי מונדיאל 2026</h1>
-<div class="sub">משחקי היום · {daylabel}</div>
+<div class="sub">משחקי היום · <span id="daylabel">{daylabel}</span></div>
 <div class="navbtns">
   <button class="nav" onclick="refresh()">🔄 רענן</button>
   <a class="nav" href="odds.html">📊 סיכויי הטורניר</a></div>
 <div class="upd" id="updated">עודכן: {upd}</div></header>
 <section class="card"><div class="matches">{cards}</div>
+<p class="note" id="noday" style="display:none;text-align:center">אין משחקים היום — מוצגים המשחקים הקרובים.</p>
 <p class="note">לחיצה על "ניתוח מלא" פותחת ניתוח טקסטואלי של המשחק (הרכבים, טקטיקה, קריאת משחק). xG = גולים צפויים לפי המודל.</p>
 </section>
 <footer>מנוע Elo + Poisson + Monte Carlo · ניתוח טקסטואלי · נתונים חיים מ-ESPN<br>נבנה ע"י Claude</footer>
@@ -161,7 +179,21 @@ async function refresh(){{
     u.textContent='עודכן: '+new Date().toLocaleString('he-IL');
   }}catch(e){{ /* offline / CORS: keep the data baked at build time */ }}
 }}
-window.addEventListener('load',()=>setTimeout(refresh,300));
+// football-day (06:00->06:00 IL) computed in the browser = UTC date of (now - 3h)
+function fdayNow(){{return new Date(Date.now()-10800000).toISOString().slice(0,10);}}
+function showDay(){{
+  const t=fdayNow();
+  const cards=[...document.querySelectorAll('.match')];
+  if(!cards.length)return;
+  const days=[...new Set(cards.map(c=>c.dataset.fday))].sort();
+  const day=days.includes(t)?t:(days.find(d=>d>=t)||days[days.length-1]);
+  cards.forEach(c=>{{c.style.display=(c.dataset.fday===day)?'':'none';}});
+  const lbl=document.getElementById('daylabel');
+  if(lbl&&day){{const p=day.split('-');lbl.textContent=p[2]+'/'+p[1]+'/'+p[0];}}
+  const nd=document.getElementById('noday'); if(nd)nd.style.display=(day===t)?'none':'block';
+}}
+showDay();
+window.addEventListener('load',()=>{{showDay();setTimeout(refresh,300);}});
 </script>
 </body></html>'''
 
@@ -354,10 +386,9 @@ def render(state, sim):
         f.write(render_landing(state, analyses))
     with open(os.path.join(OUT_DIR, "odds.html"), "w", encoding="utf-8") as f:
         f.write(render_odds(state, sim))
-    # analysis page for every match in today's slate
-    _, today = today_matches(state)
+    # analysis page for every match in the window (today + tomorrow)
     pages = 0
-    for fx in today:
+    for fx in window_matches(state, days=2):
         a = analyses.get(str(fx["id"]))
         with open(os.path.join(OUT_DIR, f"match-{fx['id']}.html"), "w", encoding="utf-8") as f:
             f.write(render_analysis_page(state, fx, a))
