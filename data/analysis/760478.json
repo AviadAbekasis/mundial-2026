@@ -1,124 +1,128 @@
 {
- "headline": "כף ורדה מול ערב הסעודית: קרב על היסטוריה בבית H",
- "context": "כף ורדה וערב הסעודית נפגשות למשחק מכריע בבית H של מונדיאל 2026. כף ורדה, בהופעת בכורה מרשימה בטורניר, נמצאת במקום השלישי עם 2 נקודות (תיקו מול ספרד ותיקו 2-2 מול אורוגוואי), וניצחון יבטיח לה כמעט בוודאות מקום בשלב שמינית הגמר, ואף יכול להספיק למקום השני בבית אם ספרד תנצח את אורוגוואי. תיקו עשוי גם הוא להספיק כדי לעלות כאחת משמונה הקבוצות הטובות ביותר במקום השלישי. ערב הסעודית, לעומת זאת, עם נקודה אחת בלבד (תיקו 1-1 מול אורוגוואי והפסד 4-0 לספרד), חייבת ניצחון כדי להימנע מהדחה מוקדמת. תרחיש עלייה עבורה יהיה ניצחון ואי-ניצחון של אורוגוואי מול ספרד, או לחלופין ניצחון משכנע שישפר את הפרש השערים שלה באופן דרמטי כדי להתמודד על מקום כקבוצה שלישית טובה ביותר.",
+ "headline": "כף ורדה מול ערב הסעודית: קרב על מקום בשלב הנוקאאוט במונדיאל 2026",
+ "context": "מצב הבית כרגע מציב את ספרד במקום הראשון עם 4 נקודות, אורוגוואי וכף ורדה עם 2 נקודות כל אחת, וערב הסעודית עם נקודה אחת. כף ורדה, בהופעתה הראשונה במונדיאל, עשו היסטוריה עם שתי תוצאות תיקו מפתיעות מול ספרד ואורוגוואי. ניצחון יבטיח להם מקום בשלב 32 האחרונות. תיקו עשוי להספיק אם ספרד תנצח את אורוגוואי, או אם כף ורדה תהיה בין שמונה הקבוצות הטובות ביותר במקום השלישי. ערב הסעודית חייבת ניצחון כדי להימנע מהדחה מוקדמת, מכיוון שתיקו לא יספיק להם בגלל הפרש השערים הנמוך שלהם (-4).",
  "lineups": {
   "CPV": {
-   "formation": "4-3-3 (הערכה)",
+   "formation": "4-3-3 (צפוי)",
    "xi": [
     "Vozinha",
-    "Moreira",
-    "Lopes",
-    "Borges",
+    "Steven Moreira",
+    "Roberto Lopes",
+    "Diney Borges",
     "João Paulo",
-    "L. Duarte",
-    "Pina",
-    "Monteiro",
-    "Mendes",
-    "Benchimol",
-    "Rodrigues"
+    "Laros Duarte",
+    "Kevin Pina",
+    "Jamiro Monteiro",
+    "Garry Rodrigues",
+    "Gilson Benchimol",
+    "Ryan Mendes"
    ],
-   "news": "כף ורדה תחסר את המגן השמאלי סידני לופס קברל המושעה עקב צבירת כרטיסים צהובים. ז'ואאו פאולו צפוי להחליפו. טלמו ארקאז'ו נפצע מול אורוגוואי וצפוי להיות מוחלף בקישור על ידי אחד מהאחים דוארטה, דרוי או לארוס. ג'ובאני קברל בספק עקב פציעה וייתכן שיפתח על הספסל אם ישחק."
+   "news": "סידני לופס קברל מושעה עקב צבירת שני כרטיסים צהובים. טלמו ארקאנג'ו בספק עקב פציעה, וג'ובאנה קברל בספק אף הוא."
   },
   "KSA": {
-   "formation": "4-4-2 (הערכה)",
+   "formation": "4-4-2 (צפוי)",
    "xi": [
-    "Al Owais",
-    "Abdulhamid",
-    "Al Amri",
-    "Al Tambakti",
-    "Al Harbi",
-    "Al Shamat",
-    "Kanno",
-    "Al Khaibari",
-    "Al Dawsari",
-    "Al Buraikan",
-    "Al Juwayr"
+    "Mohammed Al Owais",
+    "Saud Abdulhamid",
+    "Abdulelah Al Amri",
+    "Hassan Al Tambakti",
+    "Moteb Al Harbi",
+    "Mohammed Abu Al Shamat",
+    "Mohammed Kanno",
+    "Abdullah Al Khaibari",
+    "Salem Al-Dawsari",
+    "Firas Al Buraikan",
+    "Musab Al Juwayr"
    ],
-   "news": "ערב הסעודית צפויה לחזור למערך 4-4-2 לאחר ששיחקה עם חמישה בהגנה מול ספרד. מוחמד קאנו צפוי לחזור לקישור, ומוחמד אבו אל-שמאט עשוי לפתוח באגף ימין. שינויים אלו עשויים לבוא על חשבון צמד שחקני אל-הילאל, נאסר אל-דוסארי ועלי לאג'אמי. אין דיווחים על פציעות או השעיות נוספות בערב הסעודית."
+   "news": "לערב הסעודית אין חששות מפציעות או השעיות חדשות. מוחמד קאנו עשוי לחזור להרכב הפותח בקישור."
   }
  },
- "tactics": "כף ורדה, בראשות המאמן בובסיטה, הציגה יכולת הגנתית מאורגנת מאוד ושיחקה על התקפות מתפרצות מול ספרד ואורוגוואי. הם צפויים לנסות לשלוט יותר בכדור במשחק זה, בניגוד למשחקים הקודמים. ערב הסעודית, תחת המאמן גאורגיוס דוניס, מעדיפה גם היא מבנה הגנתי קומפקטי ומעברים מהירים. הקבוצה תסתמך על סאלם אל-דוסארי ומוסאב אל-ג'וואייר ליצירת מצבים התקפיים. שתי הקבוצות אינן נוחות באופן טבעי בנטילת היוזמה, מה שעשוי להוביל למשחק טקטי וזהיר.",
+ "tactics": "כף ורדה צפויה להמשיך עם משחק הגנה מאורגן וקומפקטי, כפי שהציגה בתיקו המפתיע מול ספרד ואורוגוואי. הם ינסו לספוג לחץ ולצאת להתקפות מתפרצות מהירות, תוך ניצול שחקני הכנף שלהם. ערב הסעודית צפויה לשחק בגישה התקפית יותר, כיוון שהיא חייבת ניצחון. הם עשויים לעבור למערך של 4-4-2 או 4-3-3 כדי להגביר את הלחץ ההתקפי, תוך ניסיון לנצל את המהירות באגפים ויכולת המעבר המהיר שלהם.",
  "form": {
-  "CPV": "כף ורדה מגיעה בכושר טוב, עם שני ניצחונות ושלוש תוצאות תיקו והפסד אחד בחמשת משחקיה האחרונים בכל המסגרות. במונדיאל רשמה תיקו 0-0 מול ספרד ותיקו 2-2 מול אורוגוואי.",
-  "KSA": "ערב הסעודית מגיעה בכושר פחות טוב, עם ניצחון אחד, שתי תוצאות תיקו ושלושה הפסדים בששת משחקיה האחרונים. במונדיאל רשמה תיקו 1-1 מול אורוגוואי והפסד 4-0 לספרד."
+  "CPV": "DDWWLDDWWW (2 ניצחונות, 6 תיקו, הפסד 1 ב-10 משחקים אחרונים, כולל תיקו מול ספרד ואורוגוואי במונדיאל)",
+  "KSA": "DLDWLLDDLW (ניצחון 1, 4 תיקו, 5 הפסדים ב-10 משחקים אחרונים, כולל תיקו מול אורוגוואי והפסד לספרד במונדיאל)"
  },
- "h2h": "אין היסטוריית מפגשים קודמים בין כף ורדה לערב הסעודית.",
- "matchup": "כף ורדה הפתיעה רבים ביכולתה בטורניר, עם הגנה מאורגנת ויכולת התקפית שהשתפרה מול אורוגוואי. ערב הסעודית התקשתה בחלק ההתקפי שלה, עם 0.8 שערי XG בלבד בשני משחקים. המודל שלי חוזה 1.4 שערים לכף ורדה ו-1.25 שערים לערב הסעודית.",
+ "h2h": "זהו המפגש הראשון בין כף ורדה לערב הסעודית בהיסטוריה.",
+ "matchup": "כף ורדה הציגה יכולת הגנתית מרשימה וארגון טקטי מצוין, והצליחה להפתיע את ספרד ואורוגוואי. ערב הסעודית התקשתה לייצר מצבי הבקעה משמעותיים בטורניר עד כה, עם 10 בעיטות בלבד בשני משחקים. המודל שלי צופה 1.4 גולים לכף ורדה ו-1.25 גולים לערב הסעודית, מה שמרמז על משחק צמוד ולא עשיר בשערים.",
  "opta": {
-  "home": "39%",
-  "draw": "29%",
-  "away": "32%",
-  "sims": "הערכה - Opta לא פרסמה תחזית ספציפית למשחק זה. הנתונים מבוססים על תחזית המודל המשתמש."
+  "home": "לא פורסמה תחזית Opta ספציפית למשחק זה. בהתבסס על ביצועי הקבוצות בטורניר וההימורים, כף ורדה נחשבת לפייבוריטית קלה.",
+  "draw": "לא פורסמה תחזית Opta ספציפית למשחק זה.",
+  "away": "לא פורסמה תחזית Opta ספציפית למשחק זה.",
+  "sims": "לא פורסמה תחזית Opta ספציפית למשחק זה."
  },
  "betting": {
   "odds": {
    "home": {
-    "dec": "2.60",
-    "imp": "38.46%"
+    "dec": "2.65",
+    "imp": "37.7%"
    },
    "draw": {
-    "dec": "3.50",
-    "imp": "28.57%"
+    "dec": "3.30",
+    "imp": "30.3%"
    },
    "away": {
-    "dec": "2.80",
-    "imp": "35.71%"
+    "dec": "2.70",
+    "imp": "37.0%"
    }
   },
-  "ou": "מתחת ל-2.5 שערים (יחס 1.73 - 1.79)",
-  "handicap": "כף ורדה -0.25 (יחס 2.02)",
+  "ou": "מתחת ל-2.5 שערים (קו הימורים נפוץ, עם יחס של 1.79-).",
+  "handicap": "כף ורדה -0.5 (+134).",
   "predicted_scores": [
    {
     "src": "Sports Mole",
     "score": "2-1"
    },
    {
-    "src": "Whispers",
-    "score": "1-1"
+    "src": "William Hill",
+    "score": "2-1"
    },
    {
-    "src": "Forebet",
-    "score": "1-0"
-   },
-   {
-    "src": "RotoWire",
+    "src": "RotoWire AI",
     "score": "1-1"
    }
   ],
-  "value": "תיקו (יחס 3.50) או מתחת ל-2.5 שערים (יחס 1.73).",
-  "tip": "בהתחשב ביכולת ההגנתית של כף ורדה והצורך של ערב הסעודית לתקוף, תיקו 1-1 נראה כתוצאה סבירה, עם פוטנציאל לערך בהימור על תיקו או על מספר שערים נמוך.",
+  "value": "תיקו (+250) נחשב להימור ערך, במיוחד אם ספרד תנצח את אורוגוואי, מה שיספיק לכף ורדה כדי לעלות.",
+  "tip": "כף ורדה לניצחון ושתי הקבוצות יבקיעו (יחס 4.00) או תיקו במחצית הראשונה (יחס 2.20).",
   "sources": [
-   "https://www.sportsmole.co.uk/football/cape-verde/vs/saudi-arabia/preview",
-   "https://www.sportsgambler.com/football/predictions/cape-verde-vs-saudi-arabia-prediction-betting-tips-lineups-odds/",
-   "https://www.rotowire.com/soccer/world-cup-best-bets-picks-odds-friday-june-26",
-   "https://www.racingpost.com/sport/football/world-cup/cape-verde-vs-saudi-arabia-prediction-bet-builder-tip-odds-team-news-a111111",
-   "https://www.oddschecker.com/football/world-cup/cape-verde-v-saudi-arabia/betting-odds"
+   "https://www.sportsmole.co.uk/football/world-cup/2026/preview/cape-verde-vs-saudi-arabia/prediction",
+   "https://www.rotowire.com/soccer/world-cup-best-bets-picks-odds-friday-june-26/",
+   "https://www.racingpost.com/sport/football/world-cup/cape-verde-vs-saudi-arabia-prediction-11-2-bet-builder-tip-odds-team-news-a1P7bL2wW3T1",
+   "https://www.williamhill.com/news/football/world-cup-2026/cape-verde-v-saudi-arabia-world-cup-prediction",
+   "https://www.fanduel.com/sportsbook/football/fifa-world-cup/cape-verde-v-saudi-arabia"
   ]
  },
  "key_players": [
   {
    "team": "CPV",
    "name": "Vozinha",
-   "why": "השוער הוותיק (40) הציג יכולת מדהימה מול ספרד עם שבע הצלות והפך לגיבור לאומי, מה שמעיד על חשיבותו ליציבות ההגנתית של כף ורדה."
+   "why": "השוער הוותיק (40) הציג יכולת מדהימה בשני המשחקים הראשונים, עם 7 הצלות, והיה גורם מרכזי בשמירה על תוצאות התיקו."
   },
   {
    "team": "CPV",
-   "name": "Dailon Livramento",
-   "why": "החלוץ הוביל את כף ורדה במוקדמות עם ארבעה שערים, כולל שערים מכריעים, ומהווה איום התקפי משמעותי."
+   "name": "Ryan Mendes",
+   "why": "קפטן הקבוצה, מנהיג מנוסה עם למעלה מ-40 שערים בינלאומיים, מהווה איום התקפי משמעותי באגף."
   },
   {
    "team": "KSA",
    "name": "Salem Al-Dawsari",
-   "why": "הקפטן והשחקן המנוסה ביותר של ערב הסעודית, שזכה בתואר שחקן השנה באסיה פעמיים, הוא הכוח המניע בהתקפה ויכול לייצר רגעים קסומים."
+   "why": "הקפטן והכוכב של ערב הסעודית, שהבקיע את שער הניצחון המפורסם מול ארגנטינה במונדיאל הקודם, הוא השחקן המסוכן ביותר בהתקפה הסעודית."
   },
   {
    "team": "KSA",
-   "name": "Saud Abdulhamid",
-   "why": "המגן הימני הוא השחקן היחיד בסגל הסעודי שמשחק מחוץ למדינה (בלאנס הצרפתית) ומספק יציבות וריצות באגף."
+   "name": "Firas Al Buraikan",
+   "why": "חלוץ מרכזי עם 16 שערים בנבחרת, ינסה לנצל כל הזדמנות להבקיע."
   }
  ],
- "prediction": "כף ורדה הראתה נחישות ויכולת מרשימה בטורניר עד כה, בעוד ערב הסעודית מתקשה למצוא את דרכה. כף ורדה תהיה נחושה להשיג תוצאה שתבטיח את עלייתה ההיסטורית. אני צופה משחק צמוד וטקטי, עם יתרון קל לכף ורדה. תוצאה צפויה: 1-1 או 2-1 לכף ורדה.",
- "score_hint": "1-1",
+ "surprise_why": "מדד ההפתעה הגבוה (55/100) נובע מכך שכף ורדה כבר הפתיעה בטורניר עם שתי תוצאות תיקו מול יריבות חזקות בהרבה, ומוכיחה שוב ושוב שהיא אנדרדוג מסוכן עם ארגון הגנתי מצוין ולחץ מנטלי נמוך. ערב הסעודית, לעומת זאת, נמצאת בלחץ גדול לנצח ועלולה להיחשף בהגנה כשתחפש שערים.",
+ "prediction": "כף ורדה, עם המומנטום והביטחון העצמי הגבוהים, צפויה להמשיך את מסע הפתעות שלה. למרות שערב הסעודית חייבת ניצחון, קשיי ההבקעה שלה והארגון ההגנתי של כף ורדה עשויים להוביל לניצחון דחוק של כף ורדה או לתיקו. התוצאה הסבירה ביותר היא 1-1, אך אני נוטה לניצחון של כף ורדה.",
+ "score_hint": "2-1",
+ "sources": [
+  "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTn4USo2tVw1yZ7eg1UICogvUoDxwbSaDnZxAmb7LzLUQOQ0tXUcUQJo18-rnKl3UVfzDmlCrViZj9405lLaMRDVvq7kIJ0LQ8OKgKEiqZJNfliIoDVWfF_vzcFGgzEZqhvz1GXL2Ovk0mOiSK6AecSsvuIOKmWzNo03qt-W3c2XNXezSF0wB7-g6tzYhHyATkTEvE0mXIlAY1Aqo=",
+  "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG97fWDDmYWVPMJRQx2wqo2Rhjv_mP_7TQmWmMWc3vxn2cmvDVz-53X-fx4PV7JxV4wULuwN2EmKFn7wJ54Gt_-PZs24qQiVQnnA3GrLKy4-I2CnMkxtsdtl-ydeyR5ApvLRzsqkLeKYKNVubM9B9kgsUfVG_Q2hhW7brOMCIjl4ZTPBrX8FiZjVBNo_iKxz7W4qgqQuCtL8Pp2jMq4VytbbtiGWplNFPXyCePKiHOOKvEhHf8wqd4aGYuXlgwiQIw55x8tGWl7jrd_3MNW1owmd-iVOPq3V_Ixtlkiz8duf0lu",
+  "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcS7p9hb0I1UMvhmQfAdLIE-S3ZgBQVt-n_Qkd7PH68mVA8dB9W2YfZ91m8NHc75zJEapZlzeQrrxT3DVPSwDw3iOwbLTpCmv_Iz4tfNYRyxsi0Eqm_FjGBO5ok66U9qyMPzi_M4NNwoOqve-UJGDgIrWqo1M2_iibEzWAr4JKp0-4dDnYNWePjQW-ktovsazawxoXOk7Rad4vfVfX41WOSmgacfFioN4NTiAf",
+  "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPhY5_tcNHBXw-J-FyWDGzYKTXnUhbOKLZVozYmW72if_Oa_OY-LtvVyf0nIrosASVpanN0h2FTYt3CUxpDe8XQXj8FXU0R08QI7DqmrfMQvdk0UgX3NwwvjDWTNpy6M1F4NltSLk4wADWQGhGxWwuVpr_oXU-CBY91GRomKmO46rVAIwXQRqpg===",
+  "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOw75bn_InagRRzjZaeAKlC3lp5lwtNIFt8wCqMT5SLebY7Sxgi9RkdTOigQk8FLoieY7opHkVqZFp6U4lapKAyBb9DCKB8r9solflxQZMpzqX5Vv5hNqHKJTSnnk_5VGl5GsA1DeT6bg0b92hYNDPm3BaohFoSTaaO9U_2-_0cTPCijOFg258-qnlzBIL29kLMUZWNx-IBVzCClmAFhs0zYo="
+ ],
  "match_id": "760478",
  "home": "CPV",
  "away": "KSA",

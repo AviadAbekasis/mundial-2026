@@ -309,10 +309,16 @@ def render_analysis_page(state, fx, analysis):
     src = " · ".join(f'<a href="{u}" target="_blank">מקור {i+1}</a>'
                      for i, u in enumerate(analysis.get("sources", [])[:6]))
     betting_html = _betting_section(analysis, h, a)
+    si = M.surprise_index(pr["pH"], pr["pD"], pr["pA"], _CHAOS["rate"])
+    slabel, scls = M.surprise_level(si)
+    swhy = analysis.get("surprise_why")
+    surprise_box = (f'<div class="sec surprise {scls}"><h3>🎲 מדד הפתעה: {si}/100 · {slabel}</h3>'
+                    f'<p>{swhy}</p></div>') if swhy else ""
 
     body = f'''
       <div class="headline">{analysis['headline']}</div>
       {model_strip}
+      {surprise_box}
       <div class="sec"><h3>📋 מה על הכף</h3><p>{analysis['context']}</p></div>
       <div class="sec"><h3>👥 הרכבים צפויים</h3>
         <div class="lineups">{lineup_block(h)}{lineup_block(a)}</div></div>
@@ -526,6 +532,14 @@ img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto
 .dim{color:#9089a6;font-size:.78rem}.sm{font-size:.72rem;margin-top:2px}
 .tip{background:#efe9fb;border-radius:8px;padding:8px 10px;color:#3d2569}
 .rg{font-size:.72rem;color:#9089a6;margin-top:10px;border-top:1px dashed #ddd5ee;padding-top:8px}
+.sec.surprise{border-radius:12px;padding:13px;margin-bottom:16px}
+.sec.surprise h3{margin-bottom:6px}
+.sec.surprise.hi{background:#fdecec;border:1px solid #f1b8b0}
+.sec.surprise.hi h3{color:#c0392b}
+.sec.surprise.mid{background:#fff6e8;border:1px solid #f0d9a8}
+.sec.surprise.mid h3{color:#b9770e}
+.sec.surprise.lo{background:#eaf6ef;border:1px solid #c2e4ce}
+.sec.surprise.lo h3{color:#1f7a4d}
 /* odds page */
 .bars{display:flex;flex-direction:column;gap:9px}
 .brow{display:grid;grid-template-columns:130px 1fr 52px;align-items:center;gap:10px}

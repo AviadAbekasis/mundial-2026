@@ -18,6 +18,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bracket as B          # noqa: E402
 import model as M            # noqa: E402
+import build_dashboard as BD  # noqa: E402  (for tournament_chaos)
 from teams import HE_NAME, HOSTS, he  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -63,7 +64,11 @@ def match_facts(state, fx):
     lh, la, we = M.expected_goals(elo[h]["elo"], elo[a]["elo"], adv_h, adv_a)
     pH, pD, pA, score = M.match_probs(lh, la)
     t = pH + pD + pA
+    chaos = BD.tournament_chaos(state)["rate"]
+    si = M.surprise_index(pH/t, pD/t, pA/t, chaos)
     return {
+        "surprise_index": si, "surprise_level": M.surprise_level(si)[0],
+        "chaos_pct": round(chaos*100),
         "id": str(fx["id"]),
         "home": h, "away": a,
         "home_en": fx.get("home_name", h), "away_en": fx.get("away_name", a),
@@ -92,6 +97,7 @@ SCHEMA_HINT = """{
              "ou":"קו 2.5 שערים","handicap":"הפרש שערים צפוי","predicted_scores":[{"src":"מקור","score":"2-0"}],
              "value":"הימור ערך","tip":"המלצה קצרה","sources":["url"]},
  "key_players": [{"team":"<ABBR>","name":"שם","why":"למה"}],
+ "surprise_why": "משפט-שניים: למה המשחק עלול להפתיע (פציעות במועדפת, כושר ירוד, לחץ, יריבה שכבר הפתיעה השנה) — או למה דווקא צפוי. עקבי עם מדד ההפתעה שניתן.",
  "prediction": "שורה תחתונה + תוצאה צפויה.",
  "score_hint": "0-2",
  "sources": ["url1","url2"]
@@ -113,6 +119,9 @@ def build_prompt(f):
 - תחזית המודל שלי: גולים צפויים {f['home_he']} {f['model_lh']} - {f['model_la']} {f['away_he']};
   הסתברות ניצחון בית {f['model_p']['home']:.0%} / תיקו {f['model_p']['draw']:.0%} / ניצחון חוץ {f['model_p']['away']:.0%};
   תוצאה סבירה {f['model_score']}.
+- מדד הפתעה של המשחק (לפי המודל): {f['surprise_index']}/100 ({f['surprise_level']}).
+  השנה הטורניר מלא הפתעות — המוחלשת לא הפסידה ב-{f['chaos_pct']}% מהמשחקים שנשחקו.
+  ב-surprise_why הסבר קצר ועקבי עם המדד: אם גבוה — למה דווקא כאן ייתכן אפסט; אם נמוך — למה צפוי.
 
 החזר אך ורק אובייקט JSON תקין (בלי טקסט נוסף, בלי ```), בדיוק במבנה הבא.
 התוכן בעברית; שמות שחקנים באנגלית. השתמש בקודים המדויקים {f['home']} ו-{f['away']} כמפתחות ב-lineups וב-form.
