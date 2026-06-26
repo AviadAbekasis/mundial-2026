@@ -37,11 +37,12 @@ def il_time(iso):
 
 
 def matchday(iso):
-    """US-style matchday key: all games of one slate (US afternoon/evening, which spills
-    into Israel's small hours) group under one date. Boundary at 08:00 UTC sits in the
-    daily no-match gap. Kick-off times are still DISPLAYED in Israel time elsewhere."""
+    """US-style matchday key: all games of one slate group under one date. Boundary at
+    05:00 UTC = 08:00 Israel time, so the day rolls over at 08:00 IL each morning and by
+    then the user sees the UPCOMING 24h slate. The no-match gap is 05:00-15:00 UTC and the
+    latest kickoff is 04:00 UTC, so no game is ever split. Times shown in Israel time."""
     u = dt.datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(dt.timezone.utc)
-    return (u - dt.timedelta(hours=8)).date()
+    return (u - dt.timedelta(hours=5)).date()
 
 
 def pct(x, d=0):
@@ -108,7 +109,7 @@ def window_matches(state, days=2):
     by_day = {}
     for fx in state["group_fixtures"]:
         by_day.setdefault(matchday(fx["date"]), []).append(fx)
-    now_day = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=8)).date()
+    now_day = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=5)).date()
     target = sorted(d for d in by_day if d >= now_day)[:days]
     if not target:
         target = sorted(by_day)[-days:]
@@ -209,8 +210,8 @@ async function refresh(){{
     u.textContent='עודכן: '+new Date().toLocaleString('he-IL');
   }}catch(e){{ /* offline / CORS: keep the data baked at build time */ }}
 }}
-// matchday key in the browser = UTC date of (now - 8h), matching the server's matchday()
-function fdayNow(){{return new Date(Date.now()-28800000).toISOString().slice(0,10);}}
+// matchday key in the browser = UTC date of (now - 5h) -> rolls at 08:00 Israel time
+function fdayNow(){{return new Date(Date.now()-18000000).toISOString().slice(0,10);}}
 function showDay(){{
   const t=fdayNow();
   const cards=[...document.querySelectorAll('.match')];

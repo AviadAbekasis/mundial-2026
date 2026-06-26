@@ -4,8 +4,10 @@ on:
   push:
     branches: [main]
   schedule:
-    # every 2 hours (UTC). Catches the football-day rollover (03:00 UTC = 06:00 IL)
-    # and keeps scores/odds/analyses fresh. Free on a public repo.
+    # 05:00 UTC = 08:00 Israel time — the daily morning refresh: by 08:00 IL the
+    # matchday has rolled to the upcoming 24h slate, freshly rebuilt.
+    - cron: '0 5 * * *'
+    # plus every 2 hours to keep scores / odds / analyses fresh through the day.
     - cron: '0 */2 * * *'
   workflow_dispatch:
 

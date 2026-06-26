@@ -212,7 +212,7 @@ def _fday(iso):
 
 def upcoming_fixtures(state, days=2):
     """(now_day, fixtures) for the next `days` matchdays that have games."""
-    now_day = (_dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(hours=8)).date()
+    now_day = (_dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(hours=5)).date()
     byday = {}
     for fx in state["group_fixtures"]:
         byday.setdefault(_fday(fx["date"]), []).append(fx)

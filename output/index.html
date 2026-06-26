@@ -299,8 +299,8 @@ async function refresh(){
     u.textContent='עודכן: '+new Date().toLocaleString('he-IL');
   }catch(e){ /* offline / CORS: keep the data baked at build time */ }
 }
-// matchday key in the browser = UTC date of (now - 8h), matching the server's matchday()
-function fdayNow(){return new Date(Date.now()-28800000).toISOString().slice(0,10);}
+// matchday key in the browser = UTC date of (now - 5h) -> rolls at 08:00 Israel time
+function fdayNow(){return new Date(Date.now()-18000000).toISOString().slice(0,10);}
 function showDay(){
   const t=fdayNow();
   const cards=[...document.querySelectorAll('.match')];
