@@ -64,8 +64,9 @@ def team_chip(ab, big=False):
 def predict(state, fx):
     elo = state["teams"]
     h, a = fx["home"], fx["away"]
-    adv_h = M.HOST_ADV if h in HOSTS else 0.0
-    adv_a = M.HOST_ADV if a in HOSTS else 0.0
+    grp = bool(fx.get("group"))   # host advantage applies only in the group stage
+    adv_h = M.HOST_ADV if (h in HOSTS and grp) else 0.0
+    adv_a = M.HOST_ADV if (a in HOSTS and grp) else 0.0
     lh, la, we = M.expected_goals(elo[h]["elo"], elo[a]["elo"], adv_h, adv_a)
     pH, pD, pA, score = M.match_probs(lh, la)
     t = pH + pD + pA
@@ -103,11 +104,45 @@ def surprise_pill(pr):
     return f'<span class="si {cls}" title="מדד הפתעה">🎲 הפתעה {si} · {label}</span>'
 
 
+KO_ROUNDS = [
+    ("2026-06-28", "2026-07-03", "שלב 32 האחרונות"),
+    ("2026-07-04", "2026-07-08", "שמינית הגמר"),
+    ("2026-07-09", "2026-07-13", "רבע גמר"),
+    ("2026-07-14", "2026-07-17", "חצי גמר"),
+    ("2026-07-18", "2026-07-18", "מקום שלישי"),
+    ("2026-07-19", "2026-07-25", "גמר"),
+]
+
+
+def round_label(iso):
+    d = iso[:10]
+    for a, b, lbl in KO_ROUNDS:
+        if a <= d <= b:
+            return lbl
+    return "נוקאאוט"
+
+
+def all_fixtures(state):
+    """Group matches + RESOLVED knockout matches (both teams known) for the daily view."""
+    teams = state["teams"]
+    out = list(state["group_fixtures"])
+    for k in state.get("knockout_events", []):
+        if k.get("home") in teams and k.get("away") in teams:
+            kk = dict(k)
+            kk["round"] = round_label(k["date"])
+            out.append(kk)
+    return out
+
+
+def stage_label(fx):
+    return ("בית " + fx["group"]) if fx.get("group") else fx.get("round", "נוקאאוט")
+
+
 def window_matches(state, days=2):
     """Fixtures for the next `days` matchdays that have games (today + tomorrow).
     Baking two matchdays lets the browser switch instantly at the rollover."""
     by_day = {}
-    for fx in state["group_fixtures"]:
+    for fx in all_fixtures(state):
         by_day.setdefault(matchday(fx["date"]), []).append(fx)
     now_day = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=5)).date()
     target = sorted(d for d in by_day if d >= now_day)[:days]
@@ -142,7 +177,7 @@ def match_card(state, fx):
                       f'<span class="badge soon">{il_time(fx["date"])}</span>')
     btn = (f'<a class="abtn" href="match-{fx["id"]}.html">ניתוח מלא ←</a>')
     return f'''<div class="match" data-mid="{fx['id']}" data-fday="{fday}">
-      <div class="mtop"><span class="mgrp">בית {fx['group']}</span><span class="mstat">{score_html}</span></div>
+      <div class="mtop"><span class="mgrp">{stage_label(fx)}</span><span class="mstat">{score_html}</span></div>
       <div class="mteams">
         <div class="mt">{team_chip(h)}<span class="xg" data-side="h">{pr['lh']:.1f}</span></div>
         <div class="vs">xG</div>
@@ -337,7 +372,7 @@ def _page(title, h, a, fx, body):
   <button class="nav" onclick="location.reload()">🔄 רענן</button></div>
 <section class="card analysis">
   <div class="ahead">{team_chip(h, big=True)}<span class="avs">נגד</span>{team_chip(a, big=True)}</div>
-  <div class="asub">בית {fx['group']} · {il_time(fx['date'])} · גביע העולם 2026</div>
+  <div class="asub">{stage_label(fx)} · {il_time(fx['date'])} · גביע העולם 2026</div>
   {body}
 </section>
 <footer>ניתוח טקסטואלי · נבנה ע"י Claude</footer>

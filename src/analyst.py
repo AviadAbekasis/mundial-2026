@@ -59,23 +59,27 @@ def _group_standings_text(state, group):
 def match_facts(state, fx):
     h, a = fx["home"], fx["away"]
     elo = state["teams"]
-    adv_h = M.HOST_ADV if h in HOSTS else 0.0
-    adv_a = M.HOST_ADV if a in HOSTS else 0.0
+    grp = fx.get("group")
+    adv_h = M.HOST_ADV if (h in HOSTS and grp) else 0.0
+    adv_a = M.HOST_ADV if (a in HOSTS and grp) else 0.0
     lh, la, we = M.expected_goals(elo[h]["elo"], elo[a]["elo"], adv_h, adv_a)
     pH, pD, pA, score = M.match_probs(lh, la)
     t = pH + pD + pA
     chaos = BD.tournament_chaos(state)["rate"]
     si = M.surprise_index(pH/t, pD/t, pA/t, chaos)
+    stage = ("בית " + grp) if grp else BD.round_label(fx["date"])
+    standings = (_group_standings_text(state, grp) if grp else
+                 "שלב נוקאאוט — המנצח עולה, המפסיד מודח. אין טבלה; הכל לפי היריבה (כולל הארכה ופנדלים).")
     return {
         "surprise_index": si, "surprise_level": M.surprise_level(si)[0],
         "chaos_pct": round(chaos*100),
         "id": str(fx["id"]),
-        "home": h, "away": a,
+        "home": h, "away": a, "stage": stage, "is_knockout": not bool(grp),
         "home_en": fx.get("home_name", h), "away_en": fx.get("away_name", a),
         "home_he": HE_NAME.get(h, h), "away_he": HE_NAME.get(a, a),
-        "group": fx["group"], "date": fx["date"],
+        "group": grp or "", "date": fx["date"],
         "elo_home": elo[h]["elo"], "elo_away": elo[a]["elo"],
-        "standings": _group_standings_text(state, fx["group"]),
+        "standings": standings,
         "model_lh": round(lh, 2), "model_la": round(la, 2),
         "model_p": {"home": round(pH/t, 3), "draw": round(pD/t, 3), "away": round(pA/t, 3)},
         "model_score": f"{score[0]}-{score[1]}",
@@ -105,9 +109,10 @@ SCHEMA_HINT = """{
 
 
 def build_prompt(f):
+    ko = "  זהו משחק נוקאאוט — אין תיקו: הארכה ופנדלים אם צריך, המפסיד מודח." if f["is_knockout"] else ""
     return f"""אתה אנליסט כדורגל מקצועי. חקור לעומק את משחק גביע העולם 2026:
 {f['home_en']} ({f['home_he']}, קוד {f['home']}) נגד {f['away_en']} ({f['away_he']}, קוד {f['away']}),
-בית {f['group']}, בתאריך {f['date'][:10]}.
+{f['stage']}, בתאריך {f['date'][:10]}.{ko}
 
 חפש באינטרנט מידע עדכני: הרכבים צפויים ופורמציה, פציעות/השעיות, כושר אחרון,
 ראש-בראש, תחזית Opta (theanalyst.com — אחוזי ניצחון), והמלצות הימורים מהאתרים
@@ -214,7 +219,7 @@ def upcoming_fixtures(state, days=2):
     """(now_day, fixtures) for the next `days` matchdays that have games."""
     now_day = (_dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(hours=5)).date()
     byday = {}
-    for fx in state["group_fixtures"]:
+    for fx in BD.all_fixtures(state):
         byday.setdefault(_fday(fx["date"]), []).append(fx)
     target = sorted(d for d in byday if d >= now_day)[:days]
     if not target:

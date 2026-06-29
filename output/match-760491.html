@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>מקסיקו נגד אקוודור — חיזוי מונדיאל 2026</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(160deg,#0f2027,#1c3a4a 60%,#16222a);
+ color:#1b2733;direction:rtl;padding:14px;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto}
+header{text-align:center;color:#eafff4;padding:12px 8px 6px}
+header h1{font-size:1.8rem}
+header .sub{opacity:.85;margin-top:4px}
+.upd{opacity:.65;font-size:.8rem;margin-top:6px;color:#eafff4}
+.navbtns{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.nav{display:inline-block;background:#11a36b;color:#fff;border:none;border-radius:9px;
+ padding:8px 14px;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit}
+.nav:hover{background:#0d8a5a}
+.card{background:#fff;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.22)}
+.card h2{font-size:1.15rem;margin-bottom:12px;color:#0f3d2e;border-bottom:2px solid #e7f1ec;padding-bottom:8px}
+.note{font-size:.78rem;color:#7a8794;margin-top:10px;line-height:1.5}
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
+img.fl{width:22px;height:22px;object-fit:contain;border-radius:3px;flex:0 0 auto}
+.chip.big{font-size:1.25rem;gap:9px}.chip.big img.fl{width:34px;height:34px}
+.fl{font-size:1.15rem}
+/* matches */
+.matches{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.match{border:1px solid #e9eeec;border-radius:13px;padding:12px;background:#fafdfb;display:flex;flex-direction:column}
+.mtop{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#80909a;margin-bottom:9px}
+.mgrp{font-weight:700;color:#0f3d2e}
+.mstat{display:flex;align-items:center;gap:6px}
+.mscore{background:#0f3d2e;color:#fff;border-radius:6px;padding:1px 8px;font-weight:700}
+.mscore.pred{background:#cdd8d2;color:#33433b}
+.badge{font-size:.66rem;padding:2px 7px;border-radius:20px;font-weight:700}
+.badge.soon{background:#eef3f1;color:#7a8794}.badge.done{background:#dfeee6;color:#0f7a4f}
+.badge.live{background:#e0654b;color:#fff}
+.mteams{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:10px}
+.mt{display:flex;align-items:center;gap:6px}
+.xg{font-weight:800;color:#11a36b;font-size:1.05rem}.vs{font-size:.7rem;color:#9aa7b0}
+.probbar{display:flex;height:24px;border-radius:7px;overflow:hidden;font-size:.72rem;font-weight:700;color:#fff}
+.probbar.big{height:30px;font-size:.82rem;margin-top:6px}
+.probbar div{display:flex;align-items:center;justify-content:center;min-width:20px}
+.ph{background:#11a36b}.pd{background:#9aa7b0}.pa{background:#e0654b}
+.problbl{display:flex;justify-content:space-between;font-size:.66rem;color:#8694a0;margin-top:4px}
+.sirow{margin-top:9px;text-align:center}
+.ms-si{margin-top:9px;text-align:center}
+.si{display:inline-block;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:20px}
+.si.hi{background:#fdeaea;color:#c0392b;border:1px solid #f1b8b0}
+.si.mid{background:#fff4e0;color:#b9770e;border:1px solid #f0d9a8}
+.si.lo{background:#e9f5ee;color:#1f7a4d;border:1px solid #c2e4ce}
+.chaos{background:#241b33;color:#e9defb;border-radius:12px;padding:11px 14px;
+ font-size:.85rem;text-align:center;border:1px solid #4b2e83;line-height:1.5}
+.chaos b{color:#fff}
+.abtn{margin-top:11px;text-align:center;background:#0f3d2e;color:#fff;border-radius:9px;
+ padding:9px;font-weight:700;text-decoration:none;font-size:.9rem}
+.abtn:hover{background:#16513c}
+/* analysis page */
+.analysis .ahead{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+ padding-bottom:8px;border-bottom:2px solid #e7f1ec}
+.avs{color:#9aa7b0;font-weight:600}
+.asub{text-align:center;color:#7a8794;font-size:.85rem;margin:8px 0 14px}
+.headline{font-size:1.15rem;font-weight:800;color:#0f3d2e;text-align:center;margin-bottom:14px;line-height:1.5}
+.modelstrip{background:#f3f9f6;border:1px solid #dcefe6;border-radius:12px;padding:12px;margin-bottom:16px}
+.ms-xg{font-size:.92rem;color:#0f3d2e;margin-bottom:8px;text-align:center}
+.sec{margin-bottom:16px}
+.sec h3{font-size:1.02rem;color:#0f3d2e;margin-bottom:7px}
+.sec p{line-height:1.7;color:#2c3a44;font-size:.95rem}
+.sec.pred{background:#fff8f0;border:1px solid #f0e0c8;border-radius:12px;padding:13px}
+.lineups{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lu{background:#fafdfb;border:1px solid #e9eeec;border-radius:11px;padding:11px}
+.luhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.form{background:#0f3d2e;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:.8rem}
+.xi{margin:0 18px;font-size:.86rem;line-height:1.75;color:#2c3a44}
+.lunews{font-size:.78rem;color:#7a8794;margin-top:8px;line-height:1.5}
+.kps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.kp{background:#fafdfb;border:1px solid #e9eeec;border-radius:10px;padding:10px}
+.kpn{font-weight:800;color:#0f3d2e}.kpt{font-size:.75rem;color:#7a8794;margin-right:6px}
+.kp p{font-size:.82rem;color:#41525c;margin-top:5px;line-height:1.5}
+.placeholder{text-align:center;padding:24px 12px;color:#7a8794}
+.placeholder h3{color:#0f3d2e;margin-bottom:8px}
+.sec a,.note a{color:#11a36b}
+/* betting */
+.sec.betting{background:#f6f4fb;border:1px solid #e4ddf2;border-radius:12px;padding:14px}
+.sec.betting p{margin-bottom:7px;font-size:.92rem}
+.odds{display:flex;gap:8px;margin:6px 0}
+.oc{flex:1;background:#fff;border:1px solid #e4ddf2;border-radius:9px;padding:9px 6px;text-align:center;
+ display:flex;flex-direction:column;gap:2px}
+.oc span{font-size:.74rem;color:#6b7785}
+.oc b{font-size:1.15rem;color:#4b2e83}
+.oc.fav{border-color:#4b2e83;background:#efe9fb}
+.dim{color:#9089a6;font-size:.78rem}.sm{font-size:.72rem;margin-top:2px}
+.tip{background:#efe9fb;border-radius:8px;padding:8px 10px;color:#3d2569}
+.rg{font-size:.72rem;color:#9089a6;margin-top:10px;border-top:1px dashed #ddd5ee;padding-top:8px}
+.sec.surprise{border-radius:12px;padding:13px;margin-bottom:16px}
+.sec.surprise h3{margin-bottom:6px}
+.sec.surprise.hi{background:#fdecec;border:1px solid #f1b8b0}
+.sec.surprise.hi h3{color:#c0392b}
+.sec.surprise.mid{background:#fff6e8;border:1px solid #f0d9a8}
+.sec.surprise.mid h3{color:#b9770e}
+.sec.surprise.lo{background:#eaf6ef;border:1px solid #c2e4ce}
+.sec.surprise.lo h3{color:#1f7a4d}
+/* odds page */
+.bars{display:flex;flex-direction:column;gap:9px}
+.brow{display:grid;grid-template-columns:130px 1fr 52px;align-items:center;gap:10px}
+.btrack{background:#eef3f1;border-radius:8px;height:22px;overflow:hidden}
+.bfill{height:100%;background:linear-gradient(90deg,#11a36b,#1ad19a);border-radius:8px}
+.bval{font-weight:700;color:#0f3d2e;font-size:.9rem;text-align:left}
+.tbl-wrap{overflow-x:auto}
+table.grid{width:100%;border-collapse:collapse;font-size:.85rem;min-width:520px}
+table.grid th,table.grid td{padding:7px 6px;text-align:center;border-bottom:1px solid #eef2f0}
+table.grid th{background:#0f3d2e;color:#fff;font-weight:600}
+.tl{text-align:right!important}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.gcard{border:1px solid #eaefed;border-radius:12px;padding:10px;background:#fafdfb}
+.gcard h3{font-size:.95rem;color:#0f3d2e;margin-bottom:6px}
+.gtab{width:100%;border-collapse:collapse;font-size:.82rem}
+.gtab th{font-size:.7rem;color:#8694a0;font-weight:600;padding:3px}
+.gtab td{padding:5px 3px;text-align:center;border-top:1px solid #eef2f0}
+.gtab .adv{font-weight:700;color:#0f3d2e}
+footer{color:#cfe6dc;text-align:center;font-size:.76rem;opacity:.8;padding:16px 8px 28px;line-height:1.7}
+</style></head>
+<body><div class="wrap">
+<div class="topbar"><a class="nav" href="index.html">← חזרה למשחקים</a>
+  <button class="nav" onclick="location.reload()">🔄 רענן</button></div>
+<section class="card analysis">
+  <div class="ahead"><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/mex.png" alt="" loading="lazy">מקסיקו</span><span class="avs">נגד</span><span class="chip big"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/ecu.png" alt="" loading="lazy">אקוודור</span></div>
+  <div class="asub">שלב 32 האחרונות · 01/07 04:00 · גביע העולם 2026</div>
+  
+      <div class="headline">מקסיקו נגד אקוודור: קרב נוקאאוט בגביע העולם 2026 – מי תעלה לרבע הגמר?</div>
+      <div class="modelstrip">
+      <div class="ms-xg"><b>גולים צפויים:</b> מקסיקו 1.3 – 1.3 אקוודור
+        · תוצאה סבירה 1–1</div>
+      <div class="probbar big"><div class="ph" style="width:36%">36%</div>
+        <div class="pd" style="width:29%">29%</div>
+        <div class="pa" style="width:34%">34%</div></div>
+      <div class="problbl"><span>ניצחון מקסיקו</span><span>תיקו</span><span>ניצחון אקוודור</span></div>
+      <div class="ms-si"><span class="si hi" title="מדד הפתעה">🎲 הפתעה 57 · גבוה</span></div></div>
+      <div class="sec surprise hi"><h3>🎲 מדד הפתעה: 57/100 · גבוה</h3><p>מדד ההפתעה הגבוה (57/100) נובע מכך שלמרות שמקסיקו נחשבת לפייבוריטית עם יתרון ביתיות וכושר מצוין, אקוודור הראתה יכולת להפתיע, במיוחד בניצחון הדרמטי על גרמניה. בנוסף, משחקי נוקאאוט במונדיאל נוטים להיות צמודים ופחות צפויים, ושתי הקבוצות ידועות בהגנה חזקה, מה שיכול להוביל למשחק דל שערים שבו טעות אחת או רגע של גאונות יכולים להכריע.</p></div>
+      <div class="sec"><h3>📋 מה על הכף</h3><p>זהו שלב שמינית הגמר (32 האחרונות) בגביע העולם 2026, משחק נוקאאוט קריטי בו המנצחת עולה לשלב הבא והמפסידה מודחת מהטורניר. אין אפשרות לתיקו, ובמקרה של שוויון בתום 90 דקות, המשחק יוכרע בהארכה ובדו-קרב פנדלים. מקסיקו מגיעה למשחק במומנטום אדיר לאחר שסיימה את שלב הבתים עם מאזן מושלם ושלושה שערי נקיים, בעוד שאקוודור העפילה לאחר ניצחון דרמטי על גרמניה.</p></div>
+      <div class="sec"><h3>👥 הרכבים צפויים</h3>
+        <div class="lineups"><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/mex.png" alt="" loading="lazy">מקסיקו</span><span class="form">4-3-3</span></div>
+          <ol class="xi"><li>Raul Rangel</li><li>Jorge Sanchez</li><li>Cesar Montes</li><li>Johan Vasquez</li><li>Jesus Gallardo</li><li>Erik Lira</li><li>Luis Romo</li><li>Brian Gutierrez</li><li>Roberto Alvarado</li><li>Raul Jimenez</li><li>Julian Quinones</li></ol>
+          <p class="lunews">למקסיקו אין חששות מפציעות או השעיות לקראת שמינית הגמר. המאמן חאבייר אגירה צפוי להחזיר את ראול חימנס להרכב הפותח לאחר שקיבל מנוחה במשחק מול צ'כיה. ראול ראנגל ימשיך בשער, כאשר גיירמו אוצ'ואה בן ה-40 נכנס כמחליף במשחק הקודם ורשם הופעה במונדיאל שישי בקריירה. ססאר מונטס חזר להרכב לאחר שהחמיץ משחק בגלל כרטיס אדום.</p></div><div class="lu">
+          <div class="luhead"><span class="chip"><img class="fl" src="https://a.espncdn.com/i/teamlogos/countries/500/ecu.png" alt="" loading="lazy">אקוודור</span><span class="form">4-3-3</span></div>
+          <ol class="xi"><li>Hernan Galindez</li><li>Alan Franco</li><li>Joel Ordonez</li><li>Willian Pacho</li><li>Piero Hincapie</li><li>Moises Caicedo</li><li>Pedro Vite</li><li>Nilson Angulo</li><li>John Yeboah</li><li>Gonzalo Plata</li><li>Enner Valencia</li></ol>
+          <p class="lunews">גם לאקוודור אין חששות מפציעות או השעיות. המאמן סבסטיאן בקצ'צ'ה לא צפוי לבצע שינויים דרסטיים בהרכב שניצח את גרמניה. אלן פרנקו צפוי להמשיך בהגנה לצד ג'ואל אורדונייז, וויליאם פאצ'ו ופיירו הינקאפי. גונסאלו פלאטה ככל הנראה ישמור על מקומו בהתקפה לאחר שכבש את שער הניצחון מול גרמניה.</p></div></div></div>
+      <div class="sec"><h3>♟️ טקטיקה צפויה</h3><p>מקסיקו, המארחת, צפויה לשחק בפורמציית 4-3-3 התקפית אך גם מאוזנת, כפי שהציגה בשלב הבתים בו שמרה על רשת נקייה בכל המשחקים. היא תנסה לשלוט בכדור וללחוץ גבוה, תוך ניצול מהירותם של שחקני הכנף ויכולת הסיום של ראול חימנס וג'וליאן קיניונס. אקוודור, מצידה, צפויה לנקוט בגישה זהירה יותר, ככל הנראה בפורמציית 4-3-3 או 4-4-2, ולהתמקד בהתקפות מתפרצות מהירות דרך גונסאלו פלאטה ואנר ולנסיה. הקרב במרכז השדה בין אדסון אלברז (מקסיקו) למואיסס קאיסדו (אקוודור) יהיה קריטי לשליטה במשחק.</p></div>
+      <div class="sec"><h3>📈 כושר אחרון</h3>
+        <p><b>מקסיקו:</b> מקסיקו מגיעה למשחק בכושר מצוין, עם שישה ניצחונות רצופים בכל המסגרות, כולל שלושה ניצחונות בשלב הבתים של המונדיאל ללא ספיגת שער. היא כבשה 14 שערים וספגה רק אחד בששת משחקיה האחרונים.</p>
+        <p><b>אקוודור:</b> אקוודור הפסידה רק באחד מעשרת משחקיה האחרונים, ספגה 0.6 שערים למשחק, אך כושר החוץ שלה פחות משכנע, ללא ניצחון בחמשת משחקי החוץ האחרונים שלה. בשלב הבתים של המונדיאל, אקוודור ניצחה משחק אחד, סיימה בתיקו אחד והפסידה אחד, כבשה שני שערים וספגה שניים.</p></div>
+      <div class="sec"><h3>🤝 ראש בראש</h3><p>מקסיקו ואקוודור נפגשו 28 פעמים בעבר, כאשר מקסיקו ניצחה 17 פעמים, אקוודור ניצחה ארבע פעמים ושבעה משחקים הסתיימו בתיקו. המפגש האחרון ביניהן היה תיקו 1-1 במשחק ידידות באוקטובר 2025. המפגש היחיד הקודם בגביע העולם היה בשלב הבתים של טורניר 2002, בו מקסיקו ניצחה 2-1. שלושת המפגשים האחרונים בין הקבוצות היו צמודים, כאשר שניים מהם הסתיימו בתיקו.</p></div>
+      <div class="sec"><h3>⚽ גולים צפויים — המאצ'אפ</h3><p>מקסיקו נחשבת לפייבוריטית קלה, במיוחד עם יתרון הביתיות באצטדיון האצטקה. ההגנה של מקסיקו הייתה בלתי חדירה בשלב הבתים, ואילו אקוודור הראתה יכולת להפתיע קבוצות חזקות כמו גרמניה. המודל שלי צופה משחק צמוד עם 1.35 גולים צפויים למקסיקו ו-1.3 גולים צפויים לאקוודור, עם הסתברות של 36% לניצחון מקסיקו ו-34% לניצחון אקוודור. התוצאה הסבירה ביותר היא 1-1.</p></div>
+      <div class="sec betting"><h3>💰 תחזיות והימורים — מהאתרים המובילים</h3><p><b>תחזית Opta:</b> ניצחון אקוודור 23% · תיקו 32% · ניצחון מקסיקו 45% <span class="dim">(Opta לא פרסמה תחזית ספציפית למשחק זה. הנתונים המוצגים מבוססים על הערכות כלליות מאתרי הימורים מובילים המנתחים את סיכויי הקבוצות (לפני הארכה ופנדלים).)</span></p><div class="odds">
+              <div class="oc"><span>ניצחון מקסיקו</span><b>2.10</b><span class="dim">45%</span></div>
+              <div class="oc"><span>תיקו</span><b>3.20</b><span class="dim">31%</span></div>
+              <div class="oc fav"><span>ניצחון אקוודור</span><b>3.70</b><span class="dim">27%</span></div>
+            </div><p class="dim sm">יחס עשרוני · באחוזים = הסתברות משתמעת מהיחס</p><p><b>תחזיות תוצאה סופית:</b> Sports Mole: <b>2-1</b> · Football Whispers: <b>1-0</b> · FootballPredictions.com: <b>1-1</b> · Tips.GG: <b>1-0</b></p><p><b>הפרש שערים (הנדיקפ):</b> מקסיקו -0.5</p><p><b>סך שערים:</b> מתחת ל-2.5 שערים (קו 2.5 שערים)</p><p><b>הימור ערך:</b> הימור על 'מתחת ל-2.5 שערים' נראה כהימור ערך טוב, בהתחשב בכושר ההגנתי של שתי הקבוצות ובמפגשים האחרונים ביניהן שהיו דלי שערים.</p><p class="tip">💡 <b>המלצה:</b> מקסיקו צפויה לנצח במשחק צמוד ודל שערים. הימור על מקסיקו לניצחון או על 'מתחת ל-2.5 שערים'.</p><p class="rg">⚠️ מידע למטרות ניתוח בלבד, לא ייעוץ הימורים. הימור אחראי · גיל 18+.</p></div>
+      <div class="sec"><h3>⭐ שחקני מפתח</h3><div class="kps"><div class="kp"><span class="kpn">Raul Jimenez</span> <span class="kpt">מקסיקו</span><p>החלוץ המנוסה צפוי לחזור להרכב הפותח לאחר מנוחה ויביא איתו ניסיון ויכולת סיום חשובה במשחק נוקאאוט.</p></div><div class="kp"><span class="kpn">Julian Quinones</span> <span class="kpt">מקסיקו</span><p>כבש שני שערים בטורניר עד כה והוא איום התקפי משמעותי עבור מקסיקו.</p></div><div class="kp"><span class="kpn">Enner Valencia</span> <span class="kpt">אקוודור</span><p>מלך השערים של אקוודור בכל הזמנים, בן 36, קרוב ל-50 שערים בינלאומיים ויביא ניסיון רב למשחק נוקאאוט.</p></div><div class="kp"><span class="kpn">Moises Caicedo</span> <span class="kpt">אקוודור</span><p>קפטן הקבוצה והמנוע של מרכז השדה של אקוודור, שחקן בעל ערך רב באירופה.</p></div><div class="kp"><span class="kpn">Gonzalo Plata</span> <span class="kpt">אקוודור</span><p>כבש את שער הניצחון מול גרמניה ויכול לספק מהירות ואיום בהתקפות מתפרצות.</p></div></div></div>
+      <div class="sec pred"><h3>🎯 שורה תחתונה</h3><p>מקסיקו, עם יתרון הביתיות והכושר המצוין, צפויה לנצח את אקוודור במשחק צמוד וקשוח, ככל הנראה בהפרש שערים קטן. התוצאה הצפויה היא 1-0 למקסיקו.</p></div>
+      <p class="note"><a href="https://www.sportsmole.co.uk/football/world-cup/2026/preview/mexico-vs-ecuador-prediction-team-news-lineups_20260628_162000.html" target="_blank">מקור 1</a> · <a href="https://tips.gg/predictions/football/mexico-vs-ecuador-1279973/" target="_blank">מקור 2</a> · <a href="https://www.footballwhispers.com/blog/mexico-vs-ecuador-prediction-betting-tips-preview/" target="_blank">מקור 3</a> · <a href="https://hooligansoccer.com/2026/06/28/mexico-gets-ecuador-again-a-familiar-face-awaits-in-the-round-of-32/" target="_blank">מקור 4</a> · <a href="https://footballpredictions.com/predictions/world-cup/mexico-vs-ecuador-prediction-and-betting-tips-20260630/" target="_blank">מקור 5</a></p>
+</section>
+<footer>ניתוח טקסטואלי · נבנה ע"י Claude</footer>
+</div></body></html>
