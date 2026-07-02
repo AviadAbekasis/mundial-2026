@@ -28,15 +28,21 @@ DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
+def _clean_key(s):
+    # strip a stray UTF-8 BOM (﻿) plus whitespace — a BOM in an HTTP header
+    # crashes requests with a latin-1 encode error, silently killing every analysis.
+    return s.replace("﻿", "").strip()
+
+
 def get_key():
-    k = os.environ.get("GEMINI_API_KEY", "").strip()
+    k = _clean_key(os.environ.get("GEMINI_API_KEY", ""))
     if k:
         return k
     path = os.path.join(ROOT, ".gemini_key")
     if os.path.exists(path):
-        with open(path, encoding="utf-8") as f:
+        with open(path, encoding="utf-8-sig") as f:
             for line in f:
-                line = line.strip()
+                line = _clean_key(line)
                 if line and "PASTE_YOUR" not in line:
                     return line
     raise RuntimeError(

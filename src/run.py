@@ -32,12 +32,21 @@ def main(n=50000, force_analysis=False):
 
     print("=" * 56)
     print("STEP 3/4  Generating Gemini analyses (today + tomorrow) ...")
+    key_ok = False
     try:
         analyst.get_key()
+        key_ok = True
+    except Exception as ex:
+        print(f"  (no Gemini key — skipping analyses: {ex})")
+    if key_ok:
         done, failed = analyst.generate_upcoming(state, days=2, force=force_analysis)
         print(f"  analyses: {len(done)} new, {len(failed)} failed")
-    except Exception as ex:
-        print(f"  (skipped — {ex})")
+        # if a key IS present but EVERY analysis failed, it's systemic (bad key / BOM /
+        # quota) — fail the build loudly instead of silently deploying without analyses.
+        if failed and not done:
+            raise RuntimeError(
+                f"ALL {len(failed)} analyses failed — systemic issue. Failing the build "
+                f"so it's visible rather than silently shipping without analysis.")
 
     print("=" * 56)
     print("STEP 4/4  Building dashboard ...")
